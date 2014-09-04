@@ -64,7 +64,6 @@ void FsTest(void) {
     char buf[64];
 		int len1, len2, len3;
     
-
     yaffs_format("/nand", 0, 0, 0);
     yaffs_mount("/nand");
 		yaffs_mkdir("/nand/web", 0666);

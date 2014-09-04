@@ -566,7 +566,7 @@ int  LCD_L0_Init(void) {
 
   uint32_t i;
 
-	uint32_t *pDst = (uint32_t *)LCD_VRAM_BASE_ADDR;
+	//uint32_t *pDst = (uint32_t *)LCD_VRAM_BASE_ADDR;
 	//uint32_t p0,p1,p2,p3;
 	// Assign pins
 

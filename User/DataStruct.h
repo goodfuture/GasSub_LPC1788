@@ -1,5 +1,5 @@
-#ifndef  __DATASTRUCT_H_
-#define  __DATASTRUCT_H_
+#ifndef  DATASTRUCT
+#define  DATASTRUCT
 
 #include "os_cpu.h"
 
@@ -96,12 +96,5 @@ typedef struct
 		INT32S slope[16];
 		INT32S intercept[16];
 }Correct_Input;
-
-typedef enum {											/*	US485´®¿ÚºÅ			*/	
-	RS485_1 	= 0,										/*	RS485_UART0		*/
-	RS485_2,	 												/*	RS485_UART2 	*/
-	RS485_3, 													/*	RS485_UART3 	*/
-	RS485_4, 													/*	RS485_UART4		*/
-} RS485_NUM;
 
 #endif 

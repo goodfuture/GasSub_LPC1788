@@ -51,7 +51,6 @@
 ..\flash_obj\user_main.o: ..\..\GuiLib\include\RADIO.h
 ..\flash_obj\user_main.o: ..\..\GuiLib\include\SLIDER.h
 ..\flash_obj\user_main.o: ..\..\GuiLib\include\TEXT.h
-..\flash_obj\user_main.o: ..\..\GuiLib\include\PROGBAR.h
 ..\flash_obj\user_main.o: ..\..\User\main.h
 ..\flash_obj\user_main.o: ..\App\includes.h
 ..\flash_obj\user_main.o: D:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
@@ -109,3 +108,4 @@
 ..\flash_obj\user_main.o: ..\..\BoardSupport\eeprom_st24c02.h
 ..\flash_obj\user_main.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_i2c.h
 ..\flash_obj\user_main.o: ..\..\User\user_SaveOption.h
+..\flash_obj\user_main.o: ..\..\Task\Sensor.h

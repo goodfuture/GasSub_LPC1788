@@ -37,5 +37,9 @@
 #define USER_ID_MENU_TEST_TOTAL     			(GUI_ID_USER + 14)
 #define USER_ID_MENU_TEST_SERIAL     			(GUI_ID_USER + 15)
 
+#define USER_ID_MENU_CORRECT     					(GUI_ID_USER + 16)
+
+#define USER_ID_MENU_ERROR_RATE_RS485     (GUI_ID_USER + 17)
+
 #endif
 

@@ -56,9 +56,9 @@ ARM Macro Assembler    Page 1
    35 00008000         ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
    36 00008000         ; </h>
    37 00008000         
-   38 00008000 00600000 
+   38 00008000 00800000 
                        Heap_Size
-                               EQU              0x00600000
+                               EQU              0x00800000
    39 00008000         
    40 00008000                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
 3
@@ -71,16 +71,16 @@ ARM Macro Assembler    Page 2
 
    42 00000000         Heap_Mem
                                SPACE            Heap_Size
-   43 00600000         __heap_limit
-   44 00600000         
-   45 00600000         
-   46 00600000                 PRESERVE8
-   47 00600000                 THUMB
-   48 00600000         
-   49 00600000         
-   50 00600000         ; Vector Table Mapped to Address 0 at Reset
-   51 00600000         
-   52 00600000                 AREA             RESET, DATA, READONLY
+   43 00800000         __heap_limit
+   44 00800000         
+   45 00800000         
+   46 00800000                 PRESERVE8
+   47 00800000                 THUMB
+   48 00800000         
+   49 00800000         
+   50 00800000         ; Vector Table Mapped to Address 0 at Reset
+   51 00800000         
+   52 00800000                 AREA             RESET, DATA, READONLY
    53 00000000                 EXPORT           __Vectors
    54 00000000         
    55 00000000                 IMPORT           OS_CPU_PendSVHandler
@@ -450,7 +450,7 @@ ARM Macro Assembler    Page 7
               00000000 
               00000000 
               00008000 
-              00600000 
+              00800000 
               00000000 
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=..\flash
 
@@ -526,7 +526,7 @@ Symbol: __heap_base
    Uses
       None
 Comment: __heap_base unused
-__heap_limit 00600000
+__heap_limit 00800000
 
 Symbol: __heap_limit
    Definitions
@@ -1114,7 +1114,7 @@ Relocatable symbols
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Absolute symbols
 
-Heap_Size 00600000
+Heap_Size 00800000
 
 Symbol: Heap_Size
    Definitions

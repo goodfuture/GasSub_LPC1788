@@ -153,7 +153,7 @@ EMC_FUNC_CODE StaticMem_Init(EMC_STATIC_MEM_Config_Type* pConfig)
     EMC_FUNC_CODE ret = EMC_FUNC_OK;
     
     // Power On
-    ret |= EMC_PwrOn();
+    //ret |= EMC_PwrOn();
 
     // Configuration
     if(pConfig->AddressMirror)

@@ -19,4 +19,15 @@
 ..\flash_obj\user_file.o: ..\..\uCOS-II\Source\ucos_ii.h
 ..\flash_obj\user_file.o: ..\..\Config\app_cfg.h
 ..\flash_obj\user_file.o: ..\..\Config\os_cfg.h
+..\flash_obj\user_file.o: ..\..\BoardSupport\com_uart.h
+..\flash_obj\user_file.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_uart.h
+..\flash_obj\user_file.o: ..\..\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h
+..\flash_obj\user_file.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cm3.h
+..\flash_obj\user_file.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\flash_obj\user_file.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmInstr.h
+..\flash_obj\user_file.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h
+..\flash_obj\user_file.o: ..\..\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h
+..\flash_obj\user_file.o: ..\..\LPC177x_8xLib\inc\lpc_types.h
+..\flash_obj\user_file.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_pinsel.h
+..\flash_obj\user_file.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_clkpwr.h
 ..\flash_obj\user_file.o: ..\..\User\DataStruct.h

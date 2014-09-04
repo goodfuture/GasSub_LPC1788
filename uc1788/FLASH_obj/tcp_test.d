@@ -36,3 +36,4 @@
 ..\flash_obj\tcp_test.o: ..\..\lwip\include\lwip/timers.h
 ..\flash_obj\tcp_test.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
 ..\flash_obj\tcp_test.o: ..\..\User\DataStruct.h
+..\flash_obj\tcp_test.o: ..\..\Task\Sensor.h

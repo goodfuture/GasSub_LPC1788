@@ -132,17 +132,17 @@ static  void  CheckInit (void)
 
 int  GUI_X_GetKey (void) 
 {
-    int r;
+    int r = 0;
 
  //   r  = KeyPressed;
  //   CheckInit();
  //   KeyPressed = 0;
- //   return (r);
+    return (r);
 }
 
 int  GUI_X_WaitKey (void) 
 {
-//    int    r;
+    int    r = 0;
 //    unsigned  char  err;
 
 
@@ -152,7 +152,7 @@ int  GUI_X_WaitKey (void)
 //    }
 //    r          = KeyPressed;
 //    KeyPressed = 0;
-//    return (r);
+    return (r);
 }
 
 void  GUI_X_StoreKey (int k) 

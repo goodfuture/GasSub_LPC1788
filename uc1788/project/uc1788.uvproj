@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\CMSISv2p00_LPC177x_8x\inc;..\..\LPC177x_8xLib\inc;..\..\Config;..\..\uCOS-II\Source;..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView;..\..\BoardSupport;..\App;..\..\YAFFS2;..\..\lwip\include;..\..\goahead\src;..\..\hvsftpd;..\..\User;..\..\Task;..\..\GuiLib\include;..\..\GuiLib\Config;..\..\GuiLib;..\..\FreeModbus\modbus\include;..\..\FreeModbus\port;..\..\FreeModbus\modbus\rtu</IncludePath>
+              <IncludePath>..\..\CMSISv2p00_LPC177x_8x\inc;..\..\LPC177x_8xLib\inc;..\..\Config;..\..\uCOS-II\Source;..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView;..\..\BoardSupport;..\App;..\..\YAFFS2;..\..\lwip\include;..\..\goahead\src;..\..\hvsftpd;..\..\User;..\..\Task;..\..\GuiLib\include;..\..\GuiLib\Config;..\..\FreeModbus\modbus\include;..\..\FreeModbus\port</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1087,6 +1087,16 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\user_file.c</FilePath>
             </File>
+            <File>
+              <FileName>user_Correct.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\user_Correct.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_ErrorRateRS485.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\user_ErrorRateRS485.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1116,11 +1126,6 @@
               <FileName>G631Y2.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Image\G631Y2.c</FilePath>
-            </File>
-            <File>
-              <FileName>SecondImg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Image\SecondImg.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1251,66 +1256,6 @@
               <FileName>session.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\hvsftpd\session.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>FreeModBus</GroupName>
-          <Files>
-            <File>
-              <FileName>mbfunccoils_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\functions\mbfunccoils_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncdisc_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncdisc_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncholding_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncholding_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncinput_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncinput_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbrtu_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\rtu\mbrtu_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>portevent_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\portevent_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>FMBport.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\FMBport.c</FilePath>
-            </File>
-            <File>
-              <FileName>portserial_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\portserial_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>porttimer_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\porttimer_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>user_mb_app_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\user_mb_app_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mb_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\mb_m.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2397,6 +2342,16 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\user_file.c</FilePath>
             </File>
+            <File>
+              <FileName>user_Correct.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\user_Correct.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_ErrorRateRS485.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\user_ErrorRateRS485.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2426,11 +2381,6 @@
               <FileName>G631Y2.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Image\G631Y2.c</FilePath>
-            </File>
-            <File>
-              <FileName>SecondImg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Image\SecondImg.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2561,66 +2511,6 @@
               <FileName>session.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\hvsftpd\session.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>FreeModBus</GroupName>
-          <Files>
-            <File>
-              <FileName>mbfunccoils_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\functions\mbfunccoils_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncdisc_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncdisc_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncholding_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncholding_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncinput_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncinput_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbrtu_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\rtu\mbrtu_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>portevent_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\portevent_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>FMBport.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\FMBport.c</FilePath>
-            </File>
-            <File>
-              <FileName>portserial_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\portserial_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>porttimer_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\porttimer_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>user_mb_app_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\port\user_mb_app_m.c</FilePath>
-            </File>
-            <File>
-              <FileName>mb_m.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\FreeModbus\modbus\mb_m.c</FilePath>
             </File>
           </Files>
         </Group>

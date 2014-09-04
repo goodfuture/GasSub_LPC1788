@@ -144,10 +144,6 @@ void _OnPaintBrowsTestpoint( WM_HWIN hWin )
 						sprintf( s, "%u", _tristate->testpointNo );
 						GUI_DispStringAt( s,        r.x0+ADDSTEP6,     r.y0+EDITXSIZE );
 						GUI_DispStringAt( getSensorName( _tristate->sensorName ),        r.x0+ADDSTEP6,     r.y0+EDITXSIZE2+7 );
-						sprintf( s, "%u", _tristate->correctRange.maxval );
-						GUI_DispStringAt( s,        r.x0+ADDSTEP6,     r.y0+EDITXSIZE3+14 );
-						sprintf( s, "%u", _tristate->correctRange.minval );
-						GUI_DispStringAt( s,        r.x0+ADDSTEP6,     r.y0+EDITXSIZE4+21 );
 						
 						GUI_DispStringAt( "输出口控制:",        r.x0+ADDSTEP6,     r.y0+EDITXSIZE5+28 );
             break;
@@ -257,11 +253,12 @@ void _InitBrowsTestpointDialog(WM_HWIN hWin)
 						sprintf( s, "%u", _tristate->testpointNo );
 						GUI_DispStringAt( s,        r.x0+ADDSTEP6,     r.y0+EDITXSIZE );
 						GUI_DispStringAt( getSensorName( _tristate->sensorName ),        r.x0+ADDSTEP6,     r.y0+EDITXSIZE2+7 );
+				/*
 						sprintf( s, "%u", _tristate->correctRange.maxval );
 						GUI_DispStringAt( s,        r.x0+ADDSTEP6,     r.y0+EDITXSIZE3+14 );
 						sprintf( s, "%u", _tristate->correctRange.minval );
 						GUI_DispStringAt( s,        r.x0+ADDSTEP6,     r.y0+EDITXSIZE4+21 );
-						
+				*/		
 						GUI_DispStringAt( "输出口控制:",        r.x0+ADDSTEP6,     r.y0+EDITXSIZE5+28 );
             break;
 				

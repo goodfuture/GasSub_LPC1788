@@ -65,7 +65,7 @@
 #define IFNAME0 'e'
 #define IFNAME1 'n'
 
-static sys_sem_t sem_recv;
+static sys_sem_t sem_recv = {NULL};
 
 /**
  * Helper struct to hold private data used to operate your ethernet interface.
@@ -274,6 +274,8 @@ ethernetif_input(struct netif *netif)
   struct eth_hdr *ethhdr;
   struct pbuf *p;
 
+	EMAC_IntCmd(EMAC_INT_RX_DONE, ENABLE);
+
   for (;;)
   {
     sys_sem_wait(&sem_recv);
@@ -315,7 +317,8 @@ ethernetif_input(struct netif *netif)
 void ethernetif_frame_ready()
 {
   EMAC_IntCmd(EMAC_INT_RX_DONE, DISABLE);
-  sys_sem_signal(&sem_recv);
+	if (sys_sem_valid(&sem_recv))
+		sys_sem_signal(&sem_recv);
 }
 
 /**

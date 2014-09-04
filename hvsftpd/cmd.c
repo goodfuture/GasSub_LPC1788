@@ -809,7 +809,7 @@ static int fmt_handler(struct session *s, char *param)
 {
     
     yaffs_unmount("/nand");
-    FsTest();
+    //FsTest();
     yaffs_mount("/nand");
     
     session_response(s, "200 ok.");

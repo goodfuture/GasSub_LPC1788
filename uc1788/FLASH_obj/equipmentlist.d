@@ -73,3 +73,4 @@
 ..\flash_obj\equipmentlist.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_uart.h
 ..\flash_obj\equipmentlist.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_pinsel.h
 ..\flash_obj\equipmentlist.o: ..\..\User\DataStruct.h
+..\flash_obj\equipmentlist.o: ..\..\Task\Sensor_Operation.h

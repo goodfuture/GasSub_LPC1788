@@ -13,35 +13,39 @@ extern RcvStruct  uart1RcvInfo;
 extern INT8U      uart1RcvOK;
 
 SendStruct uart1SendInfo;
+extern OS_EVENT  *UartSendTaskSem;
 
 INT32U Uart1LostCnt = 0;
 
 void UartRcv_Task (void) 
 {
-	INT8U err;	
+		INT8U err;
 	
-	uart1SendInfo.clearFreCount = 0;
-	uart1SendInfo.outPut = 0xaa;
-	uart1SendInfo.SEL = 0;
+		uart1SendInfo.clearFreCount = 0;
+		uart1SendInfo.outPut = 0x00;
+		uart1SendInfo.SEL = 0;
 	
-	while(1)
-	{
-		uart1SendInfo.outPut = ~uart1SendInfo.outPut;
-		Uart1_Send_Struct(&uart1SendInfo);
-
-		OSTimeDly(1000);
-		if ( uart1RcvOK == 1 )
-		{	
-				OSSemPend(UartRcvTaskSem, 1000, &err );
-				uart1RcvInfo = Uart1_Get_Struct();
-				OSSemPost(UartRcvTaskSem);
-				Uart1LostCnt = 0;
-		}
-		else 
+		while(1)
 		{
-				Uart1LostCnt++;
+				
+				printf("In function Uart: ret = %u\n", uart1SendInfo.outPut );
+				OSSemPend( UartSendTaskSem, 1000, &err );
+				Uart1_Send_Struct(&uart1SendInfo);
+				OSSemPost( UartSendTaskSem );
+				
+				OSTimeDly(1000);
+				if ( uart1RcvOK == 1 )
+				{			
+						OSSemPend(UartRcvTaskSem, 1000, &err );
+						uart1RcvInfo = Uart1_Get_Struct();
+						OSSemPost(UartRcvTaskSem);
+						Uart1LostCnt = 0;
+				}
+				else 
+				{
+						Uart1LostCnt++;
+				}
 		}
-	}
-	
+		return;
 }
 

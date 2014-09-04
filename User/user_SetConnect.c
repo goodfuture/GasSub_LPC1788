@@ -98,6 +98,7 @@ void _InitSetConnectDialog(WM_HWIN hWin)
 	DROPDOWN_AddString( hDropdown, "4800bps" );
 	DROPDOWN_AddString( hDropdown, "9600bps" );
 	DROPDOWN_SetSel( hDropdown, optionSaveStruct.uartConfig[2] );
+	DROPDOWN_SetAutoScroll( hDropdown, 1 );
 	//DROPDOWN_SetBkColor( hDropdown, DROPDOWN_CI_UNSEL, GUI_WHITE );
 
 	hDropdown = WM_GetDialogItem( hWin, GUI_ID_DROPDOWN3 );
@@ -106,6 +107,7 @@ void _InitSetConnectDialog(WM_HWIN hWin)
 	DROPDOWN_AddString( hDropdown, "4800bps" );
 	DROPDOWN_AddString( hDropdown, "9600bps" );
 	DROPDOWN_SetSel( hDropdown, optionSaveStruct.uartConfig[3] );
+	DROPDOWN_SetAutoScroll( hDropdown, 1 );
 	//DROPDOWN_SetBkColor( hDropdown, DROPDOWN_CI_UNSEL, GUI_WHITE );
 
 	hDropdown = WM_GetDialogItem( hWin, GUI_ID_DROPDOWN4 );
@@ -114,6 +116,7 @@ void _InitSetConnectDialog(WM_HWIN hWin)
 	DROPDOWN_AddString( hDropdown, "4800bps" );
 	DROPDOWN_AddString( hDropdown, "9600bps" );
 	DROPDOWN_SetSel( hDropdown, optionSaveStruct.uartConfig[4] );
+	DROPDOWN_SetAutoScroll( hDropdown, 1 );
 	//DROPDOWN_SetBkColor( hDropdown, DROPDOWN_CI_UNSEL, GUI_WHITE );
 
 	hDropdown = WM_GetDialogItem( hWin, GUI_ID_DROPDOWN5 );
@@ -122,6 +125,7 @@ void _InitSetConnectDialog(WM_HWIN hWin)
 	DROPDOWN_AddString( hDropdown, "4800bps" );
 	DROPDOWN_AddString( hDropdown, "9600bps" );
 	DROPDOWN_SetSel( hDropdown, optionSaveStruct.uartConfig[5] );
+	DROPDOWN_SetAutoScroll( hDropdown, 1 );
 	//DROPDOWN_SetBkColor( hDropdown, DROPDOWN_CI_UNSEL, GUI_WHITE );
 
 	return;

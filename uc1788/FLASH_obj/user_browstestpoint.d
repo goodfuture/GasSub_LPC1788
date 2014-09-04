@@ -45,4 +45,8 @@
 ..\flash_obj\user_browstestpoint.o: ..\..\uCOS-II\Source\ucos_ii.h
 ..\flash_obj\user_browstestpoint.o: ..\..\Config\app_cfg.h
 ..\flash_obj\user_browstestpoint.o: ..\..\Config\os_cfg.h
+..\flash_obj\user_browstestpoint.o: ..\..\BoardSupport\com_uart.h
+..\flash_obj\user_browstestpoint.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_uart.h
+..\flash_obj\user_browstestpoint.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_pinsel.h
+..\flash_obj\user_browstestpoint.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_clkpwr.h
 ..\flash_obj\user_browstestpoint.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h

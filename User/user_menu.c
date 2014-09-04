@@ -249,6 +249,8 @@ INT8U substType = 0;
 static RTC_TIME_Type RTCFullTime;		 //当前系统时间
 MY_DATE currentTime;					 //当前系统时间
 
+extern WM_HWIN  _hErrorRateRS485;
+
 extern IPConfigStruct ipConfig;								//IP地址配置参数全局结构体
 
 extern Testpoint currentTp;
@@ -257,6 +259,7 @@ extern Testpoint* EquipmentList;		//设备表头指针
 extern OS_EVENT *EquipmentTaskSem;  //任务初始化先后顺序锁
 
 extern SendStruct uart1SendInfo;
+extern OS_EVENT  *UartSendTaskSem;
 
 
 extern GUI_WIDGET_CREATE_INFO _aDialogCreateSetTime[9];
@@ -270,6 +273,7 @@ extern GUI_WIDGET_CREATE_INFO _aDialogCreateBrowsTestpoint[3];
 extern GUI_WIDGET_CREATE_INFO _aDialogCreateTestRS485[4];
 extern GUI_WIDGET_CREATE_INFO _aDialogCreateTestSerial[7];
 extern GUI_WIDGET_CREATE_INFO _aDialogCreateTestIO[12];
+extern GUI_WIDGET_CREATE_INFO _aDialogCreateCorrect[7];
 
 unsigned int k=0;
 unsigned int testNo = 0;
@@ -286,6 +290,7 @@ extern void _cbBrowsTestpoint( WM_MESSAGE *pMsg );
 extern void _cbTestRS485( WM_MESSAGE *pMsg );
 extern void _cbTestSerial( WM_MESSAGE *pMsg );
 extern void _cbTestIO( WM_MESSAGE *pMsg );
+extern void _cbCorrect( WM_MESSAGE *pMsg );
 
 /*******************************************************************
 *		给菜单中添加选项
@@ -311,14 +316,14 @@ static void _CreateMenu(WM_HWIN hWin)
 
     MENU_SetDefaultFont(&GUI_FontHZ16);
 
-	//_hMenu = MENU_CreateEx(0, 22,  LCD_XSIZE, 20, _hFrame, WM_CF_SHOW, MENU_CF_HORIZONTAL, 0);
+	  //_hMenu = MENU_CreateEx(0, 22,  LCD_XSIZE, 20, _hFrame, WM_CF_SHOW, MENU_CF_HORIZONTAL, 0);
 
     /* Create menu 'Game' */
     hMenuGame = MENU_CreateEx(0, 0, 0, 0, WM_UNATTACHED, 0, MENU_CF_VERTICAL, 0);
     _AddMenuItem(hMenuGame, 0, "测点显示", 			USER_ID_MENU_DISP_TESTPOINT,  0);
 		_AddMenuItem(hMenuGame, 0, 0,          0,  		MENU_IF_SEPARATOR);
     _AddMenuItem(hMenuGame, 0, "通讯状态显示",  	USER_ID_MENU_DISP_CONNECT, 0);
-    _AddMenuItem(hMenuGame, 0, "后备电源显示",  	USER_ID_MENU_DISP_BACKPOWER, 0);
+   // _AddMenuItem(hMenuGame, 0, "后备电源显示",  	USER_ID_MENU_DISP_BACKPOWER, 0);
     
 	/* Create menu 'Options' */
     hMenuOptions = MENU_CreateEx(0, 0, 0, 0, WM_UNATTACHED, 0, MENU_CF_VERTICAL, 0);
@@ -327,19 +332,24 @@ static void _CreateMenu(WM_HWIN hWin)
     _AddMenuItem(hMenuOptions, 0, 0,          0,            MENU_IF_SEPARATOR);
     _AddMenuItem(hMenuOptions, 0, "时间设置", 		USER_ID_MENU_SET_TIMER, 0);
     _AddMenuItem(hMenuOptions, 0, "闭锁设置", 	USER_ID_MENU_SET_LOCK, 0);
-    _AddMenuItem(hMenuOptions, 0, 0,          0,            MENU_IF_SEPARATOR);
-		_AddMenuItem(hMenuOptions, 0, "分站类型设置", USER_ID_MENU_SET_TYPE, 0);
-    _AddMenuItem(hMenuOptions, 0, "密码设置", 		USER_ID_MENU_SET_PASSWORD, 0);
+    //_AddMenuItem(hMenuOptions, 0, 0,          0,            MENU_IF_SEPARATOR);
+		//_AddMenuItem(hMenuOptions, 0, "分站类型设置", USER_ID_MENU_SET_TYPE, 0);
+    //_AddMenuItem(hMenuOptions, 0, "密码设置", 		USER_ID_MENU_SET_PASSWORD, 0);
 
     /* Create menu 'Help' */
     hMenuHelp = MENU_CreateEx(0, 0, 0, 0,  WM_UNATTACHED, 0, MENU_CF_VERTICAL, 0);
+		/*
     _AddMenuItem(hMenuHelp, 0, "RS485测试", 			USER_ID_MENU_TEST_RS485, 0);
 		_AddMenuItem(hMenuHelp, 0, "输入输出口测试", 	USER_ID_MENU_TEST_IO, 0);
 		_AddMenuItem(hMenuHelp, 0, "累计量测试", 			USER_ID_MENU_TEST_TOTAL, 0);
 		_AddMenuItem(hMenuHelp, 0, "串口测试", 				USER_ID_MENU_TEST_SERIAL, 0);
     _AddMenuItem(hMenuHelp, 0, 0,          0,              MENU_IF_SEPARATOR);
     _AddMenuItem(hMenuHelp, 0, "关于...",  USER_ID_MENU_ABOUT, 0);
-    /* Create main menu */
+		*/
+		_AddMenuItem(hMenuHelp, 0, "本机校准", 			USER_ID_MENU_CORRECT, 0);
+		//_AddMenuItem(hMenuHelp, 0, "RS-485误码率测试", 			USER_ID_MENU_ERROR_RATE_RS485, 0);
+    
+		/* Create main menu */
     _hMenu = MENU_CreateEx(0, 0, 0, 0, WM_UNATTACHED, 0, MENU_CF_HORIZONTAL, 0);
 
     _AddMenuItem(_hMenu, hMenuGame,    "显示",    0, 0);
@@ -371,12 +381,12 @@ static void _OnMenu(WM_MESSAGE* pMsg)
 						WM_SetFocus( _hListview );
 						currentWin = USER_ID_MENU_DISP_TESTPOINT;
             break;
-
+/*
         case USER_ID_MENU_DISP_BACKPOWER:
 						GUI_CreateDialogBox( _aDialogCreateDispBackpower, GUI_COUNTOF(_aDialogCreateDispBackpower), &_cbDispBackpower, NULL, 80, 0 );   //非阻塞方式创建对话框			
             currentWin = USER_ID_MENU_DISP_BACKPOWER;
 						break;
-
+*/
         case USER_ID_MENU_DISP_CONNECT:
 						GUI_CreateDialogBox( _aDialogCreateDispConnect, GUI_COUNTOF(_aDialogCreateDispConnect), &_cbDispConnect, NULL, 80, 0 );   //非阻塞方式创建对话框
 						currentWin = USER_ID_MENU_DISP_CONNECT;
@@ -406,25 +416,26 @@ static void _OnMenu(WM_MESSAGE* pMsg)
 						//GUI_ExecDialogBox( _aDialogCreate, GUI_COUNTOF(_aDialogCreate), &_cbCallback, _hFrame, 100, 0 );	 //阻塞方式创建对话框
 						currentWin = USER_ID_MENU_SET_TIMER;
 						break;
-
+/*
 				case USER_ID_MENU_SET_TYPE:		
 						GUI_CreateDialogBox( _aDialogCreateSetType, GUI_COUNTOF(_aDialogCreateSetType), &_cbSetType, NULL, 80, 0 );   //非阻塞方式创建对话框
 						currentWin = USER_ID_MENU_SET_TYPE;
 						break;
-
+*/
 				case USER_ID_MENU_SET_LOCK:		
 						currentWin = USER_ID_MENU_SET_LOCK;
 						break;
-
+/*
 				case USER_ID_MENU_SET_PASSWORD:		
 						GUI_CreateDialogBox( _aDialogCreateSetPassword, GUI_COUNTOF(_aDialogCreateSetPassword), &_cbSetPassword, NULL, 80, 0 );
 						currentWin = USER_ID_MENU_SET_PASSWORD;
 						break;
-/*
+
 				case USER_ID_MENU_UNIT_TEST:		
 						GUI_CreateDialogBox( _aDialogCreateBrowsTestpoint, GUI_COUNTOF(_aDialogCreateBrowsTestpoint), &_cbBrowsTestpoint, NULL, 80, 0 );
 						break;
 */
+				/*
 				case USER_ID_MENU_TEST_RS485:
 						GUI_CreateDialogBox( _aDialogCreateTestRS485, GUI_COUNTOF(_aDialogCreateTestRS485), &_cbTestRS485, NULL, 80, 0 );
 						currentWin = USER_ID_MENU_TEST_RS485;
@@ -446,6 +457,19 @@ static void _OnMenu(WM_MESSAGE* pMsg)
 				
 				case USER_ID_MENU_ABOUT:
 						currentWin = USER_ID_MENU_ABOUT;
+						break;
+						*/
+						
+				case USER_ID_MENU_CORRECT:
+						GUI_CreateDialogBox( _aDialogCreateCorrect, GUI_COUNTOF(_aDialogCreateCorrect), &_cbCorrect, NULL, 80, 0 );
+						currentWin = USER_ID_MENU_CORRECT;
+						break;
+				case USER_ID_MENU_ERROR_RATE_RS485:
+					
+						WM_ShowWindow(_hErrorRateRS485);
+						WM_SetFocus(_hErrorRateRS485);
+						currentWin = USER_ID_MENU_ERROR_RATE_RS485;
+					
 						break;
         }
         break;
@@ -503,13 +527,13 @@ static void MainDisplayStatus(GUI_RECT  r)
 *       _OnPaint
 */
 
-const char Item[][5]= {"No.","类型","地点","状态","端口"};
 static void _OnPaint(WM_HWIN hWin)
 {	
 		INT8U err;
+		INT8U ret = 0;
 		GUI_RECT  r;
-    unsigned int i;
-		//char* _aTable[5];
+		unsigned int i = 0;
+		char str[16];
 		Testpoint *pList = NULL;
 		TestpointShowInfo tpShow;
 	
@@ -517,49 +541,81 @@ static void _OnPaint(WM_HWIN hWin)
 				pList = EquipmentList->next;
 	
 		if ( substType == SUBST_TYPE_A )
-				FRAMEWIN_SetText(_hFrame, "KJ218-F(A型)通用监控分站");	  //设置标题文本
+				FRAMEWIN_SetText(_hFrame, "KJ719-F(A型)监控分站");	  //设置标题文本
 		else 
-				FRAMEWIN_SetText(_hFrame, "KJ218-F(B型)通用监控分站");
-	
-	if ( k % 30 == 0 )
-	{
-		if ( currentWin == 0 )
-			LISTVIEW_IncSel( _hListview );
-		++testNo;
-		if ( currentWin == 0 && testNo >= 15 )
+				FRAMEWIN_SetText(_hFrame, "KJ719-F(B型)监控分站");
+		
+		if ( k % 30 == 0 )
 		{
-			for ( i = 0; i < 15; ++i )
-				LISTVIEW_DecSel( _hListview );
-			testNo = 0;
+			if ( currentWin == 0 )
+				LISTVIEW_IncSel( _hListview );
+			++testNo;
+			if ( currentWin == 0 && testNo >= 15 )
+			{
+				for ( i = 0; i < 15; ++i )
+					LISTVIEW_DecSel( _hListview );
+				testNo = 0;
+			}
 		}
-	}
-	
-	i = 0;
-	//pList = pList->next;
-
-	
-	while ( pList != NULL )
-	{
-		OSSemPend( pList->EquipmentSem , 0, &err );
-		tpShow = pList->getShowInfo( pList );			
-		OSSemPost( pList->EquipmentSem );
 		
-		LISTVIEW_SetItemText( _hListview, 0, i, tpShow.testpointNo );
-		LISTVIEW_SetItemText( _hListview, 1, i, tpShow.sensorType );
-		LISTVIEW_SetItemText( _hListview, 2, i, tpShow.location );
-		LISTVIEW_SetItemText( _hListview, 3, i, tpShow.collectData );
-		LISTVIEW_SetItemText( _hListview, 4, i, tpShow.portType );
+		i = 0;
+		//pList = pList->next;	
+		while ( pList != NULL )
+		{
+			sprintf( str, "%d", i + 1 );
+			
+			OSSemPend( pList->EquipmentSem , 0, &err );
+			tpShow = pList->getShowInfo( pList );
+			if ( pList->ifAlarm( pList ) )						 //报警
+			{
+					LISTVIEW_SetItemTextColor( _hListview, 0, i, LISTVIEW_CI_UNSEL, GUI_RED );
+					LISTVIEW_SetItemTextColor( _hListview, 1, i, LISTVIEW_CI_UNSEL, GUI_RED );
+					LISTVIEW_SetItemTextColor( _hListview, 2, i, LISTVIEW_CI_UNSEL, GUI_RED );
+					LISTVIEW_SetItemTextColor( _hListview, 3, i, LISTVIEW_CI_UNSEL, GUI_RED );
+					LISTVIEW_SetItemTextColor( _hListview, 4, i, LISTVIEW_CI_UNSEL, GUI_RED );
+			}
+			if ( pList->ifLiftAlarm( pList ) )				//解除报警
+			{
+					LISTVIEW_SetItemTextColor( _hListview, 0, i, LISTVIEW_CI_UNSEL, GUI_WHITE );
+					LISTVIEW_SetItemTextColor( _hListview, 1, i, LISTVIEW_CI_UNSEL, GUI_WHITE );
+					LISTVIEW_SetItemTextColor( _hListview, 2, i, LISTVIEW_CI_UNSEL, GUI_WHITE );
+					LISTVIEW_SetItemTextColor( _hListview, 3, i, LISTVIEW_CI_UNSEL, GUI_WHITE );
+					LISTVIEW_SetItemTextColor( _hListview, 4, i, LISTVIEW_CI_UNSEL, GUI_WHITE );
+			}
+			if ( pList->ifOutput(pList) )							//断电
+			{
+					ret |= pList->controlOutput( pList );
+					printf("In function menu paint1: ret = %u\n", ret );
+			}
+			if ( pList->ifRecover(pList) )						//复电
+			{
+					ret |= pList->controlRecover( pList );
+					printf("In function menu paint2: ret = %u\n", ret );
+			}
+			
+			OSSemPost( pList->EquipmentSem );
+			
+			LISTVIEW_SetItemText( _hListview, 0, i, str );
+			LISTVIEW_SetItemText( _hListview, 1, i, tpShow.sensorType );
+			LISTVIEW_SetItemText( _hListview, 2, i, tpShow.location );
+			LISTVIEW_SetItemText( _hListview, 3, i, tpShow.collectData );
+			LISTVIEW_SetItemText( _hListview, 4, i, tpShow.portType );
+					
+			++i;
+			if ( i >= 15 ) i = 0;
+			pList = pList->next;		
+		}
 		
-		++i;
-		if ( i >= 15 ) i = 0;
-		pList = pList->next;		
-	}	
+		printf("In function menu paint before send: ret = %u\n", ret );
+		OSSemPend( UartSendTaskSem, 1000, &err );
+		uart1SendInfo.outPut = ~ret;
+		OSSemPost( UartSendTaskSem );
 	
     WM_GetClientRectEx(hWin, &r);
 		MainDisplayStatus(r);							 //显示表格外的关键信息 
 }
 
-void InitListview(  )
+void InitListview()
 {
 	INT32U i = 0;
 	//char s[4];
@@ -572,7 +628,7 @@ void InitListview(  )
 	
 	LISTVIEW_AddColumn( _hListview, EDITXSIZE2-4, "No.", GUI_TA_LEFT );
 	LISTVIEW_AddColumn( _hListview, EDITXSIZE7, "类型", GUI_TA_HCENTER );
-	LISTVIEW_AddColumn( _hListview, LCD_XSIZE-EDITXSIZE9-EDITXSIZE7+4, "地点", GUI_TA_HCENTER );
+	LISTVIEW_AddColumn( _hListview, LCD_XSIZE-EDITXSIZE9-EDITXSIZE7+4, "安装地点", GUI_TA_HCENTER );
 	LISTVIEW_AddColumn( _hListview, EDITXSIZE4, "状态", GUI_TA_HCENTER );
 	LISTVIEW_AddColumn( _hListview, EDITXSIZE3, "端口", GUI_TA_HCENTER );
 
@@ -697,7 +753,7 @@ void Menu_Task(void)
 	WM_EnableMemdev(WM_HBKWIN);
   WM_SetCreateFlags(WM_CF_MEMDEV);  /* Use memory devices on all windows to avoid flicker */
     
-	OSSemPend(EquipmentTaskSem, 1000, &err);
+	OSSemPend(EquipmentTaskSem, 1000, &err);	//等待设备链表初始化完毕
 
 	while (1)
 	{		

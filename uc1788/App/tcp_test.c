@@ -13,11 +13,16 @@
 #include "string.h"
 #include "stdlib.h"
 #include "DataStruct.h"
+#include "Sensor.h"
 
 static OS_STK App_TaskServerStk[APP_CFG_TASK_TCPTEST_STK_SIZE];
 static OS_STK App_TaskClientStk[APP_CFG_TASK_TCPTEST_STK_SIZE];
 
 extern EEPROMDataStruct optionSaveStruct;			//配置储存结构体
+extern OS_EVENT    *ConfigQueueHead;				//配置信息消息队列
+extern OS_EVENT    *UploadQueueHead;        //上传信息消息队列
+
+Config_Struct rev_config;
 
 /**
  * ClientTest
@@ -33,32 +38,43 @@ void ClientTest(void)
     int fd;
     int i;
     int ret;
-    char buf[32];
+    char buf[64];
+		INT8U err;
+		Upload_Info* upload, *test;
     
-    for (i = 0; i < 10; ++ i)
+		addr.sin_family = AF_INET;
+    addr.sin_port = htons(8888);
+		addr.sin_addr.s_addr = inet_addr("192.168.1.100");
+		memset(&addr.sin_zero, 0, sizeof(addr.sin_zero));
+	
+		fd = socket(AF_INET,  SOCK_STREAM, IPPROTO_TCP );
+	
+		printf("connecting fd %d...\n", fd);
+    ret = connect(fd, (struct sockaddr *)&addr, sizeof(addr));
+		printf( "ret = %d\n", ret );
+    
+		while (1)
     {
-        /* first time delay is to wait server start */
-        OSTimeDlyHMSM(0, 0, 0, 1000);
-            
-        addr.sin_family = AF_INET;
-        addr.sin_port = htons(8888);
-        addr.sin_addr.s_addr = inet_addr("192.168.1.103");
-        memset(&addr.sin_zero, 0, sizeof(addr.sin_zero));
-
-        fd = socket(AF_INET,  SOCK_STREAM, 0);
-        
-        printf("connecting fd %d...\n", fd);
-        ret = connect(fd, (struct sockaddr *)&addr, sizeof(addr));
-				printf( "ret = %d\n", ret );
+        upload = OSQPend( UploadQueueHead, 0, &err );
+                          
         if (ret != -1)
         {
             printf("connected\n");
-            sprintf(buf, "hi ~ %d.\n", i);
-            ret = send(fd, buf, strlen(buf) + 1, 0);
-            if (ret == -1)
+            //sprintf(buf, "hi ~ %d.\n", i);
+						memcpy( buf, upload, sizeof( Upload_Info ) );
+            ret = send(fd, buf, sizeof( Upload_Info ), 0);
+						printf("sizeof=%d\n", sizeof( Upload_Info ));
+						test = (Upload_Info*)buf;
+						printf("Test: %u %u %u %s\n", test->testpointNo, test->sensorState, test->collectData, test->collectTime );
+						if (ret == -1)
             {
                 printf("send errno = %d\n", errno);
             }
+						for ( i = 0; i < 64; i++ )
+						{
+								printf( "%d ", buf[i] );
+						}
+            
 /*
             ret = recv(fd, buf, 8, 0);
             if (ret == -1)
@@ -75,10 +91,12 @@ void ClientTest(void)
         else
         {
             printf("connect errno = %d\n", errno);
+						break;
         }
-        shutdown(fd, SHUT_RDWR);
-        closesocket(fd);
+        
     }
+		shutdown(fd, SHUT_RDWR);
+    closesocket(fd);
 }
 
 char buf1[512];
@@ -93,6 +111,7 @@ char buf1[512];
  */
 void ServerTest(void)
 {
+		int i;
     struct sockaddr_in addr;
     int fd;
     int ret;
@@ -162,7 +181,17 @@ void ServerTest(void)
                         ret = recv(client_fd, buf1, sizeof(buf1), 0);
                         if (ret != -1)
                         {
-//                            printf("received %d\n", ret);
+														rev_config = (*( Config_Struct* )buf1);
+														printf("%u %u %s\n",rev_config.analogueConfig.testpointNo, rev_config.analogueConfig.sensorName, rev_config.analogueConfig.location );
+                            printf("received %d\n", ret);
+														if ( ret )
+														{
+																printf( "receive buf=[\n" );
+																for ( i = 0; i < ret; i++ )
+																	printf( "%d ", buf1[i] );
+																printf("]\n");
+																OSQPost( ConfigQueueHead, &rev_config );
+														}
                         }
                         else
                         {

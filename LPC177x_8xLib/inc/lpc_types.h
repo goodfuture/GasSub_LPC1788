@@ -52,20 +52,7 @@
 /**
  * @brief Boolean Type definition
  */
-#ifndef Bool
-typedef char Bool;
-#endif
-
-#ifndef TRUE
-#define TRUE            1
-#endif
-
-#ifndef FALSE
-#define FALSE           0
-#endif
-
-//typedef enum {FALSE = 0, TRUE = !FALSE} Bool;
-
+typedef enum {FALSE = 0, TRUE = !FALSE} Bool;
 
 /**
  * @brief Flag Status and Interrupt Flag Status type definition

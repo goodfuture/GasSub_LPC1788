@@ -48,13 +48,6 @@ unsigned char badd;
 uint8_t keyKeep;//是否为连续按键
 uint8_t keyTmp;	//连续按键次数
 
-extern uint16_t Uart0TOL;										/*串口包接收超时标记*/
-extern uint16_t Uart1TOL;
-extern uint16_t Uart2TOL;
-extern uint16_t Uart3TOL;
-extern uint16_t Uart4TOL;
-
-
 extern OS_EVENT    *KeyQueueHead;             		//按键消息队列指针
 extern void        *KeyMsg[KEYQSIZE]; 		   		//按键消息指针数组 
 
@@ -269,11 +262,6 @@ void TIMER2_IRQHandler(void)
 	//printf("zhongduan: %d %d\n", LPC_TIM2->IR, TIM_MR0_INT );
 	if (TIM_GetIntStatus(LPC_TIM2, TIM_MR0_INT)== SET)
 	{
-		Uart0TOL+=1;
-		Uart1TOL+=1;
-		Uart2TOL+=1;
-		Uart3TOL+=1;
-		Uart4TOL+=1;
 	   if (times<=1000)	//小于300ms	  
 	   {
 	   		times++;
@@ -341,7 +329,7 @@ void KeyInit(void)
 	TIM_ConfigMatch(LPC_TIM2, &TIM_MatchConfigStruct);
 
 	/* preemption = 1, sub-priority = 1 */
-	NVIC_SetPriority(TIMER2_IRQn, ((0x01<<4)|0x01));
+	NVIC_SetPriority(TIMER2_IRQn, ((0x01<<3)|0x01));
 
 	/* Enable interrupt for timer 0 */
 	NVIC_EnableIRQ(TIMER2_IRQn);

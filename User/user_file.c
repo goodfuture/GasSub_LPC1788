@@ -3,6 +3,9 @@
 #include "stdio.h"
 #include "EquipmentList.h"
 #include "DataStruct.h"
+#include "LPC177x_8x.h"
+
+extern OS_EVENT    *ConfigQueueHead;
 
 void File_Set_Config_Analogue(int* f, Analogue_Config* analogue_conf);
 void File_Get_Config_Analogue(int* f, Analogue_Config* analogue_conf);
@@ -19,38 +22,62 @@ void File_Get_Config_Tristate(int* f, Tristate_Config* tristate_conf);
 /* 调试用：创建空的配置信息结构体 */
 void initConf( Analogue_Config *an, Switch_Config *sw, Accumulate_Config *ac, Tristate_Config *tr )
 {
-    an->testpointNo=111111;
+    an->testpointNo=10001;
     an->sensorName = SENSOR_METHANE;
-    strcpy( an->location, "The location is A.");
-    an->portType = 11;
-    an->outputControl=0x11;
+    strcpy( an->location, "测试报警测试报警测试报警");
+    an->portType = 17;
+    an->outputControl[0]=0x80;
+		an->outputControl[1]=0xff;
     an->coefficient = 1.1;
+	
+		an->outage.minval = VALUE_UNDEF;
+		an->outage.maxval = 70;
+		
+		an->alarm.minval = VALUE_UNDEF;
+		an->alarm.maxval = 70;
+		
+		an->liftAlarm.minval = 70;
+		an->liftAlarm.maxval = VALUE_UNDEF;
+		
+		an->recover.minval = VALUE_UNDEF;
+		an->recover.maxval = 70;
+	
+		an->measureRange.minval = 0;
+		an->measureRange.maxval = 200;
 
-    sw->testpointNo=222222;
+    sw->testpointNo=20002;
     sw->sensorName = SENSOR_2_OPEN_OFF;
-    strcpy( sw->location, "The location is B.");
-    sw->portType = 22;
-    sw->outputControl=0x22;
+    strcpy( sw->location, "科技园");
+    sw->portType = 17;
+    sw->outputControl[0]=0x20;
+		sw->outputControl[1]=0xff;
 
-    ac->testpointNo=333333;
+    ac->testpointNo=30003;
     ac->sensorName = SENSOR_HOOK_NUM;
-    strcpy( ac->location, "The location is C.");
-    ac->portType = 33;
+    strcpy( ac->location, "中船重工环境");
+    ac->portType = 24;
     ac->coefficient = 3.3;
+		ac->shift = 3;
+		ac->measureMaxVal = 12345;
 
-    tr->testpointNo=444444;
+    tr->testpointNo=40004;
     tr->sensorName = SENSOR_3_OPEN_OFF;
-    strcpy( tr->location, "The location is D.");
-    tr->portType = 44;
-    tr->outputControl=0x44;
+    strcpy( tr->location, "123468afsdfasd");
+    tr->portType = 36;
+    tr->outputControl[0]=0x08;
+		tr->outputControl[1]=0xff;
+		tr->current[0] = 0;
+		tr->current[1] = 1;
+		tr->current[2] = 5;
 
     return;
 }
 
-void File_Create(void)
+void File_Create_TpConfig(Config_Struct* rev_config)
 {
 		int f;
-		char buf[BUFFERSIZE];
+		//char buf[BUFFERSIZE];
+	
 		Analogue_Config     analogue_conf;
 		Switch_Config       switch_conf;
 		Accumulate_Config   accumulate_conf;
@@ -61,16 +88,47 @@ void File_Create(void)
 		f = yaffs_open( "/nand/config/TestpointConfig",  O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
 		if ( f >= 0 )
 		{
+				printf("InfileCre: %u %u\n",rev_config->analogueConfig.testpointNo, rev_config->analogueConfig.sensorName );
+	/*			
+				File_Set_Config_Analogue( &f, &rev_config->analogueConfig );
+				File_Set_Config_Switch( &f, &rev_config->switchConfig );
+				File_Set_Config_Accumulate( &f, &rev_config->accumulateConfig );
+				File_Set_Config_Tristate( &f, &rev_config->tristateConfig );
+	*/		
+				
 				File_Set_Config_Analogue( &f, &analogue_conf );
 				File_Set_Config_Switch( &f, &switch_conf );
 				File_Set_Config_Accumulate( &f, &accumulate_conf );
 				File_Set_Config_Tristate( &f, &tristate_conf );
-/*				
-				memset(buf, '\0', sizeof(buf));
-				sprintf( buf, "%s", "end." );
-				buf[BUFFERSIZE-1] = '\n';
-				n = yaffs_write(f, buf, BUFFERSIZE );
-*/			
+				
+				File_Set_Config_Analogue( &f, &analogue_conf );
+				File_Set_Config_Switch( &f, &switch_conf );
+				File_Set_Config_Accumulate( &f, &accumulate_conf );
+				File_Set_Config_Tristate( &f, &tristate_conf );
+				
+				File_Set_Config_Analogue( &f, &analogue_conf );
+				File_Set_Config_Switch( &f, &switch_conf );
+				File_Set_Config_Accumulate( &f, &accumulate_conf );
+				File_Set_Config_Tristate( &f, &tristate_conf );
+				
+				File_Set_Config_Analogue( &f, &analogue_conf );
+				File_Set_Config_Switch( &f, &switch_conf );
+				File_Set_Config_Accumulate( &f, &accumulate_conf );
+				File_Set_Config_Tristate( &f, &tristate_conf );
+			
+				yaffs_close(f);
+		}
+		return;
+}
+
+void File_Create_SubstationConfig()
+{
+		int f;
+		//char buf[BUFFERSIZE];
+	
+		f = yaffs_open( "/nand/config/SubstationConfig",  O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
+		if ( f >= 0 )
+		{			
 				yaffs_close(f);
 		}
 		return;
@@ -81,9 +139,88 @@ void File_Update(void)
 		return;
 }
 
+/*************************************************
+
+ 		检查测点配置文件是否存在，如不存在则创建一个
+
+**************************************************/
+
+void File_TpConfig_Exist()
+{
+		int f;
+	
+		f = yaffs_open("/nand/config/TestpointConfig", O_RDONLY, 0 );    //检查测点配置文件是否存在
+		if (f >= 0)
+		{
+			 printf("Open Success! Testpoint Config Exist!\n");
+		}
+		else 																															//如果不存在，创建一个
+		{
+			 f = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
+			 if ( f >= 0 )
+					printf("Create Success! Testpoint Config doesn't exist!\n");
+		}
+		yaffs_close(f);
+
+		return;
+}
+
+/*************************************************
+
+ 		检查分站配置文件是否存在，如不存在则创建一个
+
+**************************************************/
+
+void File_SubstationConfig_Exist()
+{
+		int f;
+	
+		f = yaffs_open("/nand/config/SubstationConfig", O_RDONLY, 0 );    //检查测点配置文件是否存在
+		if (f >= 0)
+		{
+			 printf("Open Success! Substation Config Exist!\n");
+		}
+		else 																															//如果不存在，创建一个
+		{
+			 f = yaffs_open( "/nand/config/SubstationConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
+			 if ( f >= 0 )
+					printf("Create Success! Substation Config doesn't exist!\n");
+		}
+		yaffs_close(f);
+
+		return;
+}
+
+/*************************************************
+
+ 		检查上传数据文件是否存在，如不存在则创建一个
+
+**************************************************/
+
+void File_Data_Exist()
+{
+		int f;
+	
+		f = yaffs_open("/nand/data/SensorData", O_RDONLY, 0 );    //检查测点配置文件是否存在
+		if (f >= 0)
+		{
+			 printf("Open Success! Sensor Data Exist!\n");
+		}
+		else 																															//如果不存在，创建一个
+		{
+			 f = yaffs_open( "/nand/data/SensorData",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
+			 if ( f >= 0 )
+					printf("Create Success! Sensor Data doesn't exist!\n");
+		}
+		yaffs_close(f);
+
+		return;
+}
+
 /**************************************
 
-						初始化配置文件
+						 初始化文件
+						建立主要文件
 
 ***************************************/
 
@@ -95,39 +232,48 @@ void File_Init(void)
     
 		f1 = yaffs_open("nand/first_start", O_RDONLY, 0 );
 	  if ( f1 >= 0 )    //不是第一次启动文件系统 
-		{			
-				f2 = yaffs_open("/nand/config/TestpointConfig", O_RDONLY, 0 );    //检查配置文件是否存在
-				if (f2 >= 0)
-				{
-					 printf("Open Success! Config Exist!\n");
-				}
-				else 																															//如果不存在，创建一个
-				{
-					 f2 = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
-					 if ( f2 >= 0 )
-							printf("Create Success! Config doesn't exist!\n");
-				}
+		{
+				printf("first_start open success!\n");
+				File_TpConfig_Exist();
+				//File_SubstationConfig_Exist();
+				//File_Data_Exist();
 		}
-		else             //第一次启动文件系统
+		else              //第一次启动文件系统
  	  {
+			  yaffs_unmount("/nand");
 				yaffs_format("/nand", 0, 0, 0);           //格式化
 				yaffs_mount("/nand");											//挂载
-				yaffs_mkdir("/nand/config", 0666);				//创建目录
+				yaffs_mkdir("/nand/config", 0666);				//创建配置文件目录
+				yaffs_mkdir("/nand/data", 0666);					//创建上传数据目录
 				
 				f1 = yaffs_open( "/nand/first_start",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
 				if ( f1 >= 0 )
 				{
-						printf("Format success!\n");
+						printf("first_start create success!\n");
 				}
-			
-				f2 = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
-				
+/*			
+				f2 = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );			
 				if ( f2 >= 0 )
-						printf("Create Success!\n");
+				{
+						printf("Testpoint Config Create Success!\n");
+						yaffs_close(f2);
+				}
+				
+				f2 = yaffs_open( "/nand/config/SubstationConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );			
+				if ( f2 >= 0 )
+				{
+						printf("Substation Config Create Success!\n");
+						yaffs_close(f2);
+				}
+				
+				f2 = yaffs_open( "/nand/data/SensorData",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );			
+				if ( f2 >= 0 )
+				{
+						printf("SensorData Create Success!\n");
+						yaffs_close(f2);
+				}
+				*/
 		}
-		yaffs_close(f2);
-		
-		File_Create();
 		
 		yaffs_close(f1);
 				
@@ -261,6 +407,11 @@ void File_Set_Config_Accumulate(int* f, Accumulate_Config* accumulate_conf)
 		sprintf( buf, "%.3f", accumulate_conf->coefficient );
 		buf[BUFFERSIZE-1] = '\n';
 		n = yaffs_write((*f), buf, BUFFERSIZE );
+		
+		memset(buf, '\0', sizeof(buf));	
+		sprintf( buf, "%d", accumulate_conf->shift );
+		buf[BUFFERSIZE-1] = '\n';
+		n = yaffs_write((*f), buf, BUFFERSIZE );
 
 		return;
 }
@@ -292,7 +443,7 @@ void File_Set_Config_Tristate(int* f, Tristate_Config* tristate_conf)
 		n = yaffs_write((*f), buf, BUFFERSIZE );
 		
 		memset(buf, '\0', sizeof(buf));
-		sprintf( buf, "%d %d", tristate_conf->correctRange.minval, tristate_conf->correctRange.maxval );
+		sprintf( buf, "%d %d %d", tristate_conf->current[0], tristate_conf->current[1], tristate_conf->current[2] );
 		buf[BUFFERSIZE-1] = '\n';
 		n = yaffs_write((*f), buf, BUFFERSIZE );
 		
@@ -419,6 +570,10 @@ void File_Get_Config_Accumulate(int* f, Accumulate_Config* accumulate_conf)
 		memset(buf, '\0', sizeof(buf));
 		n = yaffs_read( (*f), buf, BUFFERSIZE );
 		sscanf( buf, "%f", &accumulate_conf->coefficient );
+	
+		memset(buf, '\0', sizeof(buf));
+		n = yaffs_read( (*f), buf, BUFFERSIZE );
+		sscanf( buf, "%d", &accumulate_conf->shift );
 
 		return;
 }
@@ -444,11 +599,30 @@ void File_Get_Config_Tristate(int* f, Tristate_Config* tristate_conf)
 		
 		memset(buf, '\0', sizeof(buf));
 		n = yaffs_read( (*f), buf, BUFFERSIZE );
-		sscanf( buf, "%d %d", &tristate_conf->correctRange.minval, &tristate_conf->correctRange.maxval );		
+		sscanf( buf, "%d %d %d", &tristate_conf->current[0], &tristate_conf->current[1], &tristate_conf->current[2] );
 		
 		memset(buf, '\0', sizeof(buf));
 		n = yaffs_read( (*f), buf, BUFFERSIZE );
 		sscanf( buf, "%d", &tristate_conf->outputControl );
 	
 		return;
+}
+
+/**************************************************
+
+						接收文件任务
+
+***************************************************/
+
+void FileReceive_Task (void) 
+{
+		INT8U err;
+		Config_Struct *revConf;
+		
+		while (1)
+		{
+				revConf=(Config_Struct *)OSQPend(ConfigQueueHead, 0, &err);
+				File_Create_TpConfig( revConf );
+				NVIC_SystemReset();
+		}
 }

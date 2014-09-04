@@ -8,42 +8,24 @@
 #include "Sensor.h"
 #include "com_uart.h"
 #include "DataStruct.h"
+#include "Sensor_Operation.h"
 
 
-extern OS_EVENT *EquipmentTaskSem;
-
+extern OS_EVENT *EquipmentTaskSem;				//¿ØÖÆÉè±¸±íÈÎÎñ½¨Á¢Ë³Ðò
+extern OS_EVENT *UploadQueueHead;        	//ÉÏ´«ÐÅÏ¢ÏûÏ¢¶ÓÁÐ
 
 Testpoint* EquipmentList = NULL;           //Éè±¸±íÍ·Ö¸Õë
 
 extern RcvStruct  uart1RcvInfo;     //´®¿Ú½ÓÊÕÊý¾Ý
 extern OS_EVENT  *UartRcvTaskSem;   //´®¿Ú»º³åÇø»¥³âËø
-extern INT8U      uart1RcvOK;
+extern INT8U      uart1RcvOK;				//´®¿Ú1½ÓÊÜÊý¾Ý³É¹¦
 
-extern INT32U Uart1LostCnt;
+extern INT32U Uart1LostCnt; 				//´®¿Ú1¶ªÊ§Êý¾Ý´ÎÊý
 
 //extern INT8U  isUploading;
 
-
-extern void setConfig_Analogue( void* dest, void* src );
-extern void setConfig_Switch( void* dest, void* src );
-extern void setConfig_Accumulate( void* dest, void* src );
-extern void setConfig_Tristate( void* dest, void* src );
-
-extern void uploadData( Upload_Info *data );
-
-extern void setUpload(Upload_Info *dest, Upload_Info *src);
-
-extern Upload_Info getUploadInfo(Upload_Info src);
-
-extern TestpointShowInfo getShowInfo_Analogue(Testpoint *tp);
-extern TestpointShowInfo getShowInfo_Switch(Testpoint *tp);
-extern TestpointShowInfo getShowInfo_Accumulate(Testpoint *tp);
-extern TestpointShowInfo getShowInfo_Tristate(Testpoint *tp);
-
-extern void showAllInfo(Testpoint *tp);
-
-
-
+/* ´ÓÎÄ¼þÖÐ»ñÈ¡ÅäÖÃ */
+extern void File_Create_TpConfig(void);
 extern void File_Get_Config_Analogue(int* f, Analogue_Config* analogue_conf);
 extern void File_Get_Config_Switch(int* f, Switch_Config* switch_conf);
 extern void File_Get_Config_Accumulate(int* f, Accumulate_Config* accumulate_conf);
@@ -63,7 +45,7 @@ Upload_Info Upload_NULL = { 0, "\0", 0, 0 };
 
 void initTestpoint( Testpoint* thisp, INT16U sensorName, void *config )
 {
-    thisp->prev = NULL;
+    //thisp->prev = NULL;
     thisp->next = NULL;
     thisp->EquipmentType = sensorName;
 		thisp->EquipmentSem = OSSemCreate(1);
@@ -81,30 +63,81 @@ void initTestpoint( Testpoint* thisp, INT16U sensorName, void *config )
             thisp->config = malloc( sizeof(Analogue_Config) );
             thisp->setConfig = &setConfig_Analogue;						            
 						thisp->getShowInfo = &getShowInfo_Analogue;
+						thisp->upload.testpointNo = ((Analogue_Config*)config)->testpointNo;
+						thisp->getDataFromUart = &getDataFromUart_Analogue;
+						thisp->ifAlarm = &ifAlarm_Analogue;
+						thisp->ifLiftAlarm = &ifLiftAlarm_Analogue;
+						
+						thisp->ifOutput = &ifOutput_Analogue;
+						thisp->controlOutput = &controlOutput_Analogue;
+				
+						thisp->ifRecover = &ifRecover_Analogue;
+						thisp->controlRecover = &controlRecover_Analogue;
+						
             break;
 
         case SENSOR_SWITCH:
             thisp->config = malloc( sizeof(Switch_Config) );
             thisp->setConfig = &setConfig_Switch;
 						thisp->getShowInfo = &getShowInfo_Switch;
+						thisp->upload.testpointNo = ((Switch_Config*)config)->testpointNo;
+						thisp->getDataFromUart = &getDataFromUart_Switch;
+						thisp->ifAlarm = &ifAlarm_Switch;
+						thisp->ifLiftAlarm = &ifLiftAlarm_Switch;
+						
+						thisp->ifOutput = &ifOutput_Switch;
+						thisp->controlOutput = &controlOutput_Switch;
+				
+						thisp->ifRecover = &ifRecover_Switch;
+						thisp->controlRecover = &controlRecover_Switch;
+				
             break;
 
         case SENSOR_ACCUMULATE:
             thisp->config = malloc( sizeof(Accumulate_Config) );
             thisp->setConfig = &setConfig_Accumulate;
 						thisp->getShowInfo = &getShowInfo_Accumulate;
-            break;
+						thisp->upload.testpointNo = ((Accumulate_Config*)config)->testpointNo;
+						thisp->getDataFromUart = &getDataFromUart_Accumulate;
+						thisp->ifAlarm = &ifAlarm_Accumulate;
+						thisp->ifLiftAlarm = &ifLiftAlarm_Accumulate;
+				
+						thisp->ifOutput = &ifOutput_Accumulate;
+						thisp->controlOutput = &controlOutput_Accumulate;
+						
+						thisp->ifRecover = &ifRecover_Accumulate;
+						thisp->controlRecover = &controlRecover_Accumulate;
+				
+						break;
 
         case SENSOR_TRISTATE:
             thisp->config = malloc( sizeof(Tristate_Config) );
             thisp->setConfig = &setConfig_Tristate;
 						thisp->getShowInfo = &getShowInfo_Tristate;
-            break;
+						thisp->upload.testpointNo = ((Tristate_Config*)config)->testpointNo;
+            thisp->getDataFromUart = &getDataFromUart_Tristate;
+						thisp->ifAlarm = &ifAlarm_Tristate;
+						thisp->ifLiftAlarm = &ifLiftAlarm_Tristate;
+				
+						thisp->ifOutput = &ifOutput_Tristate;
+						thisp->controlOutput = &controlOutput_Tristate;
+				
+						thisp->ifRecover = &ifRecover_Tristate;
+						thisp->controlRecover = &controlRecover_Tristate;
+				
+						break;
 
         default:
             thisp->config = NULL;
             thisp->setConfig = NULL;
 						thisp->getShowInfo = NULL;
+						thisp->getDataFromUart = NULL;
+						thisp->ifAlarm = NULL;
+						thisp->ifOutput = NULL;
+						thisp->controlOutput = NULL;
+						thisp->ifRecover = NULL;
+						thisp->controlRecover = NULL;
+				
             break;
     }
 
@@ -131,12 +164,16 @@ void AddEquipment( Testpoint* head, Testpoint* equipment )
     Testpoint* phead = head->next;
 
     equipment->next = head->next;
+	
+	/*
     if ( phead != NULL )
     {
         phead->prev = equipment;
     }
 
     equipment->prev = head;
+	*/
+	
     head->next = equipment;
     return;
 }
@@ -164,10 +201,13 @@ void DeleteEquipment(Testpoint* head, Testpoint *equipment)    //´ÓÉè±¸±íÖÐÉ¾³ýÉ
     if ( pList == NULL ) return;
 
     pList->next = equipment->next;
-    if ( pNext != NULL )
+    
+		/*
+		if ( pNext != NULL )
     {
         pNext->prev = pList;
     }
+		*/
 
     free(equipment);
     return;
@@ -187,13 +227,18 @@ BOOLEAN InitEquipmentList()
     EquipmentList = (Testpoint *)malloc(sizeof(Testpoint));
 		if ( EquipmentList == NULL ) return FALSE;
 		
-    EquipmentList->prev = NULL;
+    //EquipmentList->prev = NULL;
     EquipmentList->next = NULL;
     EquipmentList->EquipmentType = 0;      // the number of testpoints
 
     EquipmentList->config = (char*)malloc(sizeof(str));
     strcpy( EquipmentList->config, str );
     return TRUE;
+}
+
+int Tp_GetConfig_()
+{
+		return 0;
 }
 
 //²âÊÔÓÃ£¬´ýÐÞ¸Ä
@@ -233,8 +278,11 @@ void UpdateEquipmentList()
 				while ( pList != NULL )
 				{
 						OSSemPend( pList->EquipmentSem , 0, &err );
-						
-						pList->upload.collectData = rcvTemp.AD[i];
+												
+						pList->getDataFromUart( &rcvTemp, pList );
+						//pList->upload.sensorState = 11;
+						//strcpy( pList->upload.collectTime, "2014-8-24" );						
+						OSQPost( UploadQueueHead, &pList->upload );
 /*						
 						if ( isUploading == 0 )
 						{
@@ -274,6 +322,7 @@ void UpdateEquipmentList()
 
 void Read_ConfigFile()
 {
+		INT8U err;
 		int n;
 		int f;
 		INT32U sensor_type;
@@ -284,7 +333,7 @@ void Read_ConfigFile()
 		Switch_Config       switch_conf;
 		Accumulate_Config   accumulate_conf;
 		Tristate_Config     tristate_conf;
-	
+		
 		f = yaffs_open("/nand/config/TestpointConfig", O_RDONLY , 0 );
 		printf( "EquipInit F = %d\n", f );
 	
@@ -293,7 +342,6 @@ void Read_ConfigFile()
 				while ( ( n = yaffs_read( f, buf, 64 ) ) != 0 )
 				{
 						testP = (Testpoint *)malloc( sizeof(Testpoint) );
-						printf( "buf=[%s], ", buf );
 						sscanf( buf, "Type: %d", &sensor_type );
 						printf("Type=%d\n", sensor_type);
 						switch( sensor_type )
@@ -332,7 +380,7 @@ void Read_ConfigFile()
 						}
 				}
 				
-				
+				yaffs_close(f);
 		}
 		
 		return;
@@ -355,7 +403,7 @@ void Equipment_Task (void)
 		while (1)
 		{
 				UpdateEquipmentList();
-				OSTimeDly(1000);
+				OSTimeDly(2000);
 		}
 }
 
