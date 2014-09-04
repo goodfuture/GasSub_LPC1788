@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\ARM项目\LPC1788控制端_LPC1788\demo\ucGUI移植版本\17882_08_23\1788\uc1788\project\uc1788.uvproj
+Project File Date:  08/30/2014
+
+<h2>Output:</h2>
+Build target 'FLASH'
+compiling mbrtu_m.c...
+..\..\FreeModbus\modbus\rtu\mbrtu_m.c(167): warning:  #223-D: function "assert_param" declared implicitly
+..\..\FreeModbus\modbus\rtu\mbrtu_m.c(243): warning:  #223-D: function "assert_param" declared implicitly
+..\..\FreeModbus\modbus\rtu\mbrtu_m.c(309): warning:  #223-D: function "assert_param" declared implicitly
+..\..\FreeModbus\modbus\rtu\mbrtu_m.c(376): warning:  #223-D: function "assert_param" declared implicitly
+..\..\FreeModbus\modbus\rtu\mbrtu_m.c(396): warning:  #223-D: function "assert_param" declared implicitly
+compiling portevent_m.c...
+..\..\FreeModbus\port\portevent_m.c(39): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(48): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(68): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(119): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(148): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(149): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(156): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(188): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(211): error:  #20: identifier "u8" is undefined
+..\..\FreeModbus\port\portevent_m.c(267): error:  #20: identifier "u8" is undefined
+compiling portserial_m.c...
+..\..\FreeModbus\port\portserial_m.c(176): warning:  #550-D: variable "rs485cfg" was set but never used
+..\..\FreeModbus\port\portserial_m.c(412): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(448): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(483): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(518): warning:  #550-D: variable "lineStatus" was set but never used
+compiling mb_m.c...
+"..\FLASH_obj\uc1788.axf" - 10 Errors, 10 Warning(s).
+Target not created
+Build target 'FLASH'
+compiling portevent_m.c...
+linking...
+..\FLASH_obj\uc1788.axf: Error: L6218E: Undefined symbol prveMBError2Exception (referred from mbfunccoils_m.o).
+..\FLASH_obj\uc1788.axf: Error: L6218E: Undefined symbol assert_param (referred from mbrtu_m.o).
+..\FLASH_obj\uc1788.axf: Error: L6218E: Undefined symbol usMBCRC16 (referred from mbrtu_m.o).
+..\FLASH_obj\uc1788.axf: Error: L6218E: Undefined symbol xMBUtilGetBits (referred from user_mb_app_m.o).
+..\FLASH_obj\uc1788.axf: Error: L6218E: Undefined symbol xMBUtilSetBits (referred from user_mb_app_m.o).
+..\FLASH_obj\uc1788.axf: Error: L6218E: Undefined symbol eMBFuncReportSlaveID (referred from mb_m.o).
+..\FLASH_obj\uc1788.axf: Error: L6218E: Undefined symbol vMBMasterCBRequestScuuess (referred from mb_m.o).
+"..\FLASH_obj\uc1788.axf" - 7 Errors, 0 Warning(s).
+Target not created

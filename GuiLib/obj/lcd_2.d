@@ -1,0 +1,12 @@
+..\obj\lcd_2.o: ..\GUI\MultiLayer\LCD_2.c
+..\obj\lcd_2.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+..\obj\lcd_2.o: ..\GUI\Core\LCD_Private.h
+..\obj\lcd_2.o: ..\GUI\Core\LCD_ConfDefaults.h
+..\obj\lcd_2.o: ..\Config\LCDConf.h
+..\obj\lcd_2.o: ..\GUI\Core\GUI_ConfDefaults.h
+..\obj\lcd_2.o: ..\Config\GUIConf.h
+..\obj\lcd_2.o: ..\GUI\Core\LCD_Protected.h
+..\obj\lcd_2.o: ..\GUI\Core\LCD.h
+..\obj\lcd_2.o: ..\GUI\Core\GUI.h
+..\obj\lcd_2.o: ..\GUI\Core\GUIType.h
+..\obj\lcd_2.o: ..\GUI\Core\GUIVersion.h

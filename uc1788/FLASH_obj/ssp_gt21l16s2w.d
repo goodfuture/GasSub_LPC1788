@@ -1,0 +1,11 @@
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\BoardSupport\SSP_GT21L16S2W.c
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\LPC177x_8xLib\inc\lpc_types.h
+..\flash_obj\ssp_gt21l16s2w.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\BoardSupport\SSP_GT21L16S2W.h
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\LPC177x_8xLib\inc\LPC177x_8x_ssp.h
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cm3.h
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmInstr.h
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h
+..\flash_obj\ssp_gt21l16s2w.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_gpio.h

@@ -1,0 +1,12 @@
+..\sdram_obj\ssp_m25p128.o: ..\..\BoardSupport\SSP_M25P128.c
+..\sdram_obj\ssp_m25p128.o: ..\..\BoardSupport\SSP_M25P128.h
+..\sdram_obj\ssp_m25p128.o: ..\..\LPC177x_8xLib\inc\lpc_types.h
+..\sdram_obj\ssp_m25p128.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\sdram_obj\ssp_m25p128.o: ..\..\LPC177x_8xLib\inc\LPC177x_8x_ssp.h
+..\sdram_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h
+..\sdram_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cm3.h
+..\sdram_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmInstr.h
+..\sdram_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h
+..\sdram_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h
+..\sdram_obj\ssp_m25p128.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_gpio.h
+..\sdram_obj\ssp_m25p128.o: ..\..\BoardSupport\Gpioconfig.h

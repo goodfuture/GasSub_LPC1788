@@ -1,0 +1,12 @@
+..\flash_obj\lpc177x_8x_timer.o: ..\..\LPC177x_8xLib\src\lpc177x_8x_timer.c
+..\flash_obj\lpc177x_8x_timer.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_libcfg_default.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\LPC177x_8xLib\inc\lpc_types.h
+..\flash_obj\lpc177x_8x_timer.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_timer.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cm3.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmInstr.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_clkpwr.h
+..\flash_obj\lpc177x_8x_timer.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_pinsel.h

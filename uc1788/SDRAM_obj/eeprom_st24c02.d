@@ -1,0 +1,13 @@
+..\sdram_obj\eeprom_st24c02.o: ..\..\BoardSupport\eeprom_st24c02.c
+..\sdram_obj\eeprom_st24c02.o: ..\..\BoardSupport\eeprom_st24c02.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_i2c.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cm3.h
+..\sdram_obj\eeprom_st24c02.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmInstr.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\LPC177x_8xLib\inc\lpc_types.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\User\DataStruct.h
+..\sdram_obj\eeprom_st24c02.o: ..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h
+..\sdram_obj\eeprom_st24c02.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h

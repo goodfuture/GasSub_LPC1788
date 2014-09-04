@@ -1,0 +1,13 @@
+..\obj\guidev_usage.o: ..\GUI\MemDev\GUIDEV_Usage.c
+..\obj\guidev_usage.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+..\obj\guidev_usage.o: ..\GUI\Core\GUI_Protected.h
+..\obj\guidev_usage.o: ..\GUI\Core\GUI.h
+..\obj\guidev_usage.o: ..\GUI\Core\GUI_ConfDefaults.h
+..\obj\guidev_usage.o: ..\Config\GUIConf.h
+..\obj\guidev_usage.o: ..\GUI\Core\GUIType.h
+..\obj\guidev_usage.o: ..\GUI\Core\LCD.h
+..\obj\guidev_usage.o: ..\GUI\Core\GUIVersion.h
+..\obj\guidev_usage.o: ..\GUI\Core\LCD_Protected.h
+..\obj\guidev_usage.o: ..\GUI\Core\GUIDebug.h
+..\obj\guidev_usage.o: ..\GUI\Core\GUI_X.h
+..\obj\guidev_usage.o: ..\GUI\WM\WM_GUI.h

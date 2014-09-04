@@ -1,0 +1,17 @@
+..\obj\jdcolor.o: ..\GUI\JPEG\jdcolor.c
+..\obj\jdcolor.o: ..\GUI\JPEG\jinclude.h
+..\obj\jdcolor.o: ..\GUI\JPEG\jconfig.h
+..\obj\jdcolor.o: ..\GUI\Core\GUI.h
+..\obj\jdcolor.o: ..\GUI\Core\GUI_ConfDefaults.h
+..\obj\jdcolor.o: ..\Config\GUIConf.h
+..\obj\jdcolor.o: ..\GUI\Core\GUIType.h
+..\obj\jdcolor.o: ..\GUI\Core\LCD.h
+..\obj\jdcolor.o: ..\GUI\Core\GUIVersion.h
+..\obj\jdcolor.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+..\obj\jdcolor.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\obj\jdcolor.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\jdcolor.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+..\obj\jdcolor.o: ..\GUI\JPEG\jpeglib.h
+..\obj\jdcolor.o: ..\GUI\JPEG\jmorecfg.h
+..\obj\jdcolor.o: ..\GUI\JPEG\jpegint.h
+..\obj\jdcolor.o: ..\GUI\JPEG\jerror.h

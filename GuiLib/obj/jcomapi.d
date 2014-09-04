@@ -1,0 +1,17 @@
+..\obj\jcomapi.o: ..\GUI\JPEG\jcomapi.c
+..\obj\jcomapi.o: ..\GUI\JPEG\jinclude.h
+..\obj\jcomapi.o: ..\GUI\JPEG\jconfig.h
+..\obj\jcomapi.o: ..\GUI\Core\GUI.h
+..\obj\jcomapi.o: ..\GUI\Core\GUI_ConfDefaults.h
+..\obj\jcomapi.o: ..\Config\GUIConf.h
+..\obj\jcomapi.o: ..\GUI\Core\GUIType.h
+..\obj\jcomapi.o: ..\GUI\Core\LCD.h
+..\obj\jcomapi.o: ..\GUI\Core\GUIVersion.h
+..\obj\jcomapi.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+..\obj\jcomapi.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\obj\jcomapi.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\jcomapi.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+..\obj\jcomapi.o: ..\GUI\JPEG\jpeglib.h
+..\obj\jcomapi.o: ..\GUI\JPEG\jmorecfg.h
+..\obj\jcomapi.o: ..\GUI\JPEG\jpegint.h
+..\obj\jcomapi.o: ..\GUI\JPEG\jerror.h

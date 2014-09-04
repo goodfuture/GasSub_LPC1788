@@ -1,0 +1,10 @@
+..\sdram_obj\sensor_operation.o: ..\..\Task\Sensor_Operation.c
+..\sdram_obj\sensor_operation.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\sdram_obj\sensor_operation.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\sdram_obj\sensor_operation.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
+..\sdram_obj\sensor_operation.o: ..\..\Task\EquipmentList.h
+..\sdram_obj\sensor_operation.o: ..\..\Task\Sensor.h
+..\sdram_obj\sensor_operation.o: ..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h
+..\sdram_obj\sensor_operation.o: ..\..\uCOS-II\Source\ucos_ii.h
+..\sdram_obj\sensor_operation.o: ..\..\Config\app_cfg.h
+..\sdram_obj\sensor_operation.o: ..\..\Config\os_cfg.h

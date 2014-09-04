@@ -1,0 +1,14 @@
+..\flash_obj\nand_test.o: ..\App\nand_test.c
+..\flash_obj\nand_test.o: ..\..\BoardSupport\nandflash_k9f4g08u0b.h
+..\flash_obj\nand_test.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_emc.h
+..\flash_obj\nand_test.o: ..\..\LPC177x_8xLib\inc\lpc_types.h
+..\flash_obj\nand_test.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\flash_obj\nand_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h
+..\flash_obj\nand_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cm3.h
+..\flash_obj\nand_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmInstr.h
+..\flash_obj\nand_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h
+..\flash_obj\nand_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h
+..\flash_obj\nand_test.o: ..\..\BoardSupport\bsp.h
+..\flash_obj\nand_test.o: ..\..\BoardSupport\norflash_sst39vf1601.h
+..\flash_obj\nand_test.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\flash_obj\nand_test.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h

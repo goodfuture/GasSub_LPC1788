@@ -1,0 +1,9 @@
+..\flash_obj\emac_test.o: ..\App\emac_test.c
+..\flash_obj\emac_test.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_emac.h
+..\flash_obj\emac_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h
+..\flash_obj\emac_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cm3.h
+..\flash_obj\emac_test.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\flash_obj\emac_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmInstr.h
+..\flash_obj\emac_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h
+..\flash_obj\emac_test.o: ..\..\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h
+..\flash_obj\emac_test.o: ..\..\LPC177x_8xLib\inc\lpc_types.h

@@ -1,0 +1,17 @@
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffs_checkptrw.c
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffs_checkptrw.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffs_guts.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yportenv.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\ydirectenv.h
+..\flash_obj\yaffs_checkptrw.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\flash_obj\yaffs_checkptrw.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\flash_obj\yaffs_checkptrw.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffs_osglue.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yportenv.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffs_hweight.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffscfg.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffs_list.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffsfs.h
+..\flash_obj\yaffs_checkptrw.o: D:\Keil\ARM\ARMCC\bin\..\include\errno.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffs_getblockinfo.h
+..\flash_obj\yaffs_checkptrw.o: ..\..\YAFFS2\yaffs_trace.h

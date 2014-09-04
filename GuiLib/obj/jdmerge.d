@@ -1,0 +1,17 @@
+..\obj\jdmerge.o: ..\GUI\JPEG\jdmerge.c
+..\obj\jdmerge.o: ..\GUI\JPEG\jinclude.h
+..\obj\jdmerge.o: ..\GUI\JPEG\jconfig.h
+..\obj\jdmerge.o: ..\GUI\Core\GUI.h
+..\obj\jdmerge.o: ..\GUI\Core\GUI_ConfDefaults.h
+..\obj\jdmerge.o: ..\Config\GUIConf.h
+..\obj\jdmerge.o: ..\GUI\Core\GUIType.h
+..\obj\jdmerge.o: ..\GUI\Core\LCD.h
+..\obj\jdmerge.o: ..\GUI\Core\GUIVersion.h
+..\obj\jdmerge.o: C:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+..\obj\jdmerge.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\obj\jdmerge.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\jdmerge.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+..\obj\jdmerge.o: ..\GUI\JPEG\jpeglib.h
+..\obj\jdmerge.o: ..\GUI\JPEG\jmorecfg.h
+..\obj\jdmerge.o: ..\GUI\JPEG\jpegint.h
+..\obj\jdmerge.o: ..\GUI\JPEG\jerror.h

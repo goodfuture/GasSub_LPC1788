@@ -1,0 +1,12 @@
+..\flash_obj\ssp_m25p128.o: ..\..\BoardSupport\SSP_M25P128.c
+..\flash_obj\ssp_m25p128.o: ..\..\BoardSupport\SSP_M25P128.h
+..\flash_obj\ssp_m25p128.o: ..\..\LPC177x_8xLib\inc\lpc_types.h
+..\flash_obj\ssp_m25p128.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\flash_obj\ssp_m25p128.o: ..\..\LPC177x_8xLib\inc\LPC177x_8x_ssp.h
+..\flash_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h
+..\flash_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cm3.h
+..\flash_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmInstr.h
+..\flash_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h
+..\flash_obj\ssp_m25p128.o: ..\..\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h
+..\flash_obj\ssp_m25p128.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_gpio.h
+..\flash_obj\ssp_m25p128.o: ..\..\BoardSupport\Gpioconfig.h

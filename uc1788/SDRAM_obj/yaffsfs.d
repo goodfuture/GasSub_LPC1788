@@ -1,0 +1,17 @@
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffsfs.c
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffsfs.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffscfg.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yportenv.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\ydirectenv.h
+..\sdram_obj\yaffsfs.o: C:\Keil\ARM\RV31\INC\stdlib.h
+..\sdram_obj\yaffsfs.o: C:\Keil\ARM\RV31\INC\stdio.h
+..\sdram_obj\yaffsfs.o: C:\Keil\ARM\RV31\INC\string.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffs_osglue.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yportenv.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffs_hweight.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffscfg.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffs_list.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffsfs.h
+..\sdram_obj\yaffsfs.o: C:\Keil\ARM\ARMCC\bin\..\include\errno.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffs_guts.h
+..\sdram_obj\yaffsfs.o: ..\..\YAFFS2\yaffs_trace.h

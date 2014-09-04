@@ -1,0 +1,15 @@
+..\flash_obj\fs_test.o: ..\..\YAFFS2\fs_test.c
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yaffsfs.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yaffscfg.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yportenv.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\ydirectenv.h
+..\flash_obj\fs_test.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\flash_obj\fs_test.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\flash_obj\fs_test.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yaffs_osglue.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yportenv.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yaffs_hweight.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yaffscfg.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yaffs_list.h
+..\flash_obj\fs_test.o: ..\..\YAFFS2\yaffsfs.h
+..\flash_obj\fs_test.o: D:\Keil\ARM\ARMCC\bin\..\include\errno.h

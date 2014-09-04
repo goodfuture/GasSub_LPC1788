@@ -1,0 +1,12 @@
+..\flash_obj\def.o: ..\..\lwip\core\def.c
+..\flash_obj\def.o: ..\..\lwip\include\lwip/opt.h
+..\flash_obj\def.o: ..\..\lwip\include\lwipopts.h
+..\flash_obj\def.o: ..\..\lwip\include\lwip/debug.h
+..\flash_obj\def.o: ..\..\lwip\include\lwip/arch.h
+..\flash_obj\def.o: ..\..\lwip\include\arch/cc.h
+..\flash_obj\def.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\flash_obj\def.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\flash_obj\def.o: D:\Keil\ARM\ARMCC\bin\..\include\limits.h
+..\flash_obj\def.o: D:\Keil\ARM\ARMCC\bin\..\include\errno.h
+..\flash_obj\def.o: ..\..\lwip\include\lwip/opt.h
+..\flash_obj\def.o: ..\..\lwip\include\lwip/def.h

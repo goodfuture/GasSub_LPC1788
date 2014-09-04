@@ -1,0 +1,10 @@
+..\flash_obj\sensor_operation.o: ..\..\Task\Sensor_Operation.c
+..\flash_obj\sensor_operation.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+..\flash_obj\sensor_operation.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+..\flash_obj\sensor_operation.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
+..\flash_obj\sensor_operation.o: ..\..\Task\EquipmentList.h
+..\flash_obj\sensor_operation.o: ..\..\Task\Sensor.h
+..\flash_obj\sensor_operation.o: ..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h
+..\flash_obj\sensor_operation.o: ..\..\uCOS-II\Source\ucos_ii.h
+..\flash_obj\sensor_operation.o: ..\..\Config\app_cfg.h
+..\flash_obj\sensor_operation.o: ..\..\Config\os_cfg.h
