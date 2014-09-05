@@ -547,10 +547,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>27</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>129</TopLine>
-      <CurrentLine>133</CurrentLine>
+      <TopLine>130</TopLine>
+      <CurrentLine>148</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\CMSISv2p00_LPC177x_8x\src\startup_LPC177x_8x.s</PathWithFileName>
       <FilenameWithoutPath>startup_LPC177x_8x.s</FilenameWithoutPath>
@@ -907,10 +907,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>20</ColumnNumber>
+      <ColumnNumber>14</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>102</TopLine>
-      <CurrentLine>119</CurrentLine>
+      <TopLine>132</TopLine>
+      <CurrentLine>133</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\BoardSupport\com_uart.c</PathWithFileName>
       <FilenameWithoutPath>com_uart.c</FilenameWithoutPath>
@@ -941,8 +941,8 @@
       <Focus>0</Focus>
       <ColumnNumber>28</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>43</TopLine>
+      <CurrentLine>53</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\BoardSupport\eeprom_st24c02.c</PathWithFileName>
       <FilenameWithoutPath>eeprom_st24c02.c</FilenameWithoutPath>
@@ -963,10 +963,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>6</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1760</TopLine>
-      <CurrentLine>1771</CurrentLine>
+      <TopLine>1774</TopLine>
+      <CurrentLine>1777</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\uCOS-II\Source\os_core.c</PathWithFileName>
       <FilenameWithoutPath>os_core.c</FilenameWithoutPath>
@@ -1123,10 +1123,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>24</ColumnNumber>
+      <ColumnNumber>47</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>158</TopLine>
-      <CurrentLine>169</CurrentLine>
+      <TopLine>172</TopLine>
+      <CurrentLine>182</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu_c.c</PathWithFileName>
       <FilenameWithoutPath>os_cpu_c.c</FilenameWithoutPath>
@@ -2369,7 +2369,7 @@
 
   <Group>
     <GroupName>User</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -2381,8 +2381,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>252</TopLine>
-      <CurrentLine>257</CurrentLine>
+      <TopLine>277</TopLine>
+      <CurrentLine>278</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\User\user_key.c</PathWithFileName>
       <FilenameWithoutPath>user_key.c</FilenameWithoutPath>
@@ -2443,10 +2443,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>39</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>214</TopLine>
-      <CurrentLine>227</CurrentLine>
+      <TopLine>177</TopLine>
+      <CurrentLine>187</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\User\user_main.c</PathWithFileName>
       <FilenameWithoutPath>user_main.c</FilenameWithoutPath>
@@ -2475,10 +2475,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>17</ColumnNumber>
+      <ColumnNumber>6</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>448</TopLine>
+      <CurrentLine>462</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\User\user_SetAddr.c</PathWithFileName>
       <FilenameWithoutPath>user_SetAddr.c</FilenameWithoutPath>
@@ -2491,10 +2491,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>45</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>83</TopLine>
-      <CurrentLine>90</CurrentLine>
+      <TopLine>66</TopLine>
+      <CurrentLine>76</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\User\user_SetConnect.c</PathWithFileName>
       <FilenameWithoutPath>user_SetConnect.c</FilenameWithoutPath>
@@ -2509,8 +2509,8 @@
       <Focus>0</Focus>
       <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>15</TopLine>
+      <CurrentLine>25</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\User\user_SetPassword.c</PathWithFileName>
       <FilenameWithoutPath>user_SetPassword.c</FilenameWithoutPath>
@@ -2541,8 +2541,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>85</TopLine>
+      <CurrentLine>95</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\User\user_SetType.c</PathWithFileName>
       <FilenameWithoutPath>user_SetType.c</FilenameWithoutPath>
@@ -2667,10 +2667,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>4</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>170</TopLine>
-      <CurrentLine>176</CurrentLine>
+      <TopLine>144</TopLine>
+      <CurrentLine>154</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\User\user_SaveOption.c</PathWithFileName>
       <FilenameWithoutPath>user_SaveOption.c</FilenameWithoutPath>
@@ -2729,7 +2729,7 @@
 
   <Group>
     <GroupName>Task</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

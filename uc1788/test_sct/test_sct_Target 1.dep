@@ -1,3 +1,0 @@
-Dependencies for Project 'test_sct', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_LPC177x_8x.s)(0x51C7AFB0)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC177x_8x--list .\startup_lpc177x_8x.lst --xref -o .\startup_lpc177x_8x.o --depend .\startup_lpc177x_8x.d)
-F (.\test_sct.c)(0x536795F5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC177x_8x-o .\test_sct.o --omf_browse .\test_sct.crf --depend .\test_sct.d)

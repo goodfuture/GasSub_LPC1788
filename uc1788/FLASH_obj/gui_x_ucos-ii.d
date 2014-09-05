@@ -1,9 +1,0 @@
-..\flash_obj\gui_x_ucos-ii.o: ..\..\GuiLib\user\GUI_X_uCOS-II.c
-..\flash_obj\gui_x_ucos-ii.o: ..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView\OS_CPU.H
-..\flash_obj\gui_x_ucos-ii.o: ..\..\uCOS-II\Source\uCOS_II.H
-..\flash_obj\gui_x_ucos-ii.o: ..\..\Config\app_cfg.h
-..\flash_obj\gui_x_ucos-ii.o: ..\..\Config\os_cfg.h
-..\flash_obj\gui_x_ucos-ii.o: D:\Keil\ARM\ARMCC\bin\..\include\stdio.H
-..\flash_obj\gui_x_ucos-ii.o: ..\..\LPC177x_8xLib\inc\lpc177x_8x_lcd.h
-..\flash_obj\gui_x_ucos-ii.o: ..\..\BoardSupport\sdram_mt48lc8m32lfb5.h
-..\flash_obj\gui_x_ucos-ii.o: ..\..\BoardSupport\bsp.h
