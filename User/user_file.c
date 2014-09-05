@@ -24,7 +24,7 @@ void initConf( Analogue_Config *an, Switch_Config *sw, Accumulate_Config *ac, Tr
 {
     an->testpointNo=10001;
     an->sensorName = SENSOR_METHANE;
-    strcpy( an->location, "测试报警测试报警测试报警");
+    strcpy( an->location, "淮北矿业集团袁店煤矿");
     an->portType = 17;
     an->outputControl[0]=0x80;
 		an->outputControl[1]=0xff;
@@ -47,14 +47,14 @@ void initConf( Analogue_Config *an, Switch_Config *sw, Accumulate_Config *ac, Tr
 
     sw->testpointNo=20002;
     sw->sensorName = SENSOR_2_OPEN_OFF;
-    strcpy( sw->location, "科技园");
+    strcpy( sw->location, "中船重工矿用装备实验室");
     sw->portType = 17;
     sw->outputControl[0]=0x20;
 		sw->outputControl[1]=0xff;
 
     ac->testpointNo=30003;
     ac->sensorName = SENSOR_HOOK_NUM;
-    strcpy( ac->location, "中船重工环境");
+    strcpy( ac->location, "淮北矿业集团朱仙庄煤矿");
     ac->portType = 24;
     ac->coefficient = 3.3;
 		ac->shift = 3;
@@ -62,7 +62,7 @@ void initConf( Analogue_Config *an, Switch_Config *sw, Accumulate_Config *ac, Tr
 
     tr->testpointNo=40004;
     tr->sensorName = SENSOR_3_OPEN_OFF;
-    strcpy( tr->location, "123468afsdfasd");
+    strcpy( tr->location, "淮北创奇监测设备有限公司");
     tr->portType = 36;
     tr->outputControl[0]=0x08;
 		tr->outputControl[1]=0xff;
@@ -85,7 +85,7 @@ void File_Create_TpConfig(Config_Struct* rev_config)
 	
 		initConf( &analogue_conf, &switch_conf, &accumulate_conf, &tristate_conf );
 	
-		f = yaffs_open( "/nand/config/TestpointConfig",  O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
+		f = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT |O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
 		if ( f >= 0 )
 		{
 				printf("InfileCre: %u %u\n",rev_config->analogueConfig.testpointNo, rev_config->analogueConfig.sensorName );
@@ -95,16 +95,30 @@ void File_Create_TpConfig(Config_Struct* rev_config)
 				File_Set_Config_Accumulate( &f, &rev_config->accumulateConfig );
 				File_Set_Config_Tristate( &f, &rev_config->tristateConfig );
 	*/		
-				
+				strcpy( analogue_conf.location, "淮北矿业集团袁店煤矿");
 				File_Set_Config_Analogue( &f, &analogue_conf );
+			strcpy( analogue_conf.location, "中船重工矿用装备实验室");
 				File_Set_Config_Switch( &f, &switch_conf );
+			strcpy( analogue_conf.location, "淮北矿业集团朱仙庄煤矿");
+				File_Set_Config_Accumulate( &f, &accumulate_conf );
+			strcpy( analogue_conf.location, "淮北创奇监测设备有限公司");
+				File_Set_Config_Tristate( &f, &tristate_conf );
+				
+			/**********************************************************************
+			*2014-09-04 刘帅修改，更改安装地点
+			**********************************************************************/
+			
+			strcpy( analogue_conf.location, "四采区832工作面");
+				File_Set_Config_Analogue( &f, &analogue_conf );
+			strcpy(switch_conf.location,"南大巷机电洞室 ");
+				File_Set_Config_Switch( &f, &switch_conf );
+			strcpy(accumulate_conf.location,"二采区811掘进工作面");
 				File_Set_Config_Accumulate( &f, &accumulate_conf );
 				File_Set_Config_Tristate( &f, &tristate_conf );
 				
-				File_Set_Config_Analogue( &f, &analogue_conf );
-				File_Set_Config_Switch( &f, &switch_conf );
-				File_Set_Config_Accumulate( &f, &accumulate_conf );
-				File_Set_Config_Tristate( &f, &tristate_conf );
+			/**********************************************************************
+			*2014-09-04 修改区结束
+			**********************************************************************/	
 				
 				File_Set_Config_Analogue( &f, &analogue_conf );
 				File_Set_Config_Switch( &f, &switch_conf );
@@ -147,20 +161,30 @@ void File_Update(void)
 
 void File_TpConfig_Exist()
 {
-		int f;
-	
-		f = yaffs_open("/nand/config/TestpointConfig", O_RDONLY, 0 );    //检查测点配置文件是否存在
-		if (f >= 0)
-		{
-			 printf("Open Success! Testpoint Config Exist!\n");
-		}
-		else 																															//如果不存在，创建一个
-		{
-			 f = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
-			 if ( f >= 0 )
-					printf("Create Success! Testpoint Config doesn't exist!\n");
-		}
-		yaffs_close(f);
+//		int f;
+//	
+//		f = yaffs_open("/nand/config/TestpointConfig", O_RDONLY, 0 );    //检查测点配置文件是否存在
+//		if (f >= 0)
+//		{
+//			 printf("Open Success! Testpoint Config Exist!\n");
+//		}
+//		else 																															//如果不存在，创建一个
+//		{
+//			 f = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
+//			 if ( f >= 0 )
+//			 {
+//					printf("Create Success! Testpoint Config doesn't exist!\n");
+//			 }
+//		}
+//		yaffs_close(f);
+	/**********************************************************************
+				*2014-09-04 刘帅修改，添加默认配置
+				**********************************************************************/
+				 Config_Struct *revConf;
+				 File_Create_TpConfig( revConf );
+				 /**********************************************************************
+				*2014-09-04 修改区结束
+				**********************************************************************/
 
 		return;
 }
@@ -184,7 +208,8 @@ void File_SubstationConfig_Exist()
 		{
 			 f = yaffs_open( "/nand/config/SubstationConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
 			 if ( f >= 0 )
-					printf("Create Success! Substation Config doesn't exist!\n");
+			 
+				 printf("Create Success! Substation Config doesn't exist!\n");
 		}
 		yaffs_close(f);
 
@@ -200,7 +225,7 @@ void File_SubstationConfig_Exist()
 void File_Data_Exist()
 {
 		int f;
-	
+		
 		f = yaffs_open("/nand/data/SensorData", O_RDONLY, 0 );    //检查测点配置文件是否存在
 		if (f >= 0)
 		{
@@ -213,6 +238,7 @@ void File_Data_Exist()
 					printf("Create Success! Sensor Data doesn't exist!\n");
 		}
 		yaffs_close(f);
+		
 
 		return;
 }
