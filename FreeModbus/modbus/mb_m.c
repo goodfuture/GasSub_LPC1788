@@ -302,41 +302,41 @@ eMBMasterPoll( void )
             if(ucFunctionCode >> 7) {
             	eException = (eMBException)ucMBFrame[MB_PDU_DATA_OFF];
             }
-			else
-			{
-				for (i = 0; i < MB_FUNC_HANDLERS_MAX; i++)
-				{
-					/* No more function handlers registered. Abort. */
-					if (xMasterFuncHandlers[i].ucFunctionCode == 0)	{
-						break;
-					}
-					else if (xMasterFuncHandlers[i].ucFunctionCode == ucFunctionCode) {
-						vMBMasterSetCBRunInMasterMode(TRUE);
-						/* If master request is broadcast,
-						 * the master need execute function for all slave.
-						 */
-						if ( xMBMasterRequestIsBroadcast() ) {
-							usLength = usMBMasterGetPDUSndLength();
-							for(j = 1; j <= MB_MASTER_TOTAL_SLAVE_NUM; j++){
-								vMBMasterSetDestAddress(j);
-								eException = xMasterFuncHandlers[i].pxHandler(ucMBFrame, &usLength);
+						else
+						{
+							for (i = 0; i < MB_FUNC_HANDLERS_MAX; i++)
+							{
+								/* No more function handlers registered. Abort. */
+								if (xMasterFuncHandlers[i].ucFunctionCode == 0)	{
+									break;
+								}
+								else if (xMasterFuncHandlers[i].ucFunctionCode == ucFunctionCode) {
+									vMBMasterSetCBRunInMasterMode(TRUE);
+									/* If master request is broadcast,
+									 * the master need execute function for all slave.
+									 */
+									if ( xMBMasterRequestIsBroadcast() ) {
+										usLength = usMBMasterGetPDUSndLength();
+										for(j = 1; j <= MB_MASTER_TOTAL_SLAVE_NUM; j++){
+											vMBMasterSetDestAddress(j);
+											eException = xMasterFuncHandlers[i].pxHandler(ucMBFrame, &usLength);
+										}
+									}
+									else {
+										eException = xMasterFuncHandlers[i].pxHandler(ucMBFrame, &usLength);
+									}
+									vMBMasterSetCBRunInMasterMode(FALSE);
+									break;
+								}
 							}
 						}
-						else {
-							eException = xMasterFuncHandlers[i].pxHandler(ucMBFrame, &usLength);
-						}
-						vMBMasterSetCBRunInMasterMode(FALSE);
-						break;
-					}
-				}
-			}
             /* If master has exception ,Master will send error process.Otherwise the Master is idle.*/
             if (eException != MB_EX_NONE) {
             	vMBMasterSetErrorType(EV_ERROR_EXECUTE_FUNCTION);
             	( void ) xMBMasterPortEventPost( EV_MASTER_ERROR_PROCESS );
             }
             else {
-            	vMBMasterCBRequestScuuess( );
+            	vMBMasterCBRequestScuuess( ucMBMasterGetDestAddress());
             	vMBMasterRunResRelease( );
             }
             break;

@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\CMSISv2p00_LPC177x_8x\inc;..\..\LPC177x_8xLib\inc;..\..\Config;..\..\uCOS-II\Source;..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView;..\..\BoardSupport;..\App;..\..\YAFFS2;..\..\lwip\include;..\..\goahead\src;..\..\hvsftpd;..\..\User;..\..\Task;..\..\GuiLib\include;..\..\GuiLib\Config;..\..\FreeModbus\modbus\include;..\..\FreeModbus\port</IncludePath>
+              <IncludePath>..\..\CMSISv2p00_LPC177x_8x\inc;..\..\LPC177x_8xLib\inc;..\..\Config;..\..\uCOS-II\Source;..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView;..\..\BoardSupport;..\App;..\..\YAFFS2;..\..\lwip\include;..\..\goahead\src;..\..\hvsftpd;..\..\User;..\..\Task;..\..\GuiLib\include;..\..\GuiLib\Config;..\..\FreeModbus\modbus\include;..\..\FreeModbus\port;..\..\FreeModbus;..\..\FreeModbus\modbus\rtu</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1256,6 +1256,81 @@
               <FileName>session.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\hvsftpd\session.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>FreeModbus</GroupName>
+          <Files>
+            <File>
+              <FileName>mbrtu_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\rtu\mbrtu_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mb_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\mb_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfunccoils_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfunccoils_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncdisc_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncdisc_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncholding_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncholding_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncinput_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncinput_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>FMBport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\FMBport.c</FilePath>
+            </File>
+            <File>
+              <FileName>portevent_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\portevent_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>portserial_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\portserial_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>porttimer_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\porttimer_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_mb_app_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\user_mb_app_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbcrc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\rtu\mbcrc.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncother.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncother.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbutils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbutils.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2511,6 +2586,81 @@
               <FileName>session.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\hvsftpd\session.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>FreeModbus</GroupName>
+          <Files>
+            <File>
+              <FileName>mbrtu_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\rtu\mbrtu_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mb_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\mb_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfunccoils_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfunccoils_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncdisc_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncdisc_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncholding_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncholding_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncinput_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncinput_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>FMBport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\FMBport.c</FilePath>
+            </File>
+            <File>
+              <FileName>portevent_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\portevent_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>portserial_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\portserial_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>porttimer_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\porttimer_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_mb_app_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\port\user_mb_app_m.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbcrc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\rtu\mbcrc.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncother.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbfuncother.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbutils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\FreeModbus\modbus\functions\mbutils.c</FilePath>
             </File>
           </Files>
         </Group>

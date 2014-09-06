@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\FLASH_obj\uc1788.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\FLASH_obj\uc1788.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Fri Sep 05 17:31:29 2014
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sat Sep 06 11:27:11 2014
 <BR><P>
 <H3>Maximum Stack Usage =       2192 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -732,9 +732,9 @@ Global Symbols
 <LI><a href="#[6bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ServerTest
 <LI><a href="#[6ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClientTest
 <LI><a href="#[7dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;port_socket_geterr
-<LI><a href="#[a22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
 <LI><a href="#[a33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 <LI><a href="#[a32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__read_errno
+<LI><a href="#[a22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
 </UL>
 
 <P><STRONG><a name="[a84]"></a>__errno$intlibspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
@@ -4010,8 +4010,8 @@ Global Symbols
 <LI><a href="#[32f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_wr_chunk_tags_nand
 <LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs2_update_oldest_dirty_seq
 <LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_block_became_dirty
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[395]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_prune_chunks
 <LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_wr_data_obj
@@ -4175,8 +4175,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = yaffs_clone_str &rArr; yaffsfs_malloc &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffsfs_malloc
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_create_obj
 <LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_check_obj_details_loaded
@@ -4215,12 +4215,12 @@ Global Symbols
 <LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_chunk_del
 <LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_release_temp_buffer
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_get_temp_buffer
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_do_xattrib_mod
 <LI><a href="#[39b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_create_obj
@@ -4244,10 +4244,10 @@ Global Symbols
 <LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_rd_chunk_tags_nand
 <LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_release_temp_buffer
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_get_temp_buffer
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
-<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
+<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_unlink_worker
 <LI><a href="#[4ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffsfs_readdir_no_lock
@@ -4262,9 +4262,9 @@ Global Symbols
 <LI><a href="#[340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_calc_name_sum
 <LI><a href="#[2db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_bug_fn
 <LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_get_obj_name
-<LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[378]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_create_obj
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_change_obj_name
@@ -4687,8 +4687,8 @@ Global Symbols
 <LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs1_scan
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_deinitialise
 <LI><a href="#[3c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_guts_ll_init
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_format_common
 <LI><a href="#[4c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_mount_common
@@ -4737,11 +4737,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_nand_install_drv
 <LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_add_device
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[442]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_start_up
 </UL>
@@ -4750,8 +4750,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = nval_del &rArr; nval_find &rArr; strncmp
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nval_find
-<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_apply_xattrib_mod
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nval_set
@@ -4763,9 +4763,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[3e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nval_used
 <LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nval_find
 <LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nval_del
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_apply_xattrib_mod
 </UL>
@@ -5370,8 +5370,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[36b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_verify_blk
 <LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_skip_verification
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_checkpoint_save
 <LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs2_checkpt_restore
@@ -8001,8 +8001,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[5a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ipaddr_addr
 <LI><a href="#[5ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dns_enqueue
 <LI><a href="#[5ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dns_lookup
-<LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;do_gethostbyname
 </UL>
@@ -9661,10 +9661,10 @@ Global Symbols
 <LI><a href="#[64f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_inc_ipoutrequests
 <LI><a href="#[650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snmp_inc_ipoutdiscards
 <LI><a href="#[647]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ip_frag
-<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ip_output_if
 <LI><a href="#[63d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;igmp_ip_output_if
@@ -10858,8 +10858,8 @@ Global Symbols
 <LI><a href="#[6cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetFont
 <LI><a href="#[6ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetColor
 <LI><a href="#[6cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
-<LI><a href="#[6ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[6ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbBrowsTestpoint
 </UL>
@@ -10873,8 +10873,8 @@ Global Symbols
 <LI><a href="#[6cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetFont
 <LI><a href="#[6ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetColor
 <LI><a href="#[6cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
-<LI><a href="#[6ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[6ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbBrowsTestpoint
 </UL>
@@ -11577,8 +11577,8 @@ Global Symbols
 <LI>Call Chain = File_Set_Config_Tristate &rArr; yaffs_write &rArr; yaffsfs_do_write &rArr; yaffsfs_PutHandle &rArr; yaffsfs_PutFileDes &rArr; yaffsfs_PutInode &rArr; yaffsfs_ReleaseInode &rArr; yaffs_del_obj &rArr; yaffs_del_file &rArr; yaffs_unlink_file_if_needed &rArr; yaffs_resize_file &rArr; yaffs2_handle_hole &rArr; yaffs_update_oh &rArr; yaffs_check_gc &rArr; yaffs_gc_block &rArr;  yaffs_generic_obj_del (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[478]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_write
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;File_Create_TpConfig
 </UL>
@@ -11588,9 +11588,9 @@ Global Symbols
 <LI>Call Chain = File_Set_Config_Accumulate &rArr; yaffs_write &rArr; yaffsfs_do_write &rArr; yaffsfs_PutHandle &rArr; yaffsfs_PutFileDes &rArr; yaffsfs_PutInode &rArr; yaffsfs_ReleaseInode &rArr; yaffs_del_obj &rArr; yaffs_del_file &rArr; yaffs_unlink_file_if_needed &rArr; yaffs_resize_file &rArr; yaffs2_handle_hole &rArr; yaffs_update_oh &rArr; yaffs_check_gc &rArr; yaffs_gc_block &rArr;  yaffs_generic_obj_del (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[478]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_write
+<LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[6ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;File_Create_TpConfig
 </UL>
@@ -11600,8 +11600,8 @@ Global Symbols
 <LI>Call Chain = File_Set_Config_Switch &rArr; yaffs_write &rArr; yaffsfs_do_write &rArr; yaffsfs_PutHandle &rArr; yaffsfs_PutFileDes &rArr; yaffsfs_PutInode &rArr; yaffsfs_ReleaseInode &rArr; yaffs_del_obj &rArr; yaffs_del_file &rArr; yaffs_unlink_file_if_needed &rArr; yaffs_resize_file &rArr; yaffs2_handle_hole &rArr; yaffs_update_oh &rArr; yaffs_check_gc &rArr; yaffs_gc_block &rArr;  yaffs_generic_obj_del (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[478]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_write
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;File_Create_TpConfig
 </UL>
@@ -11611,9 +11611,9 @@ Global Symbols
 <LI>Call Chain = File_Set_Config_Analogue &rArr; yaffs_write &rArr; yaffsfs_do_write &rArr; yaffsfs_PutHandle &rArr; yaffsfs_PutFileDes &rArr; yaffsfs_PutInode &rArr; yaffsfs_ReleaseInode &rArr; yaffs_del_obj &rArr; yaffs_del_file &rArr; yaffs_unlink_file_if_needed &rArr; yaffs_resize_file &rArr; yaffs2_handle_hole &rArr; yaffs_update_oh &rArr; yaffs_check_gc &rArr; yaffs_gc_block &rArr;  yaffs_generic_obj_del (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[478]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_write
+<LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[6ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;File_Create_TpConfig
 </UL>
@@ -11685,10 +11685,10 @@ Global Symbols
 <LI>Call Chain = File_Get_Config_Analogue &rArr; yaffs_read &rArr; yaffsfs_do_read &rArr; yaffsfs_PutHandle &rArr; yaffsfs_PutFileDes &rArr; yaffsfs_PutInode &rArr; yaffsfs_ReleaseInode &rArr; yaffs_del_obj &rArr; yaffs_del_file &rArr; yaffs_unlink_file_if_needed &rArr; yaffs_resize_file &rArr; yaffs2_handle_hole &rArr; yaffs_update_oh &rArr; yaffs_check_gc &rArr; yaffs_gc_block &rArr;  yaffs_generic_obj_del (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[475]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_read
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[716]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sscanf
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_ConfigFile
 </UL>
@@ -11698,10 +11698,10 @@ Global Symbols
 <LI>Call Chain = File_Get_Config_Switch &rArr; yaffs_read &rArr; yaffsfs_do_read &rArr; yaffsfs_PutHandle &rArr; yaffsfs_PutFileDes &rArr; yaffsfs_PutInode &rArr; yaffsfs_ReleaseInode &rArr; yaffs_del_obj &rArr; yaffs_del_file &rArr; yaffs_unlink_file_if_needed &rArr; yaffs_resize_file &rArr; yaffs2_handle_hole &rArr; yaffs_update_oh &rArr; yaffs_check_gc &rArr; yaffs_gc_block &rArr;  yaffs_generic_obj_del (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[475]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_read
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[716]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sscanf
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_ConfigFile
 </UL>
@@ -11711,9 +11711,9 @@ Global Symbols
 <LI>Call Chain = File_Get_Config_Accumulate &rArr; yaffs_read &rArr; yaffsfs_do_read &rArr; yaffsfs_PutHandle &rArr; yaffsfs_PutFileDes &rArr; yaffsfs_PutInode &rArr; yaffsfs_ReleaseInode &rArr; yaffs_del_obj &rArr; yaffs_del_file &rArr; yaffs_unlink_file_if_needed &rArr; yaffs_resize_file &rArr; yaffs2_handle_hole &rArr; yaffs_update_oh &rArr; yaffs_check_gc &rArr; yaffs_gc_block &rArr;  yaffs_generic_obj_del (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[475]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_read
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[716]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sscanf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_ConfigFile
 </UL>
@@ -11723,9 +11723,9 @@ Global Symbols
 <LI>Call Chain = File_Get_Config_Tristate &rArr; yaffs_read &rArr; yaffsfs_do_read &rArr; yaffsfs_PutHandle &rArr; yaffsfs_PutFileDes &rArr; yaffsfs_PutInode &rArr; yaffsfs_ReleaseInode &rArr; yaffs_del_obj &rArr; yaffs_del_file &rArr; yaffs_unlink_file_if_needed &rArr; yaffs_resize_file &rArr; yaffs2_handle_hole &rArr; yaffs_update_oh &rArr; yaffs_check_gc &rArr; yaffs_gc_block &rArr;  yaffs_generic_obj_del (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[475]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_read
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[716]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sscanf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_ConfigFile
 </UL>
@@ -11965,10 +11965,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getSensorName
 <LI><a href="#[7c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPortType
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> equipmentlist.o(.text)
 </UL>
@@ -11978,10 +11978,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getSensorName
 <LI><a href="#[7c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPortType
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> equipmentlist.o(.text)
 </UL>
@@ -11991,10 +11991,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getSensorName
 <LI><a href="#[7c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPortType
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> equipmentlist.o(.text)
 </UL>
@@ -12004,10 +12004,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getSensorName
 <LI><a href="#[7c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getPortType
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 <LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> equipmentlist.o(.text)
 </UL>
@@ -12015,9 +12015,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = showAllInfo &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[7c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
+<BR>[Calls]<UL><LI><a href="#[7c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;puts
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[6ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> equipmentlist.o(.text)
 </UL>
@@ -12157,11 +12157,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[7cd]"></a>make_path</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, hfio.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = make_path &rArr; strncpy
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = make_path &rArr; strlen
 </UL>
-<BR>[Calls]<UL><LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
-<LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[7d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncat
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mkd_handler
 <LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rnto_handler
@@ -12201,8 +12201,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = socket_alloc &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket_accept
 <LI><a href="#[7e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket_client
@@ -12403,9 +12403,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = session_alloc &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sockAccept
 </UL>
@@ -12479,13 +12479,13 @@ Global Symbols
 
 <P><STRONG><a name="[78e]"></a>GUI__ReduceRect</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, gui__reducerect.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[78d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
-<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
-<LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
 <LI><a href="#[860]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetInsideRect
 <LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_GetRect
-<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_GetRect
+<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
+<LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
 <LI><a href="#[92f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_GetRect
 </UL>
 
 <P><STRONG><a name="[75d]"></a>GUI__strlen</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, gui__strlen.o(.text))
@@ -12563,8 +12563,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[7fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringInRectMax
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
-<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[92f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 </UL>
 
@@ -12606,10 +12606,10 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[78d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
-<LI><a href="#[8c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__DrawVLine
 <LI><a href="#[83a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawTriangleDown
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_DrawDownRect
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_DrawUpRect
+<LI><a href="#[8c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__DrawVLine
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawDownRect
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawUpRect
 <LI><a href="#[9df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawTriangle
@@ -12627,9 +12627,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[78d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
-<LI><a href="#[8c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__DrawVLine
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_DrawDownRect
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_DrawUpRect
+<LI><a href="#[8c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__DrawVLine
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawDownRect
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawUpRect
 <LI><a href="#[9df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawTriangle
@@ -12685,15 +12685,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[72d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetInsideRectExScrollbar
 <LI><a href="#[72e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_GetHeight
 <LI><a href="#[72f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
-<LI><a href="#[899]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdateButtons
-<LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
 <LI><a href="#[848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_Expand
 <LI><a href="#[8bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Client2Screen
-<LI><a href="#[97f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveWindow
-<LI><a href="#[97e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MoveDescendents
+<LI><a href="#[899]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdateButtons
+<LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
 <LI><a href="#[96a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[95a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[92f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[97f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveWindow
+<LI><a href="#[97e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MoveDescendents
 <LI><a href="#[9dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CalcPositions
 </UL>
 
@@ -12767,8 +12767,8 @@ Global Symbols
 <LI><a href="#[7ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaintCorrect
 <LI><a href="#[78d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[78b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetPaintColors
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
 <LI><a href="#[8f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_SetDefault
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
 </UL>
 
 <P><STRONG><a name="[6cb]"></a>GUI_SetFont</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, gui_setfont.o(.text))
@@ -12791,12 +12791,12 @@ Global Symbols
 <LI><a href="#[795]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU__RecalcTextWidthOfItems
 <LI><a href="#[78d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[763]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CalcTextWidth
-<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[869]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetCursorAtPixel
 <LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[8f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_SetDefault
+<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[96a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[93d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_OwnerDraw
 <LI><a href="#[95a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
@@ -12833,10 +12833,10 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[80f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Alloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
+<BR>[Called By]<UL><LI><a href="#[86c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
+<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
 <LI><a href="#[891]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__SetText
-<LI><a href="#[86c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
 <LI><a href="#[9ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__CreateFixed
 </UL>
 
@@ -12900,45 +12900,6 @@ Global Symbols
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MENU_Callback
 <LI><a href="#[745]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 <LI><a href="#[73f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateRect
-<LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
-<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
-<LI><a href="#[8c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_GetState
-<LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
-<LI><a href="#[8c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetWindowSizeX
-<LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
-<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
-<LI><a href="#[8b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetTextColor
-<LI><a href="#[8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetNumColumns
-<LI><a href="#[8b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetBkColor
-<LI><a href="#[8b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetpItemInfo
-<LI><a href="#[89f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__GetYSize
-<LI><a href="#[89e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__GetXSize
-<LI><a href="#[8a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__Draw
-<LI><a href="#[8b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_ResizeItem
-<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
-<LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
-<LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
-<LI><a href="#[8ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetBkColor
-<LI><a href="#[8ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextColor
-<LI><a href="#[8ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetFont
-<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
-<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
-<LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
-<LI><a href="#[89b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_SethItem
-<LI><a href="#[899]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdateButtons
-<LI><a href="#[898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColorEx
-<LI><a href="#[897]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColor
-<LI><a href="#[896]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetBarColor
-<LI><a href="#[895]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetAnchor
-<LI><a href="#[894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_Attach
-<LI><a href="#[88c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestor
-<LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
-<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
-<LI><a href="#[892]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DisableMemdev
-<LI><a href="#[891]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__SetText
-<LI><a href="#[893]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetMoveable
-<LI><a href="#[885]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcPositions
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__cbClient
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
 <LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
@@ -12989,7 +12950,7 @@ Global Symbols
 <LI><a href="#[832]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_OrState
 <LI><a href="#[82f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
 <LI><a href="#[82e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateEx
-<LI><a href="#[90a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__strcmp_hp
+<LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[8f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[8eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsWindow
 <LI><a href="#[8ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__RemoveFromLinList
@@ -13021,14 +12982,44 @@ Global Symbols
 <LI><a href="#[8cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__DetachWindow
 <LI><a href="#[8d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_AttachWindow
 <LI><a href="#[8ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__UpdateChildPositions
-<LI><a href="#[982]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetNextChild
-<LI><a href="#[981]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessageNoPara
-<LI><a href="#[980]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveTo
-<LI><a href="#[97f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveWindow
-<LI><a href="#[97e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MoveDescendents
-<LI><a href="#[97c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowRect
-<LI><a href="#[97b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_BringToTop
-<LI><a href="#[978]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetPrevSibling
+<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
+<LI><a href="#[8c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_GetState
+<LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
+<LI><a href="#[8c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetWindowSizeX
+<LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
+<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
+<LI><a href="#[8b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetTextColor
+<LI><a href="#[8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetNumColumns
+<LI><a href="#[8b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetBkColor
+<LI><a href="#[8b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetpItemInfo
+<LI><a href="#[89f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__GetYSize
+<LI><a href="#[89e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__GetXSize
+<LI><a href="#[8a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__Draw
+<LI><a href="#[8b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_ResizeItem
+<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
+<LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
+<LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
+<LI><a href="#[8ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetBkColor
+<LI><a href="#[8ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextColor
+<LI><a href="#[8ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetFont
+<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
+<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
+<LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
+<LI><a href="#[89b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_SethItem
+<LI><a href="#[899]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdateButtons
+<LI><a href="#[898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColorEx
+<LI><a href="#[897]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColor
+<LI><a href="#[896]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetBarColor
+<LI><a href="#[895]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetAnchor
+<LI><a href="#[894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_Attach
+<LI><a href="#[88c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestor
+<LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
+<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
+<LI><a href="#[892]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DisableMemdev
+<LI><a href="#[891]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__SetText
+<LI><a href="#[893]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetMoveable
+<LI><a href="#[885]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcPositions
 <LI><a href="#[96c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetHasTrans
 <LI><a href="#[976]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_GetValue
 <LI><a href="#[972]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_AddValue
@@ -13061,19 +13052,7 @@ Global Symbols
 <LI><a href="#[92e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Delete
 <LI><a href="#[927]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_CreateEx
 <LI><a href="#[92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Clear
-<LI><a href="#[9f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetYSize
-<LI><a href="#[9f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetXSize
-<LI><a href="#[9ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetPageSize
-<LI><a href="#[9ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetNumItems
-<LI><a href="#[9eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_CreateEx
-<LI><a href="#[9e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_AddValue
-<LI><a href="#[9e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetValue
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SCROLLBAR_Callback
-<LI><a href="#[9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_Select
-<LI><a href="#[9c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ClrHasTrans
-<LI><a href="#[9c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetHasTrans
-<LI><a href="#[9c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_HideWindow
-<LI><a href="#[9be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__ForEachDesc
+<LI><a href="#[90a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__strcmp_hp
 <LI><a href="#[9bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetFirstSibling
 <LI><a href="#[9bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsChild
 <LI><a href="#[9ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetWidth
@@ -13092,6 +13071,27 @@ Global Symbols
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__Index2Color
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__Color2Index
 <LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__GetRect
+<LI><a href="#[982]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetNextChild
+<LI><a href="#[981]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessageNoPara
+<LI><a href="#[980]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveTo
+<LI><a href="#[97f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveWindow
+<LI><a href="#[97e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MoveDescendents
+<LI><a href="#[97c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowRect
+<LI><a href="#[97b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_BringToTop
+<LI><a href="#[978]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetPrevSibling
+<LI><a href="#[9f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetYSize
+<LI><a href="#[9f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetXSize
+<LI><a href="#[9ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetPageSize
+<LI><a href="#[9ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetNumItems
+<LI><a href="#[9eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_CreateEx
+<LI><a href="#[9e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_AddValue
+<LI><a href="#[9e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetValue
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SCROLLBAR_Callback
+<LI><a href="#[9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_Select
+<LI><a href="#[9c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ClrHasTrans
+<LI><a href="#[9c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetHasTrans
+<LI><a href="#[9c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_HideWindow
+<LI><a href="#[9be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__ForEachDesc
 </UL>
 
 <P><STRONG><a name="[814]"></a>GUI_ALLOC_GetNumFreeBytes</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, guialloc.o(.text), UNUSED)
@@ -13128,14 +13128,14 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[75b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_AddItem
 <LI><a href="#[74e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
-<LI><a href="#[8a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
 <LI><a href="#[86c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
 <LI><a href="#[835]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
 <LI><a href="#[819]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
+<LI><a href="#[8a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
 <LI><a href="#[92e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Delete
-<LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GUI_USAGE_BM_Delete
 <LI><a href="#[9aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_DecUseCnt
 <LI><a href="#[9ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__CreateFixed
+<LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GUI_USAGE_BM_Delete
 </UL>
 
 <P><STRONG><a name="[819]"></a>GUI_ALLOC_FreePtr</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, guialloc.o(.text))
@@ -13150,11 +13150,11 @@ Global Symbols
 <LI><a href="#[712]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetText
 <LI><a href="#[797]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_SetItem
 <LI><a href="#[799]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_DeleteItem
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
+<LI><a href="#[867]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Delete
 <LI><a href="#[8b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_ResizeItem
 <LI><a href="#[89b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_SethItem
 <LI><a href="#[891]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__SetText
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
-<LI><a href="#[867]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Delete
 <LI><a href="#[931]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Delete
 </UL>
 
@@ -13164,10 +13164,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[729]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
+<LI><a href="#[81b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 <LI><a href="#[804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[802]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
-<LI><a href="#[81b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[790]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillStringInRect
@@ -13183,9 +13183,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[739]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
 <LI><a href="#[81d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoXY
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__cbClient
+<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__cbClient
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cbBackWin
+<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[96a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[93d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_OwnerDraw
 <LI><a href="#[92f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
@@ -13278,46 +13278,6 @@ Global Symbols
 <LI><a href="#[78d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[745]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 <LI><a href="#[73f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateRect
-<LI><a href="#[808]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_OnKey
-<LI><a href="#[807]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_PollKeyMsg
-<LI><a href="#[7fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDrawMode
-<LI><a href="#[7fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetUserClipRect
-<LI><a href="#[7f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontSizeY
-<LI><a href="#[7f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontDistY
-<LI><a href="#[7fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringInRectMax
-<LI><a href="#[7f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispString
-<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
-<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
-<LI><a href="#[8c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_GetState
-<LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
-<LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
-<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
-<LI><a href="#[8b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetTextColor
-<LI><a href="#[8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetNumColumns
-<LI><a href="#[8b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetBkColor
-<LI><a href="#[8b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_SetItemBkColor
-<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
-<LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
-<LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
-<LI><a href="#[8ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetBkColor
-<LI><a href="#[8ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextColor
-<LI><a href="#[8ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetFont
-<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
-<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
-<LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
-<LI><a href="#[898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColorEx
-<LI><a href="#[897]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColor
-<LI><a href="#[896]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetBarColor
-<LI><a href="#[895]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetAnchor
-<LI><a href="#[894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_Attach
-<LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
-<LI><a href="#[88e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
-<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
-<LI><a href="#[892]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DisableMemdev
-<LI><a href="#[881]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToTop
-<LI><a href="#[893]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetMoveable
-<LI><a href="#[88d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetActive
 <LI><a href="#[86a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeX
 <LI><a href="#[870]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_GetCharSize
 <LI><a href="#[863]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_GetCharCode
@@ -13362,18 +13322,14 @@ Global Symbols
 <LI><a href="#[819]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
 <LI><a href="#[815]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_GetMaxSize
 <LI><a href="#[813]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocNoInit
-<LI><a href="#[91d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetColor
-<LI><a href="#[91e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetBkColor
-<LI><a href="#[91a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DispChar
-<LI><a href="#[919]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispNextLine
-<LI><a href="#[918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_SetEncodeNone
-<LI><a href="#[915]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetTextAlign
-<LI><a href="#[914]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetPenSize
-<LI><a href="#[916]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetLineStyle
-<LI><a href="#[917]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDefault
-<LI><a href="#[912]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoX
-<LI><a href="#[910]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoY
-<LI><a href="#[90c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetYAdjust
+<LI><a href="#[808]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_OnKey
+<LI><a href="#[807]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_PollKeyMsg
+<LI><a href="#[7fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDrawMode
+<LI><a href="#[7fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetUserClipRect
+<LI><a href="#[7f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontSizeY
+<LI><a href="#[7f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontDistY
+<LI><a href="#[7fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringInRectMax
+<LI><a href="#[7f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispString
 <LI><a href="#[906]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
 <LI><a href="#[8f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[907]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Deactivate
@@ -13387,8 +13343,38 @@ Global Symbols
 <LI><a href="#[8d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveWindow
 <LI><a href="#[8d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveTo
 <LI><a href="#[8d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_AttachWindow
-<LI><a href="#[97c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowRect
-<LI><a href="#[97a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ForEachDesc
+<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
+<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
+<LI><a href="#[8c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_GetState
+<LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
+<LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
+<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
+<LI><a href="#[8b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetTextColor
+<LI><a href="#[8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetNumColumns
+<LI><a href="#[8b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetBkColor
+<LI><a href="#[8b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_SetItemBkColor
+<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
+<LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
+<LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
+<LI><a href="#[8ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetBkColor
+<LI><a href="#[8ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextColor
+<LI><a href="#[8ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetFont
+<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
+<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
+<LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
+<LI><a href="#[898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColorEx
+<LI><a href="#[897]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColor
+<LI><a href="#[896]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetBarColor
+<LI><a href="#[895]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetAnchor
+<LI><a href="#[894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_Attach
+<LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
+<LI><a href="#[88e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
+<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
+<LI><a href="#[892]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DisableMemdev
+<LI><a href="#[881]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToTop
+<LI><a href="#[893]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetMoveable
+<LI><a href="#[88d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetActive
 <LI><a href="#[96c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetHasTrans
 <LI><a href="#[96b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontInfo
 <LI><a href="#[976]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_GetValue
@@ -13417,22 +13403,18 @@ Global Symbols
 <LI><a href="#[92e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Delete
 <LI><a href="#[927]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_CreateEx
 <LI><a href="#[92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Clear
-<LI><a href="#[9f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetYSize
-<LI><a href="#[9f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetXSize
-<LI><a href="#[9ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetPageSize
-<LI><a href="#[9ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetNumItems
-<LI><a href="#[9eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_CreateEx
-<LI><a href="#[9e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_AddValue
-<LI><a href="#[9e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetValue
-<LI><a href="#[9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_Select
-<LI><a href="#[9d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawEllipse
-<LI><a href="#[9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillEllipse
-<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
-<LI><a href="#[9d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawCircle
-<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
-<LI><a href="#[9c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ClrHasTrans
-<LI><a href="#[9c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetHasTrans
-<LI><a href="#[9c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_HideWindow
+<LI><a href="#[91d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetColor
+<LI><a href="#[91e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetBkColor
+<LI><a href="#[91a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DispChar
+<LI><a href="#[919]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispNextLine
+<LI><a href="#[918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_SetEncodeNone
+<LI><a href="#[915]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetTextAlign
+<LI><a href="#[914]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetPenSize
+<LI><a href="#[916]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetLineStyle
+<LI><a href="#[917]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDefault
+<LI><a href="#[912]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoX
+<LI><a href="#[910]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoY
+<LI><a href="#[90c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetYAdjust
 <LI><a href="#[9ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetWidth
 <LI><a href="#[9aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_DecUseCnt
 <LI><a href="#[9ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_BM_Create
@@ -13451,6 +13433,24 @@ Global Symbols
 <LI><a href="#[999]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MoveRel
 <LI><a href="#[997]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawPolygon
 <LI><a href="#[993]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawLine
+<LI><a href="#[97c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowRect
+<LI><a href="#[97a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ForEachDesc
+<LI><a href="#[9f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetYSize
+<LI><a href="#[9f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetXSize
+<LI><a href="#[9ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetPageSize
+<LI><a href="#[9ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetNumItems
+<LI><a href="#[9eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_CreateEx
+<LI><a href="#[9e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_AddValue
+<LI><a href="#[9e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetValue
+<LI><a href="#[9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_Select
+<LI><a href="#[9d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawEllipse
+<LI><a href="#[9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillEllipse
+<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
+<LI><a href="#[9d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawCircle
+<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
+<LI><a href="#[9c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ClrHasTrans
+<LI><a href="#[9c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetHasTrans
+<LI><a href="#[9c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_HideWindow
 </UL>
 
 <P><STRONG><a name="[728]"></a>GUI_Lock</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, guitask.o(.text))
@@ -13529,46 +13529,6 @@ Global Symbols
 <LI><a href="#[78d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[745]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 <LI><a href="#[73f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateRect
-<LI><a href="#[808]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_OnKey
-<LI><a href="#[807]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_PollKeyMsg
-<LI><a href="#[7fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDrawMode
-<LI><a href="#[7fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetUserClipRect
-<LI><a href="#[7f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontSizeY
-<LI><a href="#[7f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontDistY
-<LI><a href="#[7fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringInRectMax
-<LI><a href="#[7f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispString
-<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
-<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
-<LI><a href="#[8c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_GetState
-<LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
-<LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
-<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
-<LI><a href="#[8b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetTextColor
-<LI><a href="#[8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetNumColumns
-<LI><a href="#[8b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetBkColor
-<LI><a href="#[8b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_SetItemBkColor
-<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
-<LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
-<LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
-<LI><a href="#[8ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetBkColor
-<LI><a href="#[8ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextColor
-<LI><a href="#[8ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetFont
-<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
-<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
-<LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
-<LI><a href="#[898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColorEx
-<LI><a href="#[897]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColor
-<LI><a href="#[896]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetBarColor
-<LI><a href="#[895]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetAnchor
-<LI><a href="#[894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_Attach
-<LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
-<LI><a href="#[88e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
-<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
-<LI><a href="#[892]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DisableMemdev
-<LI><a href="#[881]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToTop
-<LI><a href="#[893]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetMoveable
-<LI><a href="#[88d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetActive
 <LI><a href="#[86a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeX
 <LI><a href="#[870]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_GetCharSize
 <LI><a href="#[863]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_GetCharCode
@@ -13613,18 +13573,14 @@ Global Symbols
 <LI><a href="#[819]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
 <LI><a href="#[815]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_GetMaxSize
 <LI><a href="#[813]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocNoInit
-<LI><a href="#[91d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetColor
-<LI><a href="#[91e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetBkColor
-<LI><a href="#[91a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DispChar
-<LI><a href="#[919]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispNextLine
-<LI><a href="#[918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_SetEncodeNone
-<LI><a href="#[915]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetTextAlign
-<LI><a href="#[914]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetPenSize
-<LI><a href="#[916]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetLineStyle
-<LI><a href="#[917]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDefault
-<LI><a href="#[912]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoX
-<LI><a href="#[910]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoY
-<LI><a href="#[90c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetYAdjust
+<LI><a href="#[808]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_OnKey
+<LI><a href="#[807]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_PollKeyMsg
+<LI><a href="#[7fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDrawMode
+<LI><a href="#[7fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetUserClipRect
+<LI><a href="#[7f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontSizeY
+<LI><a href="#[7f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontDistY
+<LI><a href="#[7fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringInRectMax
+<LI><a href="#[7f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispString
 <LI><a href="#[906]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
 <LI><a href="#[8f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[907]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Deactivate
@@ -13638,8 +13594,38 @@ Global Symbols
 <LI><a href="#[8d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveWindow
 <LI><a href="#[8d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveTo
 <LI><a href="#[8d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_AttachWindow
-<LI><a href="#[97c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowRect
-<LI><a href="#[97a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ForEachDesc
+<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
+<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
+<LI><a href="#[8c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_GetState
+<LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
+<LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
+<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
+<LI><a href="#[8b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetTextColor
+<LI><a href="#[8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetNumColumns
+<LI><a href="#[8b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetBkColor
+<LI><a href="#[8b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_SetItemBkColor
+<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
+<LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
+<LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
+<LI><a href="#[8ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetBkColor
+<LI><a href="#[8ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextColor
+<LI><a href="#[8ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetFont
+<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
+<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
+<LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
+<LI><a href="#[898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColorEx
+<LI><a href="#[897]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColor
+<LI><a href="#[896]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetBarColor
+<LI><a href="#[895]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetAnchor
+<LI><a href="#[894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_Attach
+<LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
+<LI><a href="#[88e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
+<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
+<LI><a href="#[892]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DisableMemdev
+<LI><a href="#[881]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToTop
+<LI><a href="#[893]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetMoveable
+<LI><a href="#[88d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetActive
 <LI><a href="#[96c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetHasTrans
 <LI><a href="#[96b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontInfo
 <LI><a href="#[976]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_GetValue
@@ -13668,22 +13654,18 @@ Global Symbols
 <LI><a href="#[92e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Delete
 <LI><a href="#[927]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_CreateEx
 <LI><a href="#[92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_Clear
-<LI><a href="#[9f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetYSize
-<LI><a href="#[9f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetXSize
-<LI><a href="#[9ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetPageSize
-<LI><a href="#[9ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetNumItems
-<LI><a href="#[9eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_CreateEx
-<LI><a href="#[9e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_AddValue
-<LI><a href="#[9e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetValue
-<LI><a href="#[9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_Select
-<LI><a href="#[9d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawEllipse
-<LI><a href="#[9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillEllipse
-<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
-<LI><a href="#[9d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawCircle
-<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
-<LI><a href="#[9c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ClrHasTrans
-<LI><a href="#[9c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetHasTrans
-<LI><a href="#[9c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_HideWindow
+<LI><a href="#[91d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetColor
+<LI><a href="#[91e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetBkColor
+<LI><a href="#[91a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DispChar
+<LI><a href="#[919]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispNextLine
+<LI><a href="#[918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_SetEncodeNone
+<LI><a href="#[915]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetTextAlign
+<LI><a href="#[914]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetPenSize
+<LI><a href="#[916]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetLineStyle
+<LI><a href="#[917]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDefault
+<LI><a href="#[912]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoX
+<LI><a href="#[910]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GotoY
+<LI><a href="#[90c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetYAdjust
 <LI><a href="#[9ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetWidth
 <LI><a href="#[9aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_DecUseCnt
 <LI><a href="#[9ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_BM_Create
@@ -13701,6 +13683,24 @@ Global Symbols
 <LI><a href="#[999]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MoveRel
 <LI><a href="#[997]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawPolygon
 <LI><a href="#[993]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawLine
+<LI><a href="#[97c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowRect
+<LI><a href="#[97a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ForEachDesc
+<LI><a href="#[9f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetYSize
+<LI><a href="#[9f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetXSize
+<LI><a href="#[9ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetPageSize
+<LI><a href="#[9ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetNumItems
+<LI><a href="#[9eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_CreateEx
+<LI><a href="#[9e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_AddValue
+<LI><a href="#[9e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetValue
+<LI><a href="#[9d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_Select
+<LI><a href="#[9d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawEllipse
+<LI><a href="#[9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillEllipse
+<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
+<LI><a href="#[9d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawCircle
+<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
+<LI><a href="#[9c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ClrHasTrans
+<LI><a href="#[9c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetHasTrans
+<LI><a href="#[9c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_HideWindow
 </UL>
 
 <P><STRONG><a name="[81e]"></a>GUITASK_Init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, guitask.o(.text))
@@ -13763,8 +13763,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LCD_SetDrawMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[739]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
-<LI><a href="#[7fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDrawMode
 <LI><a href="#[81f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[7fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDrawMode
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMONO_DispChar
 </UL>
@@ -13789,10 +13789,10 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[739]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
 <LI><a href="#[6e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillRect
-<LI><a href="#[800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
 <LI><a href="#[866]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_InvertRect
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitmap_RLE4
 <LI><a href="#[81f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMONO_DispChar
 </UL>
@@ -13804,8 +13804,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawBitmap
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_DispChar
-<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMONO_DispChar
 <LI><a href="#[9af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV__WriteToActiveAt
+<LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMONO_DispChar
 </UL>
 
 <P><STRONG><a name="[829]"></a>LCD_SetClipRectMax</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, lcd.o(.text))
@@ -13824,10 +13824,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_L0_Init
 <LI><a href="#[82b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_L0_On
-<LI><a href="#[804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[82a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_InitLUT
 <LI><a href="#[829]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetClipRectMax
 <LI><a href="#[81b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
+<LI><a href="#[804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Init
 </UL>
@@ -13856,12 +13856,12 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[78c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetBkColor
-<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__cbClient
 <LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[81a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitContext
+<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[96a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[93d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_OwnerDraw
 <LI><a href="#[95a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
@@ -13876,18 +13876,18 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[72f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[6ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetColor
-<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[81a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitContext
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_DrawDownRect
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_DrawUpRect
-<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawDownRect
-<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawUpRect
+<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[96a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[93d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_OwnerDraw
 <LI><a href="#[92f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawDownRect
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawUpRect
 <LI><a href="#[9e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 </UL>
 
@@ -13898,8 +13898,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[82f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
 <LI><a href="#[82e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateEx
 </UL>
-<BR>[Address Reference Count : 6]<UL><LI> user_setconnect.o(.constdata)
-<LI> user_settime.o(.constdata)
+<BR>[Address Reference Count : 6]<UL><LI> user_settime.o(.constdata)
+<LI> user_setconnect.o(.constdata)
 <LI> user_browstestpoint.o(.constdata)
 <LI> user_dispconnect.o(.constdata)
 <LI> user_setaddr.o(.constdata)
@@ -14209,8 +14209,8 @@ Global Symbols
 
 <P><STRONG><a name="[874]"></a>EDIT__GetCurrentChar</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, edit.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[863]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_GetCharCode
+<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 </UL>
 
 <P><STRONG><a name="[876]"></a>EDIT_AddKey</STRONG> (Thumb, 390 bytes, Stack size 24 bytes, edit.o(.text))
@@ -14221,12 +14221,12 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[70e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
-<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[863]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_GetCharCode
 <LI><a href="#[868]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT__SetCursorPos
 <LI><a href="#[871]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InsertChar
 <LI><a href="#[86f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DeleteChar
 <LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT__Callback
 </UL>
@@ -14276,10 +14276,10 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[70e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
-<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[862]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetNumChars
 <LI><a href="#[86d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_IsSpaceInBuffer
 <LI><a href="#[819]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
+<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
@@ -14295,8 +14295,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[729]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[862]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetNumChars
+<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[725]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_getUserInputTime
@@ -14324,9 +14324,9 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[70e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
-<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[862]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetNumChars
 <LI><a href="#[86b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_IncrementBuffer
+<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 </UL>
 
 <P><STRONG><a name="[87e]"></a>EDIT_SetTextAlign</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, edit.o(.text))
@@ -14383,15 +14383,15 @@ Global Symbols
 <LI>Call Chain = FRAMEWIN__CalcPositions &rArr; WM_GetWindowSizeY &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
+<LI><a href="#[847]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetWindowSizeX
 <LI><a href="#[886]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetWindowSizeY
 <LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
 <LI><a href="#[883]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcTitleHeight
-<LI><a href="#[847]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetWindowSizeX
 </UL>
 <BR>[Called By]<UL><LI><a href="#[706]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_CreateEx
-<LI><a href="#[88f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdatePositions
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
 <LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[88f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdatePositions
 </UL>
 
 <P><STRONG><a name="[88d]"></a>FRAMEWIN_SetActive</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, framewin.o(.text))
@@ -14477,11 +14477,11 @@ Global Symbols
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[70e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
 <LI><a href="#[776]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_SetOwner
+<LI><a href="#[847]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetWindowSizeX
 <LI><a href="#[895]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetAnchor
 <LI><a href="#[894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_Attach
 <LI><a href="#[88f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdatePositions
 <LI><a href="#[883]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcTitleHeight
-<LI><a href="#[847]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetWindowSizeX
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CreateMenu
 </UL>
@@ -14492,8 +14492,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[706]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_CreateEx
 </UL>
-<BR>[Address Reference Count : 6]<UL><LI> user_setconnect.o(.constdata)
-<LI> user_settime.o(.constdata)
+<BR>[Address Reference Count : 6]<UL><LI> user_settime.o(.constdata)
+<LI> user_setconnect.o(.constdata)
 <LI> user_browstestpoint.o(.constdata)
 <LI> user_dispconnect.o(.constdata)
 <LI> user_setaddr.o(.constdata)
@@ -14559,6 +14559,7 @@ Global Symbols
 <LI><a href="#[72f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[701]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_AddRow
 <LI><a href="#[767]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU__GetNumItems
+<LI><a href="#[84c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_AddString
 <LI><a href="#[8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_GetNumColumns
 <LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
 <LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
@@ -14567,7 +14568,6 @@ Global Symbols
 <LI><a href="#[8a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetItemIndex
 <LI><a href="#[8a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
 <LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
-<LI><a href="#[84c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_AddString
 <LI><a href="#[940]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX__GetNumItems
 </UL>
 
@@ -14579,16 +14579,16 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[74f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
-<LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
 <LI><a href="#[86c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
+<LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[75a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_AddItem
 <LI><a href="#[71d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_AddString
 <LI><a href="#[6e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_AddItem
 <LI><a href="#[701]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_AddRow
 <LI><a href="#[6fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_AddColumn
-<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
 <LI><a href="#[84c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_AddString
+<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
 </UL>
 
 <P><STRONG><a name="[750]"></a>GUI_ARRAY_Delete</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, gui_array.o(.text))
@@ -14600,8 +14600,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[74e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MENU_Callback
-<LI><a href="#[8a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
 <LI><a href="#[840]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
+<LI><a href="#[8a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_RADIO_Callback
 <LI><a href="#[959]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
 </UL>
@@ -14621,9 +14621,9 @@ Global Symbols
 <LI>Call Chain = GUI_ARRAY_SetItem &rArr; GUI_ALLOC_AllocZero &rArr; GUI_ALLOC_AllocNoInit &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[819]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
 <LI><a href="#[816]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_GetSize
+<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[796]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU__SetItem
@@ -14668,6 +14668,7 @@ Global Symbols
 <LI><a href="#[774]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CloseSubmenu
 <LI><a href="#[766]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetItemHeight
 <LI><a href="#[765]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetItemWidth
+<LI><a href="#[84c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_AddString
 <LI><a href="#[8b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetpItemInfo
 <LI><a href="#[8b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_ResizeItem
 <LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
@@ -14675,7 +14676,6 @@ Global Symbols
 <LI><a href="#[8a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetItemIndex
 <LI><a href="#[8a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FreeAttached
 <LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
-<LI><a href="#[84c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_AddString
 <LI><a href="#[96a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[94a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX__InvalidateItemSize
 <LI><a href="#[93c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX__GetpString
@@ -15064,11 +15064,11 @@ Global Symbols
 <P><STRONG><a name="[8c7]"></a>WIDGET__RotateRect90</STRONG> (Thumb, 42 bytes, Stack size 20 bytes, widget.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = WIDGET__RotateRect90
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawDownRect
+<BR>[Called By]<UL><LI><a href="#[844]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawUpRect
+<LI><a href="#[8cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawDownRect
 <LI><a href="#[8ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillRectEx
 <LI><a href="#[8c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__DrawVLine
 <LI><a href="#[8c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__DrawFocusRect
-<LI><a href="#[844]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawUpRect
 </UL>
 
 <P><STRONG><a name="[8bd]"></a>WIDGET__GetClientRect</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, widget.o(.text))
@@ -15083,8 +15083,8 @@ Global Symbols
 
 <P><STRONG><a name="[8be]"></a>WIDGET__GetBkColor</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, widget.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[744]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetParent
-<LI><a href="#[8bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetBkColor
 <LI><a href="#[8c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIALOG_GetBkColor
+<LI><a href="#[8bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetBkColor
 </UL>
 
 <P><STRONG><a name="[860]"></a>WIDGET__GetInsideRect</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, widget.o(.text))
@@ -15107,8 +15107,8 @@ Global Symbols
 
 <P><STRONG><a name="[8c1]"></a>WIDGET__GetWindowSizeX</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, widget.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
 <LI><a href="#[86a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeX
+<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
 </UL>
 
 <P><STRONG><a name="[8c2]"></a>WIDGET_SetState</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, widget.o(.text))
@@ -15168,8 +15168,8 @@ Global Symbols
 <LI><a href="#[706]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_CreateEx
 <LI><a href="#[877]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_CreateEx
 <LI><a href="#[856]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_CreateEx
-<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
 <LI><a href="#[82e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateEx
+<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
 <LI><a href="#[965]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_CreateEx
 <LI><a href="#[9eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_CreateEx
 </UL>
@@ -15181,19 +15181,19 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[70e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
 <LI><a href="#[6d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
+<LI><a href="#[860]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetInsideRect
+<LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 <LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
 <LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
 <LI><a href="#[881]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToTop
-<LI><a href="#[860]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetInsideRect
-<LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LISTVIEW_Callback
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MENU_Callback
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__cbClient
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT__Callback
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DROPDOWN_Callback
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_RADIO_Callback
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LISTBOX_Callback
 <LI><a href="#[935]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
@@ -15231,8 +15231,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 192 + Unknown Stack Size
 <LI>Call Chain = WIDGET__FillRectEx &rArr; GUI_FillRectEx &rArr; GUI_FillRect &rArr; WM__InitIVRSearch &rArr; WM__GetNextIVR &rArr; _FindNext_IVR &rArr; _Findx0 &rArr;  _Findx0 (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__RotateRect90
-<LI><a href="#[843]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillRectEx
+<BR>[Calls]<UL><LI><a href="#[843]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillRectEx
+<LI><a href="#[8c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__RotateRect90
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 </UL>
@@ -15241,9 +15241,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
 <LI>Call Chain = WIDGET__EFFECT_DrawDownRect &rArr; WM_GetClientRect &rArr; WM_GetClientRectEx &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__RotateRect90
+<BR>[Calls]<UL><LI><a href="#[842]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientRect
+<LI><a href="#[8c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__RotateRect90
 <LI><a href="#[8bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_EffectRequiresRedraw
-<LI><a href="#[842]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientRect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawDown
 </UL>
@@ -15266,8 +15266,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[8c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__RotateRect90
 <LI><a href="#[8bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_EffectRequiresRedraw
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
-<LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<BR>[Called By]<UL><LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[9e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 </UL>
 
@@ -15407,8 +15407,8 @@ Global Symbols
 <LI><a href="#[6cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InitBrowsTestpointDialog
 <LI><a href="#[6c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaintBrowsTestpoint
 <LI><a href="#[7ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaintCorrect
-<LI><a href="#[8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetHeight
 <LI><a href="#[842]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientRect
+<LI><a href="#[8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetHeight
 </UL>
 
 <P><STRONG><a name="[842]"></a>WM_GetClientRect</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, wm_getclientrect.o(.text))
@@ -15419,14 +15419,14 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[6c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetClientRectEx
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetClientRect
-<LI><a href="#[8cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawDownRect
-<LI><a href="#[8bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetClientRect
-<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_EFFECT_3D_DrawUp
-<LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<BR>[Called By]<UL><LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[7f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetClientRect
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_GetRect
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_DrawDown
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D1L_DrawUp
+<LI><a href="#[8cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawDownRect
+<LI><a href="#[8bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetClientRect
+<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_EFFECT_3D_DrawUp
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_GetRect
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawDown
 </UL>
@@ -15500,9 +15500,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[732]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MoveRect
 <LI><a href="#[711]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetDialogItem
-<LI><a href="#[8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetInsideRectEx
 <LI><a href="#[8d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowRectEx
 <LI><a href="#[8d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetFlags
+<LI><a href="#[8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetInsideRectEx
 </UL>
 <BR>[Called By]<UL><LI><a href="#[740]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW__InvalidateRow
 <LI><a href="#[73e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW__InvalidateInsideArea
@@ -15569,20 +15569,20 @@ Global Symbols
 <LI><a href="#[75e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU__SendMenuMessage
 <LI><a href="#[789]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnMenu
 <LI><a href="#[786]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ForwardPIDMsgToOwner
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__cbClient
+<LI><a href="#[848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_Expand
+<LI><a href="#[906]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
+<LI><a href="#[8f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[8be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetBkColor
 <LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
 <LI><a href="#[8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetHeight
 <LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
 <LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
 <LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__cbClient
-<LI><a href="#[848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_Expand
-<LI><a href="#[906]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendToParent
-<LI><a href="#[8f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[948]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_NotifyOwner
-<LI><a href="#[9ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetScrollPartner
 <LI><a href="#[9bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetFirstSibling
 <LI><a href="#[9bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR__InvalidatePartner
+<LI><a href="#[9ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetScrollPartner
 </UL>
 
 <P><STRONG><a name="[755]"></a>WM_GetScrollbarH</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, wm_getscrollbar.o(.text))
@@ -15685,8 +15685,8 @@ Global Symbols
 <LI><a href="#[880]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_Expand
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DROPDOWN_Callback
-<LI><a href="#[983]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetFocusOnNextChild
 <LI><a href="#[970]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
+<LI><a href="#[983]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetFocusOnNextChild
 </UL>
 
 <P><STRONG><a name="[788]"></a>WM_SetSize</STRONG> (Thumb, 74 bytes, Stack size 32 bytes, wm_setsize.o(.text))
@@ -15699,9 +15699,9 @@ Global Symbols
 <LI><a href="#[8db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ResizeWindow
 </UL>
 <BR>[Called By]<UL><LI><a href="#[787]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU__ResizeMenu
+<LI><a href="#[846]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN__AdjustHeight
 <LI><a href="#[8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetHeight
 <LI><a href="#[88f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdatePositions
-<LI><a href="#[846]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN__AdjustHeight
 </UL>
 
 <P><STRONG><a name="[8dc]"></a>WM_InvalidateWindowDescs</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, wm_show.o(.text))
@@ -15764,8 +15764,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateRect
 <LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
-<LI><a href="#[8bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_EffectRequiresRedraw
 <LI><a href="#[8e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetClipRectUserIntersect
+<LI><a href="#[8bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_EffectRequiresRedraw
 </UL>
 
 <P><STRONG><a name="[8e4]"></a>WM__ClipAtParentBorders</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, wm.o(.text))
@@ -15877,9 +15877,6 @@ Global Symbols
 <LI><a href="#[6d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
 <LI><a href="#[6d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetId
 <LI><a href="#[794]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetEffect
-<LI><a href="#[8bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetBkColor
-<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
-<LI><a href="#[8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetInsideRectEx
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
 <LI><a href="#[831]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetDialogStatusPtr
 <LI><a href="#[830]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDialogStatusPtr
@@ -15887,6 +15884,9 @@ Global Symbols
 <LI><a href="#[8fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint1
 <LI><a href="#[8da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__ReleaseCapture
 <LI><a href="#[8c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetScrollState
+<LI><a href="#[8bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetBkColor
+<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
+<LI><a href="#[8a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetInsideRectEx
 <LI><a href="#[971]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsFocussable
 <LI><a href="#[948]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_NotifyOwner
 </UL>
@@ -15898,9 +15898,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[745]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 </UL>
 <BR>[Called By]<UL><LI><a href="#[757]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindowAsChild
-<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
 <LI><a href="#[835]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
 <LI><a href="#[8db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ResizeWindow
+<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
 <LI><a href="#[97f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveWindow
 <LI><a href="#[97e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MoveDescendents
 </UL>
@@ -15910,8 +15910,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
-<LI><a href="#[835]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
+<BR>[Called By]<UL><LI><a href="#[835]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
+<LI><a href="#[88e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
 </UL>
 
 <P><STRONG><a name="[835]"></a>WM_DeleteWindow</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, wm.o(.text))
@@ -15922,7 +15922,6 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[74f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
-<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
 <LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 <LI><a href="#[8eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsWindow
 <LI><a href="#[8ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__RemoveFromLinList
@@ -15931,6 +15930,7 @@ Global Symbols
 <LI><a href="#[8ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ResetNextDrawWin
 <LI><a href="#[8ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CheckCriticalHandles
 <LI><a href="#[8cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__DetachWindow
+<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_EndDialog
 <LI><a href="#[877]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_CreateEx
@@ -16004,18 +16004,6 @@ Global Symbols
 <LI><a href="#[6d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
 <LI><a href="#[787]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU__ResizeMenu
 <LI><a href="#[773]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU__InvalidateItem
-<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
-<LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
-<LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
-<LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
-<LI><a href="#[8ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetBkColor
-<LI><a href="#[8ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextColor
-<LI><a href="#[8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetHeight
-<LI><a href="#[8ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetFont
-<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
-<LI><a href="#[898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColorEx
-<LI><a href="#[897]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColor
-<LI><a href="#[896]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetBarColor
 <LI><a href="#[87f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetActive
 <LI><a href="#[87e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetTextAlign
 <LI><a href="#[87d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetMaxLen
@@ -16032,20 +16020,32 @@ Global Symbols
 <LI><a href="#[82f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetText
 <LI><a href="#[820]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_Init
 <LI><a href="#[8dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindowDescs
-<LI><a href="#[979]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InvalidateWindowAndDescs
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbInvalidateOne
+<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
+<LI><a href="#[8c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_SetState
+<LI><a href="#[8b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_DeleteItem
+<LI><a href="#[8af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextAlign
+<LI><a href="#[8ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetBkColor
+<LI><a href="#[8ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetTextColor
+<LI><a href="#[8ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetHeight
+<LI><a href="#[8ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetFont
+<LI><a href="#[8a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemWidth
+<LI><a href="#[898]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColorEx
+<LI><a href="#[897]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetTextColor
+<LI><a href="#[896]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetBarColor
 <LI><a href="#[96e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO__SetValue
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LISTBOX_Callback
 <LI><a href="#[938]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetTextColor
 <LI><a href="#[937]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetBkColor
 <LI><a href="#[936]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_SetFont
+<LI><a href="#[9bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR__InvalidatePartner
+<LI><a href="#[979]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InvalidateWindowAndDescs
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbInvalidateOne
 <LI><a href="#[9ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetPageSize
 <LI><a href="#[9ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetNumItems
 <LI><a href="#[9e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_SetValue
 <LI><a href="#[9e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnSetScrollState
 <LI><a href="#[9c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ClrHasTrans
 <LI><a href="#[9c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetHasTrans
-<LI><a href="#[9bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR__InvalidatePartner
 </UL>
 
 <P><STRONG><a name="[757]"></a>WM_CreateWindowAsChild</STRONG> (Thumb, 316 bytes, Stack size 40 bytes, wm.o(.text))
@@ -16056,12 +16056,12 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[70e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
-<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
-<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[8f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_BringToBottom
 <LI><a href="#[8e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SelectWindow
 <LI><a href="#[8f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_AddToLinList
 <LI><a href="#[8d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InsertWindowIntoList
+<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
+<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 </UL>
 <BR>[Called By]<UL><LI><a href="#[759]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_CreateEx
 <LI><a href="#[6eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU_CreateEx
@@ -16069,9 +16069,9 @@ Global Symbols
 <LI><a href="#[706]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_CreateEx
 <LI><a href="#[877]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_CreateEx
 <LI><a href="#[856]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_CreateEx
-<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
 <LI><a href="#[82e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_CreateEx
 <LI><a href="#[8f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_CreateWindow
+<LI><a href="#[8b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_CreateEx
 <LI><a href="#[965]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_CreateEx
 <LI><a href="#[9eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR_CreateEx
 </UL>
@@ -16101,25 +16101,25 @@ Global Symbols
 <LI><a href="#[739]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
 <LI><a href="#[6e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillRect
 <LI><a href="#[6d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawBitmap
-<LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
-<LI><a href="#[7f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DispLine
-<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
 <LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[866]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_InvertRect
 <LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
+<LI><a href="#[7f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DispLine
 <LI><a href="#[8fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint1
+<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
 <LI><a href="#[930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawRect
-<LI><a href="#[9d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawEllipse
-<LI><a href="#[9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillEllipse
-<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
-<LI><a href="#[9d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawCircle
-<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
 <LI><a href="#[9b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_CopyToLCDAt
 <LI><a href="#[99f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawPoint
 <LI><a href="#[99c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawLineTo
 <LI><a href="#[99a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawLineRel
 <LI><a href="#[997]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawPolygon
 <LI><a href="#[993]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawLine
+<LI><a href="#[9d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawEllipse
+<LI><a href="#[9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillEllipse
+<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
+<LI><a href="#[9d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawCircle
+<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
 </UL>
 
 <P><STRONG><a name="[801]"></a>WM__InitIVRSearch</STRONG> (Thumb, 248 bytes, Stack size 32 bytes, wm.o(.text))
@@ -16138,24 +16138,24 @@ Global Symbols
 <LI><a href="#[739]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ClearRect
 <LI><a href="#[6e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillRect
 <LI><a href="#[6d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawBitmap
-<LI><a href="#[7f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DispLine
-<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
 <LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[866]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_InvertRect
 <LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[7f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DispLine
 <LI><a href="#[8fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint1
+<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
 <LI><a href="#[930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawRect
-<LI><a href="#[9d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawEllipse
-<LI><a href="#[9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillEllipse
-<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
-<LI><a href="#[9d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawCircle
-<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
 <LI><a href="#[9b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MEMDEV_CopyToLCDAt
 <LI><a href="#[99f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawPoint
 <LI><a href="#[99c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawLineTo
 <LI><a href="#[99a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawLineRel
 <LI><a href="#[997]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawPolygon
 <LI><a href="#[993]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawLine
+<LI><a href="#[9d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawEllipse
+<LI><a href="#[9d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillEllipse
+<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
+<LI><a href="#[9d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawCircle
+<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
 </UL>
 
 <P><STRONG><a name="[8f8]"></a>WM_SetDefault</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, wm.o(.text))
@@ -16220,12 +16220,12 @@ Global Symbols
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_cbBrowsTestpoint
 <LI><a href="#[75f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMessage
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MENU_Callback
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__cbClient
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT__Callback
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DROPDOWN_Callback
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cbBackWin
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_RADIO_Callback
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_LISTBOX_Callback
 <LI><a href="#[935]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
@@ -16408,8 +16408,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillRect
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillRectEx
-<LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<BR>[Called By]<UL><LI><a href="#[841]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[8ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillRectEx
 </UL>
 
 <P><STRONG><a name="[7f3]"></a>GUI_GetClientRect</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, gui_getclientrect.o(.text))
@@ -16481,13 +16481,13 @@ Global Symbols
 
 <P><STRONG><a name="[8ce]"></a>GUI_RectsIntersect</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, gui_rectsintersect.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[790]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillStringInRect
-<LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
-<LI><a href="#[91b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DispLine
 <LI><a href="#[8fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_PaintTransChildren
 <LI><a href="#[8fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint1Trans
 <LI><a href="#[8f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Findx1
 <LI><a href="#[8f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Findx0
 <LI><a href="#[8f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Findy1
+<LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
+<LI><a href="#[91b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DispLine
 </UL>
 
 <P><STRONG><a name="[902]"></a>GUI_SaveContext_W_M</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, gui_savecontext.o(.text))
@@ -16519,8 +16519,8 @@ Global Symbols
 <LI><a href="#[914]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetPenSize
 <LI><a href="#[916]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetLineStyle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[917]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDefault
-<LI><a href="#[8f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetDefault
+<BR>[Called By]<UL><LI><a href="#[8f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetDefault
+<LI><a href="#[917]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetDefault
 </UL>
 
 <P><STRONG><a name="[917]"></a>GUI_SetDefault</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, gui_setdefault.o(.text), UNUSED)
@@ -16537,8 +16537,8 @@ Global Symbols
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[81b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawBitmap
-<LI><a href="#[866]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_InvertRect
+<BR>[Called By]<UL><LI><a href="#[866]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_InvertRect
+<LI><a href="#[7fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawBitmap
 <LI><a href="#[8f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_SetDefault
 </UL>
 
@@ -16589,11 +16589,11 @@ Global Symbols
 <P><STRONG><a name="[865]"></a>GUI_UC__GetCharCodeInc</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, gui_uc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GUI_UC__GetCharCodeInc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetLineNumChars
-<LI><a href="#[7f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetLineDistX
-<LI><a href="#[862]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetNumChars
+<BR>[Called By]<UL><LI><a href="#[862]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetNumChars
 <LI><a href="#[869]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetCursorAtPixel
 <LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[7f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetLineNumChars
+<LI><a href="#[7f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetLineDistX
 <LI><a href="#[91b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DispLine
 </UL>
 
@@ -16603,13 +16603,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[876]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_AddKey
 <LI><a href="#[712]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetText
 <LI><a href="#[714]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_GetText
-<LI><a href="#[7f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DispStringInRect
-<LI><a href="#[7f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispString
 <LI><a href="#[87d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetMaxLen
 <LI><a href="#[874]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT__GetCurrentChar
 <LI><a href="#[871]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InsertChar
 <LI><a href="#[86f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DeleteChar
 <LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[7f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DispStringInRect
+<LI><a href="#[7f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispString
 </UL>
 
 <P><STRONG><a name="[b21]"></a>GUI_UC__NumBytes2NumChars</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, gui_uc.o(.text), UNUSED)
@@ -16626,12 +16626,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[729]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DispStringInRect
+<BR>[Called By]<UL><LI><a href="#[861]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__CalcTextRect
+<LI><a href="#[7f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__DispStringInRect
 <LI><a href="#[7f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispString
-<LI><a href="#[861]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__CalcTextRect
-<LI><a href="#[919]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispNextLine
 <LI><a href="#[96a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[93d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_OwnerDraw
+<LI><a href="#[919]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispNextLine
 </UL>
 
 <P><STRONG><a name="[919]"></a>GUI_DispNextLine</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, guichar.o(.text))
@@ -16673,9 +16673,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[729]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetLineDistX
-<LI><a href="#[869]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetCursorAtPixel
+<BR>[Called By]<UL><LI><a href="#[869]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetCursorAtPixel
 <LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[7f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetLineDistX
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetLineDistX_SJIS
 </UL>
 
@@ -16717,9 +16717,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[240]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT21L16S2W_Read
 <LI><a href="#[6ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetColor
+<LI><a href="#[81b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 <LI><a href="#[804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
-<LI><a href="#[81b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 <LI><a href="#[91d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetColor
 <LI><a href="#[91e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetBkColor
 <LI><a href="#[91c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPROP_FindChar
@@ -16813,8 +16813,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[923]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTableUncached
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawBitmap
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitmap_RLE4
+<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitmap_RLE4
+<LI><a href="#[7fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawBitmap
 </UL>
 
 <P><STRONG><a name="[82a]"></a>LCD_InitLUT</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, lcdcolor.o(.text))
@@ -16908,13 +16908,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[93a]"></a>BUTTON_SetPressed</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, button.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
-<LI><a href="#[832]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_OrState
+<BR><BR>[Calls]<UL><LI><a href="#[832]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_OrState
+<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
 </UL>
 
 <P><STRONG><a name="[93b]"></a>BUTTON_SetFocussable</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, button.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
-<LI><a href="#[832]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_OrState
+<BR><BR>[Calls]<UL><LI><a href="#[832]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_OrState
+<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
 </UL>
 
 <P><STRONG><a name="[899]"></a>FRAMEWIN__UpdateButtons</STRONG> (Thumb, 254 bytes, Stack size 56 bytes, framewin__updatebuttons.o(.text))
@@ -16923,9 +16923,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[732]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MoveRect
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[883]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcTitleHeight
 <LI><a href="#[8db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ResizeWindow
 <LI><a href="#[8d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveWindow
+<LI><a href="#[883]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcTitleHeight
 </UL>
 <BR>[Called By]<UL><LI><a href="#[708]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetFont
 </UL>
@@ -16936,9 +16936,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[735]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_GetpItem
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
+<LI><a href="#[819]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
 <LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[89b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_SethItem
-<LI><a href="#[819]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_SetItemText
@@ -16991,10 +16991,10 @@ Global Symbols
 <LI><a href="#[6cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetFont
 <LI><a href="#[6cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
 <LI><a href="#[764]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetStringDistX
-<LI><a href="#[7f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontDistY
-<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
 <LI><a href="#[839]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_GethItem
 <LI><a href="#[81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
+<LI><a href="#[7f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontDistY
+<LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
 <LI><a href="#[93e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetInsideRect
 <LI><a href="#[93c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX__GetpString
 </UL>
@@ -17496,8 +17496,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestorOrSelf
-<LI><a href="#[88a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnChildHasFocus
+<BR>[Called By]<UL><LI><a href="#[88a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnChildHasFocus
+<LI><a href="#[88b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestorOrSelf
 </UL>
 
 <P><STRONG><a name="[88b]"></a>WM__IsAncestorOrSelf</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, wm__isancestor.o(.text))
@@ -17528,8 +17528,8 @@ Global Symbols
 <LI><a href="#[8db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ResizeWindow
 <LI><a href="#[8d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveWindow
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
-<LI><a href="#[8db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ResizeWindow
+<BR>[Called By]<UL><LI><a href="#[8db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_ResizeWindow
+<LI><a href="#[8b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_UpdateChildPostions
 </UL>
 
 <P><STRONG><a name="[8f4]"></a>WM_BringToBottom</STRONG> (Thumb, 80 bytes, Stack size 32 bytes, wm_bringtobottom.o(.text))
@@ -17638,10 +17638,10 @@ Global Symbols
 
 <P><STRONG><a name="[847]"></a>WM__GetWindowSizeX</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, wm_getwindowsize.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_AddMenu
-<LI><a href="#[885]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcPositions
 <LI><a href="#[86a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeX
 <LI><a href="#[848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_Expand
 <LI><a href="#[846]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN__AdjustHeight
+<LI><a href="#[885]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcPositions
 </UL>
 
 <P><STRONG><a name="[886]"></a>WM__GetWindowSizeY</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, wm_getwindowsize.o(.text))
@@ -17659,9 +17659,9 @@ Global Symbols
 <LI><a href="#[847]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetWindowSizeX
 <LI><a href="#[97d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDefaultWin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetWindowSizeX
-<LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<BR>[Called By]<UL><LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[869]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetCursorAtPixel
+<LI><a href="#[8c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetWindowSizeX
 </UL>
 
 <P><STRONG><a name="[887]"></a>WM_GetWindowSizeY</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, wm_getwindowsize.o(.text))
@@ -17674,10 +17674,10 @@ Global Symbols
 <LI><a href="#[886]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetWindowSizeY
 <LI><a href="#[97d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDefaultWin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetWindowSizeX
+<BR>[Called By]<UL><LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[8c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetWindowSizeX
 <LI><a href="#[8a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetItemIndex
 <LI><a href="#[885]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcPositions
-<LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 </UL>
 
 <P><STRONG><a name="[88e]"></a>WM_IsWindow</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, wm_iswindow.o(.text))
@@ -17698,12 +17698,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[732]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MoveRect
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
 <LI><a href="#[8e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateArea
+<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
 <LI><a href="#[97e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_MoveDescendents
 </UL>
-<BR>[Called By]<UL><LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
-<LI><a href="#[8d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveWindow
+<BR>[Called By]<UL><LI><a href="#[8d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveWindow
+<LI><a href="#[890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_MoveChildTo
 <LI><a href="#[980]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveTo
 </UL>
 
@@ -17726,10 +17726,10 @@ Global Symbols
 <LI><a href="#[97f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__MoveWindow
 </UL>
 <BR>[Called By]<UL><LI><a href="#[775]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DetachWindow
-<LI><a href="#[899]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdateButtons
-<LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
 <LI><a href="#[8d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_AttachWindow
 <LI><a href="#[8ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__UpdateChildPositions
+<LI><a href="#[899]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdateButtons
+<LI><a href="#[882]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetCaptureMove
 </UL>
 
 <P><STRONG><a name="[8d3]"></a>WM_MoveTo</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, wm_move.o(.text))
@@ -17766,7 +17766,6 @@ Global Symbols
 <LI><a href="#[742]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTVIEW_SetSel
 <LI><a href="#[876]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_AddKey
 <LI><a href="#[71e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DROPDOWN_SetSel
-<LI><a href="#[8a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[87c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT_SetValue
 <LI><a href="#[871]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InsertChar
 <LI><a href="#[86f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DeleteChar
@@ -17774,6 +17773,7 @@ Global Symbols
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DROPDOWN_Callback
 <LI><a href="#[845]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[835]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DeleteWindow
+<LI><a href="#[8a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[96e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO__SetValue
 <LI><a href="#[970]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[933]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ButtonReleased
@@ -17804,14 +17804,14 @@ Global Symbols
 <LI><a href="#[729]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Lock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
 <LI><a href="#[8e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_MergeRect
 <LI><a href="#[8e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateArea
 <LI><a href="#[8ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__UpdateChildPositions
+<LI><a href="#[8a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__SendMsgNoData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetSize
-<LI><a href="#[899]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdateButtons
 <LI><a href="#[8ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__UpdateChildPositions
+<LI><a href="#[899]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__UpdateButtons
 <LI><a href="#[9f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetYSize
 <LI><a href="#[9f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetXSize
 </UL>
@@ -17899,9 +17899,9 @@ Global Symbols
 <LI><a href="#[8e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__ActivateClipRect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[790]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillStringInRect
+<LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[7fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringInRectMax
 <LI><a href="#[89d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
-<LI><a href="#[85e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[95a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnPaint
 <LI><a href="#[92f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 </UL>
@@ -17941,8 +17941,8 @@ Global Symbols
 <LI><a href="#[98e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Abs
 <LI><a href="#[98f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SwapInt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawEllipse
-<LI><a href="#[991]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawLine
+<BR>[Called By]<UL><LI><a href="#[991]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawLine
+<LI><a href="#[9d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawEllipse
 </UL>
 
 <P><STRONG><a name="[991]"></a>GL_DrawLine</STRONG> (Thumb, 310 bytes, Stack size 72 bytes, gui2dlib.o(.text), UNUSED)
@@ -18033,8 +18033,8 @@ Global Symbols
 <LI><a href="#[802]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
 <LI><a href="#[99e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawRect
 </UL>
-<BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawUpRect
-<LI><a href="#[92f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<BR>[Called By]<UL><LI><a href="#[92f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_WIDGET_EFFECT_3D_DrawUpRect
 </UL>
 
 <P><STRONG><a name="[99f]"></a>GUI_DrawPoint</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, gui2dlib.o(.text), UNUSED)
@@ -18163,9 +18163,9 @@ Global Symbols
 <P><STRONG><a name="[12f]"></a>GUIMONO_DispChar</STRONG> (Thumb, 388 bytes, Stack size 80 bytes, guicharm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = GUIMONO_DispChar &rArr; LCD_DrawBitmap &rArr; LCD_FillRect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<BR>[Calls]<UL><LI><a href="#[81b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
+<LI><a href="#[804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
 <LI><a href="#[800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawBitmap
-<LI><a href="#[81b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetDrawMode
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> f6x8.o(.constdata)
 </UL>
@@ -18259,9 +18259,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[729]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Unlock
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[74f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Free
-<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[815]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_GetMaxSize
 <LI><a href="#[813]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocNoInit
+<LI><a href="#[89c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocZero
 <LI><a href="#[9ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_USAGE_BM_Create
 <LI><a href="#[9ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetNumColors
 </UL>
@@ -18450,8 +18450,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[745]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
 </UL>
-<BR>[Called By]<UL><LI><a href="#[983]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetFocusOnNextChild
-<LI><a href="#[970]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
+<BR>[Called By]<UL><LI><a href="#[970]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
+<LI><a href="#[983]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetFocusOnNextChild
 </UL>
 
 <P><STRONG><a name="[9c2]"></a>WM__SetScrollbarV</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, wm_setscrollbar.o(.text))
@@ -18534,8 +18534,8 @@ Global Symbols
 <LI><a href="#[9cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CheckYInterSect
 <LI><a href="#[9c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawHLine
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
-<LI><a href="#[991]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawLine
+<BR>[Called By]<UL><LI><a href="#[991]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawLine
+<LI><a href="#[9cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillPolygon
 </UL>
 
 <P><STRONG><a name="[9cd]"></a>GUI_FillPolygon</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, gui_fillpolygon.o(.text), UNUSED)
@@ -18576,8 +18576,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[98b]"></a>GL_FillCircle</STRONG> (Thumb, 198 bytes, Stack size 32 bytes, guicirc.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
-<LI><a href="#[98a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawPoint
+<BR><BR>[Called By]<UL><LI><a href="#[98a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DrawPoint
+<LI><a href="#[9d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillCircle
 </UL>
 
 <P><STRONG><a name="[9d3]"></a>GUI_FillCircle</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, guicirc.o(.text), UNUSED)
@@ -19331,21 +19331,21 @@ Global Symbols
 <P><STRONG><a name="[9fa]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, _printf_pad.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _printf_pre_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_wctomb
+<BR>[Called By]<UL><LI><a href="#[9f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<LI><a href="#[a1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_infnan
+<LI><a href="#[a1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_wctomb
 <LI><a href="#[a1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
 <LI><a href="#[9fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
-<LI><a href="#[9f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
-<LI><a href="#[a1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_infnan
 </UL>
 
 <P><STRONG><a name="[9fb]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, _printf_pad.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _printf_post_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_wctomb
+<BR>[Called By]<UL><LI><a href="#[9f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<LI><a href="#[a1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_infnan
+<LI><a href="#[a1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_wctomb
 <LI><a href="#[a1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
 <LI><a href="#[9fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
-<LI><a href="#[9f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
-<LI><a href="#[a1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_infnan
 </UL>
 
 <P><STRONG><a name="[9fc]"></a>_printf_truncate_signed</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, _printf_truncate.o(.text))
@@ -19353,9 +19353,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9fd]"></a>_printf_truncate_unsigned</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, _printf_truncate.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_oct
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_hex
+<BR><BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_hex
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
+<LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_oct
 </UL>
 
 <P><STRONG><a name="[9f9]"></a>_printf_str</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, _printf_str.o(.text))
@@ -19370,13 +19370,13 @@ Global Symbols
 <P><STRONG><a name="[151]"></a>_printf_int_dec</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, _printf_dec.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = _printf_int_dec &rArr; _printf_int_common &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
-<LI><a href="#[9fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned
+<BR>[Calls]<UL><LI><a href="#[9fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned
 <LI><a href="#[9fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_signed
+<LI><a href="#[9fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_i
-<LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_u
+<BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_u
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_d
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_i
 </UL>
 
 <P><STRONG><a name="[159]"></a>_printf_longlong_dec</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, _printf_longlong_dec.o(.text))
@@ -19385,9 +19385,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[9fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
 <LI><a href="#[9ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ll_udiv10
 </UL>
-<BR>[Called By]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_llu
+<BR>[Called By]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_lld
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_llu
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_lli
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_lld
 </UL>
 
 <P><STRONG><a name="[a00]"></a>_printf_longlong_hex</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, _printf_hex_int_ll_ptr.o(.text))
@@ -19692,10 +19692,10 @@ Global Symbols
 <LI><a href="#[7a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initConf
 <LI><a href="#[796]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MENU__SetItem
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sockAccept
-<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
-<LI><a href="#[891]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__SetText
 <LI><a href="#[86f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DeleteChar
 <LI><a href="#[84c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_AddString
+<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
+<LI><a href="#[891]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__SetText
 </UL>
 
 <P><STRONG><a name="[7ca]"></a>strcasecmp</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, strcasecmp.o(.text))
@@ -19737,11 +19737,11 @@ Global Symbols
 <LI><a href="#[7cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;make_path
 <LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rnfr_handler
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_write
-<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
 <LI><a href="#[871]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_InsertChar
 <LI><a href="#[86f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DeleteChar
 <LI><a href="#[86d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_IsSpaceInBuffer
 <LI><a href="#[84c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LISTBOX_AddString
+<LI><a href="#[8b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HEADER_SetItemText
 </UL>
 
 <P><STRONG><a name="[378]"></a>strncmp</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, strncmp.o(.text))
@@ -19800,9 +19800,9 @@ Global Symbols
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getShowInfo_Analogue
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getShowInfo_Accumulate
 <LI><a href="#[797]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_SetItem
+<LI><a href="#[86c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
 <LI><a href="#[8b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_ResizeItem
 <LI><a href="#[89a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_AllocInit
-<LI><a href="#[86c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_Realloc
 <LI><a href="#[9b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitLine8BPP_DDB
 <LI><a href="#[9b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawBitLine16BPP_DDB
 <LI><a href="#[a0b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memmove
@@ -20003,8 +20003,8 @@ Global Symbols
 <LI><a href="#[5ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dns_lookup
 <LI><a href="#[56d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dns_gethostbyname
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;do_dns_found
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_ctype
 <LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_numeric
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_ctype
 </UL>
 
 <P><STRONG><a name="[b3a]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
@@ -20034,16 +20034,16 @@ Global Symbols
 <P><STRONG><a name="[b3f]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[9f3]"></a>__rt_heap_descriptor</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_heap_descriptor_intlibspace.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc
-<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<BR><BR>[Called By]<UL><LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc
 </UL>
 
 <P><STRONG><a name="[16d]"></a>__rt_locale</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_locale_intlibspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[9f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ctype_table
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_common
 <LI><a href="#[a25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
 <LI><a href="#[a1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_common
 </UL>
 
 <P><STRONG><a name="[b40]"></a>__use_no_heap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
@@ -20069,10 +20069,10 @@ Global Symbols
 <P><STRONG><a name="[169]"></a>_init_alloc</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, init_alloc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = _init_alloc &rArr; __rt_SIGRTMEM &rArr; __rt_SIGRTMEM_inner &rArr; __default_signal_display &rArr; _ttywrch
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Initialize
-<LI><a href="#[9f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
-<LI><a href="#[a13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGRTMEM
+<BR>[Calls]<UL><LI><a href="#[a13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGRTMEM
 <LI><a href="#[a11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_ProvideMemory
+<LI><a href="#[a14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Initialize
+<LI><a href="#[9f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_heap_2
 </UL>
@@ -20086,8 +20086,8 @@ Global Symbols
 <P><STRONG><a name="[9ff]"></a>_ll_udiv10</STRONG> (Thumb, 138 bytes, Stack size 12 bytes, lludiv10.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _ll_udiv10
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_dec
+<BR>[Called By]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_dec
+<LI><a href="#[a15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[9fe]"></a>_printf_int_common</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, _printf_intcommon.o(.text))
@@ -20096,10 +20096,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[9fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
 <LI><a href="#[9fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_oct
-<LI><a href="#[a00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_hex
+<BR>[Called By]<UL><LI><a href="#[a00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_hex
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_dec
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
+<LI><a href="#[a21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_oct
 </UL>
 
 <P><STRONG><a name="[149]"></a>_printf_charcount</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, _printf_charcount.o(.text))
@@ -20111,12 +20111,12 @@ Global Symbols
 <P><STRONG><a name="[a1a]"></a>_printf_fp_dec_real</STRONG> (Thumb, 628 bytes, Stack size 104 bytes, _printf_fp_dec.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = _printf_fp_dec_real &rArr; _fp_digits &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
-<LI><a href="#[9fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<BR>[Calls]<UL><LI><a href="#[9fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
 <LI><a href="#[9fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 <LI><a href="#[a1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[a1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_infnan
+<LI><a href="#[a15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec
 </UL>
@@ -20127,10 +20127,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a01]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
-<LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR>[Called By]<UL><LI><a href="#[6bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[7ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_vsnprintf
 <LI><a href="#[7ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_snprintf
+<LI><a href="#[9f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 </UL>
 
 <P><STRONG><a name="[ec]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _sputc.o(.text))
@@ -20173,8 +20173,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
-<LI><a href="#[a1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ferror
+<BR>[Calls]<UL><LI><a href="#[a1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ferror
+<LI><a href="#[9f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
 <BR>[Called By]<UL><LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -20201,8 +20201,8 @@ Global Symbols
 <P><STRONG><a name="[155]"></a>_printf_int_oct</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, _printf_oct_int_ll.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = _printf_int_oct &rArr; _printf_longlong_oct &rArr; _printf_int_common &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_oct
-<LI><a href="#[9fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned
+<BR>[Calls]<UL><LI><a href="#[9fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned
+<LI><a href="#[a21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_oct
 </UL>
 <BR>[Called By]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_o
 </UL>
@@ -20223,12 +20223,12 @@ Global Symbols
 <P><STRONG><a name="[a25]"></a>_scanf_really_real</STRONG> (Thumb, 672 bytes, Stack size 120 bytes, scanf_fp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = _scanf_really_real &rArr; _fp_value &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
-<LI><a href="#[a02]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_is_digit
+<BR>[Calls]<UL><LI><a href="#[a02]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_is_digit
 <LI><a href="#[a28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_narrow
 <LI><a href="#[a26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_infnan
 <LI><a href="#[a27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_hex_real
+<LI><a href="#[a22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_real
 </UL>
@@ -20309,8 +20309,8 @@ Global Symbols
 <P><STRONG><a name="[a29]"></a>__vfscanf</STRONG> (Thumb, 876 bytes, Stack size 96 bytes, _scanf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 424<LI>Call Chain = __vfscanf &rArr; _scanf_real &rArr; _scanf_really_real &rArr; _fp_value &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_real
-<LI><a href="#[a05]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_int
+<BR>[Calls]<UL><LI><a href="#[a05]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_int
+<LI><a href="#[a2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_real
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a04]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf_char
 </UL>
@@ -20340,8 +20340,8 @@ Global Symbols
 <P><STRONG><a name="[a2b]"></a>__sig_exit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, defsig_exit.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a09]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT
-<LI><a href="#[a13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGRTMEM
+<BR>[Called By]<UL><LI><a href="#[a13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGRTMEM
+<LI><a href="#[a09]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGABRT
 </UL>
 
 <P><STRONG><a name="[a2a]"></a>__rt_SIGABRT_inner</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, defsig_abrt_inner.o(.text))
@@ -20381,17 +20381,17 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[413]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ldexp
-<LI><a href="#[a40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
+<BR>[Called By]<UL><LI><a href="#[a40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
+<LI><a href="#[a45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ldexp
 </UL>
 
 <P><STRONG><a name="[a34]"></a>_scanf_really_hex_real</STRONG> (Thumb, 776 bytes, Stack size 80 bytes, scanf_hexfp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = _scanf_really_hex_real &rArr; __support_ldexp &rArr; ldexp &rArr; __aeabi_cdcmpeq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a06]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_chval
+<BR>[Calls]<UL><LI><a href="#[a28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_narrow
+<LI><a href="#[a06]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_chval
 <LI><a href="#[a36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__support_ldexp
 <LI><a href="#[a35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
-<LI><a href="#[a28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_narrow
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_hex_real
 </UL>
@@ -20477,8 +20477,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_e2e
 <LI><a href="#[a3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__btod_div_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-<LI><a href="#[a16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<BR>[Called By]<UL><LI><a href="#[a16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<LI><a href="#[a15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[a24]"></a>_btod_edivd</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, btod.o(CL$$btod_edivd))
@@ -20496,8 +20496,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__btod_mult_common
 <LI><a href="#[a3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_e2e
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-<LI><a href="#[a16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<BR>[Called By]<UL><LI><a href="#[a16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<LI><a href="#[a15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[a23]"></a>_btod_emuld</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, btod.o(CL$$btod_emuld))
@@ -20531,18 +20531,18 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
-<LI><a href="#[a34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_hex_real
+<BR>[Called By]<UL><LI><a href="#[a34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_hex_real
+<LI><a href="#[a25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
 </UL>
 
 <P><STRONG><a name="[a40]"></a>__mathlib_tofloat</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, narrow.o(i.__mathlib_tofloat))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = __mathlib_tofloat &rArr; __aeabi_cdcmpeq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
+<BR>[Calls]<UL><LI><a href="#[a33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[a44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
 <LI><a href="#[a41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;frexp
 <LI><a href="#[a42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmpeq
 <LI><a href="#[a43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-<LI><a href="#[a33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_narrow
 </UL>
@@ -20556,8 +20556,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a02]"></a>_is_digit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, __printf_wp.o(i._is_digit))
-<BR><BR>[Called By]<UL><LI><a href="#[a25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
-<LI><a href="#[a01]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
+<BR><BR>[Called By]<UL><LI><a href="#[a01]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
+<LI><a href="#[a25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
 </UL>
 
 <P><STRONG><a name="[a41]"></a>frexp</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, frexp.o(i.frexp))
@@ -20571,10 +20571,10 @@ Global Symbols
 <P><STRONG><a name="[a45]"></a>ldexp</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, ldexp.o(i.ldexp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = ldexp &rArr; __aeabi_cdcmpeq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<BR>[Calls]<UL><LI><a href="#[a33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[a3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
 <LI><a href="#[a3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 <LI><a href="#[a42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmpeq
-<LI><a href="#[a33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__support_ldexp
 </UL>
@@ -20614,15 +20614,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a4c]"></a>__fpl_dcmp_Inf</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, dcmpi.o(x$fpl$dcmpinf), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[a4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
-<LI><a href="#[a4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmple
+<BR><BR>[Called By]<UL><LI><a href="#[a4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmple
+<LI><a href="#[a4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
 </UL>
 
 <P><STRONG><a name="[a42]"></a>__aeabi_cdcmpeq</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, deqf.o(x$fpl$deqf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_cdcmpeq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ldexp
-<LI><a href="#[a40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
+<BR>[Called By]<UL><LI><a href="#[a40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_tofloat
+<LI><a href="#[a45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ldexp
 </UL>
 
 <P><STRONG><a name="[a4b]"></a>_dcmpeq</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, deqf.o(x$fpl$deqf), UNUSED)
@@ -20642,9 +20642,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a48]"></a>__fpl_dnaninf</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, dnaninf.o(x$fpl$dnaninf), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[a4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
+<BR><BR>[Called By]<UL><LI><a href="#[a4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmple
+<LI><a href="#[a4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmpeq
 <LI><a href="#[a46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_d2f
-<LI><a href="#[a4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dcmple
 </UL>
 
 <P><STRONG><a name="[a52]"></a>__fpl_dretinf</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dretinf.o(x$fpl$dretinf), UNUSED)
@@ -20679,9 +20679,9 @@ Global Symbols
 <P><STRONG><a name="[b45]"></a>__aeabi_fadd</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fadd), UNUSED)
 
 <P><STRONG><a name="[a53]"></a>_fadd</STRONG> (Thumb, 196 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fadd), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fsub1
-<LI><a href="#[a47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fretinf
+<BR><BR>[Calls]<UL><LI><a href="#[a47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fretinf
 <LI><a href="#[a51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+<LI><a href="#[a54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fsub1
 </UL>
 
 <P><STRONG><a name="[7b3]"></a>__aeabi_fdiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, fdiv.o(x$fpl$fdiv))
@@ -20745,8 +20745,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a58]"></a>_fsub</STRONG> (Thumb, 234 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fsub), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fadd1
-<LI><a href="#[a51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+<BR><BR>[Calls]<UL><LI><a href="#[a51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_fnaninf
+<LI><a href="#[a59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fadd1
 </UL>
 
 <P><STRONG><a name="[14d]"></a>_printf_fp_dec</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, printf1.o(x$fpl$printf1))
@@ -21283,8 +21283,8 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[30b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs2_checkpt_find_erased_block
 <LI><a href="#[305]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs2_checkpt_init_chunk_hdr
 <LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apply_chunk_offset
-<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[312]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_checkpt_close
 <LI><a href="#[310]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs2_checkpt_wr
@@ -21371,9 +21371,9 @@ Local Symbols
 <LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs2_checkpt_invalidate
 <LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_release_temp_buffer
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_get_temp_buffer
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_block_became_dirty
 </UL>
@@ -21475,10 +21475,10 @@ Local Symbols
 <P><STRONG><a name="[33b]"></a>yaffs_fix_null_name</STRONG> (Thumb, 96 bytes, Stack size 64 bytes, yaffs_guts.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = yaffs_fix_null_name &rArr; strcpy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
-<LI><a href="#[33d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcat
+<BR>[Calls]<UL><LI><a href="#[33d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcat
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_get_obj_name
 <LI><a href="#[33f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_set_obj_name
@@ -21690,8 +21690,8 @@ Local Symbols
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_put_chunk_in_file
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_find_chunk_in_file
 <LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_chunk_del
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_gc_block
 </UL>
@@ -21782,8 +21782,8 @@ Local Symbols
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_put_chunk_in_file
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_find_chunk_in_file
 <LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_chunk_del
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_flush_file_cache
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_do_file_wr
@@ -22000,8 +22000,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_rd_chunk_tags_nand
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_find_chunk_in_file
-<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_do_file_wr
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_file_rd
@@ -22455,8 +22455,8 @@ Local Symbols
 <LI><a href="#[32f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_wr_chunk_tags_nand
 <LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_release_temp_buffer
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_get_temp_buffer
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;yaffs_summary_add
 </UL>
@@ -23848,9 +23848,9 @@ Local Symbols
 <LI>Call Chain = do_dns_found &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[50b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_sem_signal
-<LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[514]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> api_msg.o(.text)
 </UL>
@@ -24531,8 +24531,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[52a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;memp_malloc
 <LI><a href="#[658]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ip_reass_remove_oldest_datagram
-<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ip_reass
 </UL>
@@ -25940,9 +25940,9 @@ Local Symbols
 <LI>Call Chain = port_handler &rArr; __0sscanf &rArr; __vfscanf_char &rArr; __vfscanf &rArr; _scanf_real &rArr; _scanf_really_real &rArr; _fp_value &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;session_response
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 <LI><a href="#[716]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sscanf
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cmd.o(.data)
 </UL>
@@ -26078,11 +26078,11 @@ Local Symbols
 <LI><a href="#[7cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;session_response
 <LI><a href="#[7cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;session_format_response
 <LI><a href="#[7cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;make_path
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[233]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cmd.o(.data)
 </UL>
@@ -26307,11 +26307,11 @@ Local Symbols
 <P><STRONG><a name="[10d]"></a>_DrawBitmap_RLE4</STRONG> (Thumb, 552 bytes, Stack size 88 bytes, lcdrle4.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = _DrawBitmap_RLE4 &rArr; LCD_GetpPalConvTable &rArr; LCD_GetpPalConvTableUncached &rArr; LCD_Color2Index
 </UL>
-<BR>[Calls]<UL><LI><a href="#[804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
-<LI><a href="#[7ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTable
-<LI><a href="#[82d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetPixelIndex
+<BR>[Calls]<UL><LI><a href="#[82d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetPixelIndex
 <LI><a href="#[826]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColorIndex
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawHLine
+<LI><a href="#[804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect
+<LI><a href="#[7ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GetpPalConvTable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lcdrle4.o(.constdata)
 </UL>
@@ -26437,10 +26437,6 @@ Local Symbols
 <LI><a href="#[6cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetFont
 <LI><a href="#[784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetClientRectWin
 <LI><a href="#[790]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillStringInRect
-<LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
-<LI><a href="#[802]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
-<LI><a href="#[7fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetUserClipRect
-<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[85f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsEnabled
 <LI><a href="#[860]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetInsideRect
 <LI><a href="#[862]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__GetNumChars
@@ -26449,6 +26445,10 @@ Local Symbols
 <LI><a href="#[863]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_GetCharCode
 <LI><a href="#[866]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_InvertRect
 <LI><a href="#[864]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetCharDistX
+<LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
+<LI><a href="#[802]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
+<LI><a href="#[7fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetUserClipRect
+<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EDIT__Callback
 </UL>
@@ -26500,9 +26500,9 @@ Local Symbols
 <LI>Call Chain = _DeleteChar &rArr; WM_NotifyParent &rArr; WM_SendToParent &rArr; WM_SendMessage &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[870]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_GetCharSize
 <LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 </UL>
@@ -26514,12 +26514,12 @@ Local Symbols
 <LI>Call Chain = _InsertChar &rArr; _IsSpaceInBuffer &rArr; _IncrementBuffer &rArr; GUI_ALLOC_Realloc &rArr; GUI_ALLOC_AllocNoInit &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
-<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[872]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__CalcSizeOfChar
 <LI><a href="#[873]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC_Encode
 <LI><a href="#[86e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_IsCharsAvailable
 <LI><a href="#[86d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_IsSpaceInBuffer
 <LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<LI><a href="#[7f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_UC__NumChars2NumBytes
 <LI><a href="#[80c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memmove
 <LI><a href="#[2f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
@@ -26557,8 +26557,8 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[70e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_InvalidateWindow
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetActive
-<LI><a href="#[88a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnChildHasFocus
+<BR>[Called By]<UL><LI><a href="#[88a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnChildHasFocus
+<LI><a href="#[88d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetActive
 </UL>
 
 <P><STRONG><a name="[880]"></a>_OnTouch</STRONG> (Thumb, 70 bytes, Stack size 24 bytes, framewin.o(.text))
@@ -26582,14 +26582,14 @@ Local Symbols
 <LI><a href="#[6e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_FillRect
 <LI><a href="#[6cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetFont
 <LI><a href="#[790]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillStringInRect
+<LI><a href="#[86a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeX
+<LI><a href="#[861]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__CalcTextRect
 <LI><a href="#[801]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__InitIVRSearch
 <LI><a href="#[802]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetNextIVR
 <LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
 <LI><a href="#[889]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetActiveWindow
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_EFFECT_3D_DrawUp
 <LI><a href="#[885]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcPositions
-<LI><a href="#[86a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeX
-<LI><a href="#[861]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__CalcTextRect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
 </UL>
@@ -26598,9 +26598,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 208 + Unknown Stack Size
 <LI>Call Chain = _OnChildHasFocus &rArr; _SetActive &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateAreaBelow &rArr; WM_InvalidateArea &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
-<BR>[Calls]<UL><LI><a href="#[88b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestorOrSelf
+<BR>[Calls]<UL><LI><a href="#[87f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetActive
+<LI><a href="#[88b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestorOrSelf
 <LI><a href="#[88c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsAncestor
-<LI><a href="#[87f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SetActive
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_FRAMEWIN_Callback
 </UL>
@@ -26614,14 +26614,14 @@ Local Symbols
 <LI><a href="#[6d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
 <LI><a href="#[6d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
 <LI><a href="#[745]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SendMessage
-<LI><a href="#[88e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
-<LI><a href="#[88d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetActive
-<LI><a href="#[885]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcPositions
 <LI><a href="#[88a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnChildHasFocus
 <LI><a href="#[888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
 <LI><a href="#[880]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[833]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocusOnNextChild
 <LI><a href="#[819]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_FreePtr
+<LI><a href="#[88e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsWindow
+<LI><a href="#[88d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN_SetActive
+<LI><a href="#[885]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FRAMEWIN__CalcPositions
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> framewin.o(.text)
 </UL>
@@ -26650,13 +26650,13 @@ Local Symbols
 <LI><a href="#[735]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_GetpItem
 <LI><a href="#[731]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ARRAY_GetNumItems
 <LI><a href="#[6cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetFont
+<LI><a href="#[844]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawUpRect
+<LI><a href="#[81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
 <LI><a href="#[7fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetUserClipRect
 <LI><a href="#[7f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetClientRect
 <LI><a href="#[89f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__GetYSize
 <LI><a href="#[89e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__GetXSize
 <LI><a href="#[8a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__Draw
-<LI><a href="#[844]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawUpRect
-<LI><a href="#[81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
 </UL>
@@ -26708,8 +26708,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = _OnTouch &rArr; _HandlePID &rArr; HEADER_SetItemWidth &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateAreaBelow &rArr; WM_InvalidateArea &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HandlePID
-<LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<BR>[Calls]<UL><LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<LI><a href="#[8a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HandlePID
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_HEADER_Callback
 </UL>
@@ -26762,8 +26762,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__Client2Screen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawDownRect
-<LI><a href="#[844]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawUpRect
+<BR>[Called By]<UL><LI><a href="#[844]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawUpRect
+<LI><a href="#[8cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawDownRect
 </UL>
 
 <P><STRONG><a name="[110]"></a>_WIDGET_EFFECT_3D1L_DrawUpRect</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, widget_effect_3d1l.o(.text))
@@ -27043,8 +27043,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
 <LI><a href="#[78c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetBkColor
-<LI><a href="#[809]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_StoreKey
 <LI><a href="#[81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
+<LI><a href="#[809]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_StoreKey
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> wm.o(.text)
 </UL>
@@ -27116,8 +27116,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = _DispLine_SJIS &rArr; GL_DispChar &rArr; GUI_DispNextLine &rArr; GUI_GetFontDistY &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DispChar
-<LI><a href="#[91f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DB2SJIS
+<BR>[Calls]<UL><LI><a href="#[91f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DB2SJIS
+<LI><a href="#[91a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_DispChar
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guiencjs.o(.constdata)
 </UL>
@@ -27137,12 +27137,12 @@ Local Symbols
 <LI><a href="#[6f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetTextMode
 <LI><a href="#[6cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetFont
 <LI><a href="#[78e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI__ReduceRect
+<LI><a href="#[85f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsEnabled
+<LI><a href="#[81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
 <LI><a href="#[7fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetUserClipRect
 <LI><a href="#[7f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetClientRect
 <LI><a href="#[8c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawFocusRect
 <LI><a href="#[8a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DRAW__Draw
-<LI><a href="#[85f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsEnabled
-<LI><a href="#[81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
 <LI><a href="#[930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawRect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[935]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
@@ -27172,9 +27172,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 208 + Unknown Stack Size
 <LI>Call Chain = _ButtonReleased &rArr; WIDGET_AndState &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateAreaBelow &rArr; WM_InvalidateArea &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
-<BR>[Calls]<UL><LI><a href="#[809]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_StoreKey
+<BR>[Calls]<UL><LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<LI><a href="#[809]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_StoreKey
 <LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
-<LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[935]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_Callback
 <LI><a href="#[934]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
@@ -27500,11 +27500,11 @@ Local Symbols
 <LI><a href="#[6cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_SetFont
 <LI><a href="#[6cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DispStringAt
 <LI><a href="#[764]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetStringDistX
+<LI><a href="#[85f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsEnabled
+<LI><a href="#[81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
 <LI><a href="#[7f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontDistY
 <LI><a href="#[8c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__DrawFocusRect
 <LI><a href="#[8bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetClientRect
-<LI><a href="#[85f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__IsEnabled
-<LI><a href="#[81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Clear
 <LI><a href="#[96c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetHasTrans
 <LI><a href="#[96b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_GetFontInfo
 <LI><a href="#[96d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ResizeRect
@@ -27517,8 +27517,8 @@ Local Symbols
 <LI>Call Chain = _OnTouch &rArr; RADIO_SetValue &rArr; RADIO__SetValue &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateAreaBelow &rArr; WM_InvalidateArea &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
-<LI><a href="#[809]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_StoreKey
 <LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<LI><a href="#[809]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_StoreKey
 <LI><a href="#[971]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsFocussable
 <LI><a href="#[96f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RADIO_SetValue
 </UL>
@@ -27627,8 +27627,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[889]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetActiveWindow
 </UL>
-<BR>[Called By]<UL><LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
-<LI><a href="#[86a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeX
+<BR>[Called By]<UL><LI><a href="#[86a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeX
+<LI><a href="#[887]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_GetWindowSizeY
 </UL>
 
 <P><STRONG><a name="[97e]"></a>_MoveDescendents</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, wm_move.o(.text))
@@ -27658,9 +27658,9 @@ Local Symbols
 <LI>Call Chain = _SetFocusOnNextChild &rArr; WM_SetFocus &rArr; WM_SendMessage &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocus
+<LI><a href="#[971]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsFocussable
 <LI><a href="#[984]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM__GetFocussedChild
 <LI><a href="#[982]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetNextChild
-<LI><a href="#[971]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_IsFocussable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[833]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_SetFocusOnNextChild
 </UL>
@@ -27714,10 +27714,10 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[99e]"></a>_DrawRect</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, gui2dlib.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _DrawRect &rArr; LCD_DrawVLine
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _DrawRect &rArr; LCD_DrawHLine
 </UL>
-<BR>[Calls]<UL><LI><a href="#[803]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawVLine
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawHLine
+<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawHLine
+<LI><a href="#[803]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawVLine
 </UL>
 <BR>[Called By]<UL><LI><a href="#[930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_DrawRect
 </UL>
@@ -27862,8 +27862,8 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[9c7]"></a>_Add</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, gui_fillpolygon.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[9c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_AddPoint
-<LI><a href="#[992]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_FillPolygon
+<BR><BR>[Called By]<UL><LI><a href="#[992]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GL_FillPolygon
+<LI><a href="#[9c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_AddPoint
 </UL>
 
 <P><STRONG><a name="[9c8]"></a>_Init</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, gui_fillpolygon.o(.text), UNUSED)
@@ -27967,9 +27967,9 @@ Local Symbols
 <LI>Call Chain = _Paint &rArr; _CalcPositions &rArr; WM_GetScrollbarV &rArr; WM_GetDialogItem &rArr; _GetDialogItem &rArr;  _GetDialogItem (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[734]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetColor
+<LI><a href="#[844]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawUpRect
 <LI><a href="#[8ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__FillRectEx
 <LI><a href="#[8bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__GetClientRect
-<LI><a href="#[844]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET__EFFECT_DrawUpRect
 <LI><a href="#[9df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_DrawTriangle
 <LI><a href="#[9dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_CalcPositions
 </UL>
@@ -27990,8 +27990,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 208 + Unknown Stack Size
 <LI>Call Chain = _ScrollbarReleased &rArr; WIDGET_AndState &rArr; WM_InvalidateWindow &rArr; WM_InvalidateRect &rArr; WM__InvalidateAreaBelow &rArr; WM_InvalidateArea &rArr; GUI_Unlock &rArr; GUI_X_Unlock &rArr; OSSemPost &rArr; OS_EventTaskRdy &rArr; OS_EventTaskRemoveMulti
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
-<LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<BR>[Calls]<UL><LI><a href="#[83d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_NotifyParent
+<LI><a href="#[8c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_AndState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 </UL>
@@ -28036,11 +28036,11 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[752]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIDGET_HandleActive
 <LI><a href="#[738]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_ALLOC_h2p
 <LI><a href="#[6d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WM_DefaultProc
+<LI><a href="#[9bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR__InvalidatePartner
 <LI><a href="#[9e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnSetScrollState
 <LI><a href="#[9e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnKey
 <LI><a href="#[9e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_OnTouch
 <LI><a href="#[9e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Paint
-<LI><a href="#[9bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCROLLBAR__InvalidatePartner
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> scrollbar.o(.text)
 </UL>
@@ -28055,11 +28055,11 @@ Local Symbols
 <P><STRONG><a name="[a15]"></a>_fp_digits</STRONG> (Thumb, 426 bytes, Stack size 96 bytes, _printf_fp_dec.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = _fp_digits &rArr; _btod_etento &rArr; _btod_emul &rArr; _e2e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ll_udiv10
-<LI><a href="#[a19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_emul
+<BR>[Calls]<UL><LI><a href="#[a19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_emul
 <LI><a href="#[a18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_ediv
 <LI><a href="#[a17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_d2e
 <LI><a href="#[a16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_btod_etento
+<LI><a href="#[9ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ll_udiv10
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
 </UL>

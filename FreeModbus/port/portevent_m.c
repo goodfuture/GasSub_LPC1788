@@ -222,8 +222,8 @@ void vMBMasterErrorCBExecuteFunction(UCHAR ucDestAddress, const UCHAR* pucPDUDat
  *
  */
 //void vMBMasterCBRequestScuuess( void ) {
-void vMBMasterCBRequestSucess(UCHAR ucDestAddress, const UCHAR* pucPDUData,
-		USHORT ucPDULength) {	
+void vMBMasterCBRequestScuuess(UCHAR ucDestAddress/*, const UCHAR* pucPDUData,
+		USHORT ucPDULength*/) {	
 	/**
 	 * @note This code is use OS's event mechanism for modbus master protocol stack.
 	 * If you don't use OS, you can change it.
