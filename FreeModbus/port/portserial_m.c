@@ -410,7 +410,7 @@ void USART0_IRQHandler(void)
 	
 	uint32_t intsrc;
 	uint8_t lineStatus;
-	
+
 	OSIntEnter();																		/****通知os进入中断*/
 	
 	intsrc=UART_GetIntId(UART_0);

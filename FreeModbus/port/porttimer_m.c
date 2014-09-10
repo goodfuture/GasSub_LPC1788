@@ -316,12 +316,13 @@ void TIM3_IRQHandler(void)
 	OS_CPU_SR  cpu_sr;
 	OS_ENTER_CRITICAL();
 	OSIntNesting++;
+	OSIntExit();
 	if (TIM_GetIntStatus(LPC_TIM2, TIM_MR0_INT)== SET)
 	{
 		TIM_ClearIntPending(LPC_TIM3, TIM_MR0_INT);	//T0ÖÐ¶Ï¸´Î» T0IR
 		prvvTIMERExpiredISR();
 	}
-	OSIntExit();
+	
 	
 }
 
