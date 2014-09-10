@@ -7,3 +7,13 @@ E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\uc1788
 Project File Date:  09/09/2014
 
 <h2>Output:</h2>
+Build target 'FLASH'
+compiling portserial_m.c...
+..\..\FreeModbus\port\portserial_m.c(176): warning:  #550-D: variable "rs485cfg" was set but never used
+..\..\FreeModbus\port\portserial_m.c(412): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(448): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(483): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(518): warning:  #550-D: variable "lineStatus" was set but never used
+linking...
+Program Size: Code=306030 RO-data=13630 RW-data=11500 ZI-data=14903220  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 5 Warning(s).

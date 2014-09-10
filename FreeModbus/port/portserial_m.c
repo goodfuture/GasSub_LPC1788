@@ -101,7 +101,7 @@ void vMBMasterPortClose(void)
 //	USART_Cmd(USART2, DISABLE);
 }
 
-//默认一个主机 串口2 波特率可设置  奇偶检验可设置
+//设定四个主机 分别设置 波特率可设置  奇偶检验可设置
 BOOL xMBMasterPortSerialInit(RS485_NUM RS485_X, ULONG ulBaudRate, UCHAR ucDataBits,
 		eMBParity eParity)
 {
