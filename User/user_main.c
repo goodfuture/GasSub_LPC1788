@@ -205,7 +205,10 @@ void Test_Key(void)
 static void TaskStart (void  *parg)
 {
 		INT8U err;
-		
+		Correct_Input	 cTestInput;
+		Correct_Input	 cReadInput;
+		uint8_t i;
+	
     (void)parg;
 
     #if OS_TASK_STAT_EN > 0
@@ -282,6 +285,14 @@ static void TaskStart (void  *parg)
 			
 		App_KeyTaskCreate();						  /* Create Task Key */
 
+		
+		for(i=0;i<16;i++)
+		{
+				cTestInput.intercept[i]=i*2000;
+				cTestInput.slope[i]=i*1000;
+		}
+		EEPROM_WriteRati(cTestInput);
+		cReadInput=EEPROM_ReadRati();
 		while (1) 
 		{                             
         OSTaskSuspend(OS_PRIO_SELF);                                    /*  The start task can be pended*/

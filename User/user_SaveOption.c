@@ -13,6 +13,7 @@
 *			include files
 ********************************************************************************************/
 #include "user_SaveOption.h"
+#include "stdio.h"
 
 /*****************************************************************************
  * Defines and typedefs
@@ -182,16 +183,23 @@ Bool EEPROM_WriteRati(Correct_Input savestruct)
 	{
 		INT32TOUINT8(WriteData,savestruct.intercept[2*i],savestruct.intercept[2*i+1]);
 		if(EEPROM_WriteDataOnePage(WriteData,PAGE_SIZE,(RATI_ADRESS+PAGE_SIZE*i)&0xff)==FALSE)
+		{
+			printf("Read Rati Failed in roll 1 num %d\n",i+1);
 			return  FALSE;
+		}
 		OSTimeDly(6);
 	}
 	for(i=0;i<8;i++)
 	{
-		INT32TOUINT8(WriteData,savestruct.intercept[2*i],savestruct.intercept[2*i+1]);
+		INT32TOUINT8(WriteData,savestruct.slope[2*i],savestruct.slope[2*i+1]);
 		if(EEPROM_WriteDataOnePage(WriteData,PAGE_SIZE,(RATI_ADRESS+0x40+PAGE_SIZE*i)&0xff)==FALSE)
+		{
+			printf("Read Rati Failed in roll 2 num %d\n",i+1);
 			return  FALSE;
+		}
 		OSTimeDly(6);
 	}
+	printf("Save Rati Success!\n");
 	return  TRUE;
 }
 /*********************************************************************************************
@@ -209,8 +217,10 @@ Correct_Input EEPROM_ReadRati()
 	
 	if(EEPROM_ReadData(ReadData,RATI_SIZE,RATI_ADRESS)==FALSE)
 	{
+		printf("Read Rati Failed!\n");
 	}
 	UINT8TOINT32(ReadData,savestruct.intercept,savestruct.slope);
+	printf("Read Rati Success!\n");
 	return savestruct;
 }
 
@@ -228,11 +238,11 @@ void INT32TOUINT8(uint8_t data[],int32_t fp1,int32_t fp2)
 	{
 		if(i<4)
 		{
-			data[i]=(fp1&(0xF000>>i))>>((3-i)*4);
+			data[i]=(fp1&(0xF000>>(i*4)))>>((3-i)*4);
 		}
 		else
 		{
-			data[i]=(fp2&(0xF000>>(i-4)))>>((7-i)*4);
+			data[i]=(fp2&(0xF000>>((i-4)*4)))>>((7-i)*4);
 		}
 	}
 }
