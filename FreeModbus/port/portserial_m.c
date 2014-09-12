@@ -532,6 +532,7 @@ void USART4_IRQHandler(void)
 	{
 		prvvUARTRxISR(RS485_4);
 	}
+	
 	/******∑¢ÀÕ÷–∂œ*************/
 	else if((intsrc&0x0f) == UART_IIR_INTID_THRE)
 	{	

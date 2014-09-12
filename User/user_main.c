@@ -58,6 +58,8 @@
 #include "user_SaveOption.h"
 #include "Sensor.h"
 
+#include "mb_m.h"
+
 /* 队列大小 */
 #define KEYQSIZE 8						//按键消息队列大小
 #define CONFIGQSIZE 2					//配置信息队列大小
@@ -163,37 +165,20 @@ void tcpip_init_done(void *arg)
 }
 
 /*
-Use for debug
-
-void Test_Key(void)
-{
-		int i = 0;
-		while (1)
-		{
-				OSTimeDly(500);
-				if ( i < 3 )
-				{
-						GUI_StoreKeyMsg(GUI_KEY_TAB, 1);
-						OSTimeDly(10);
-						GUI_StoreKeyMsg(GUI_KEY_TAB, 0);
-				}
-				else 
-				{
-						GUI_StoreKeyMsg(GUI_KEY_DOWN, 1);
-						OSTimeDly(10);
-						GUI_StoreKeyMsg(GUI_KEY_DOWN, 0);
-						OSTimeDly(10);
-						GUI_StoreKeyMsg(GUI_KEY_ENTER, 1);
-						OSTimeDly(10);
-						GUI_StoreKeyMsg(GUI_KEY_ENTER, 0);
-				}
-				++i;
-				if ( i > 4 ) i = 0;
-		}
-		
-		return;
-}
+RS485_Test
 */
+void RS485_Test(void)
+{
+		printf("RS485_Init ERRORCode = %d\n",eMBMasterInit(MB_RTU,RS485_1,1200,MB_PAR_ODD));
+		printf("RS485_Enable ERRORCode = %d\n",eMBMasterEnable());
+	
+		while(1)
+		{
+			printf("RS485_Poll ERRORCode = %d\n",eMBMasterPoll());
+			OSTimeDlyHMSM(0,0,5,0);
+		}
+}
+
 
 /*********************************************************************************************************
 ** Function name:           taskStart	   
@@ -205,9 +190,6 @@ void Test_Key(void)
 static void TaskStart (void  *parg)
 {
 		INT8U err;
-		Correct_Input	 cTestInput;
-		Correct_Input	 cReadInput;
-		uint8_t i;
 	
     (void)parg;
 
@@ -276,23 +258,17 @@ static void TaskStart (void  *parg)
 						   (OS_STK	*)&TestStk[511],
 						   (INT8U	 )44  	);                           /  Create Menu Task     */ 	
 		
-	/*	
-		err = OSTaskCreate ((void (*)(void	*))ErrorRate_RS485_Task, 
+		
+		err = OSTaskCreate ((void (*)(void	*))RS485_Test, 
 						   (void 	*)0,   
 						   (OS_STK	*)&TaskErrorRateRS485Stk[ TASK_ERROR_RATE_RS485_STK_SIZE-1 ],
 						   (INT8U	 )TASK_ERROR_RATE_RS485  	);                          
-		printf("ErrorRateRS485_Task: err = %d\n", err );*/
+		printf("ErrorRateRS485_Task: err = %d\n", err );
 			
 		App_KeyTaskCreate();						  /* Create Task Key */
 
 		
-		for(i=0;i<16;i++)
-		{
-				cTestInput.intercept[i]=i*2000;
-				cTestInput.slope[i]=i*1000;
-		}
-		EEPROM_WriteRati(cTestInput);
-		cReadInput=EEPROM_ReadRati();
+		
 		while (1) 
 		{                             
         OSTaskSuspend(OS_PRIO_SELF);                                    /*  The start task can be pended*/
@@ -373,6 +349,7 @@ static void Board_Init()
 
 int main(void)
 {	
+	
 		OS_CPU_SysTickInit(CLKPWR_GetCLK(CLKPWR_CLKTYPE_CPU) / 1000 - 1);
 
 		Board_Init();
@@ -389,8 +366,10 @@ int main(void)
 		M25P128_SSP_Init();
 	
 		GT21L16S2W_SSP_Init();
-	
-		LPC_Uart_Init(1200*(0x01<<optionSaveStruct.uartConfig[2]),1200*(0x01<<optionSaveStruct.uartConfig[3]),1200*(0x01<<optionSaveStruct.uartConfig[4]),1200*(0x01<<optionSaveStruct.uartConfig[5]));
+		
+		
+		
+//		LPC_Uart_Init(1200*(0x01<<optionSaveStruct.uartConfig[2]),1200*(0x01<<optionSaveStruct.uartConfig[3]),1200*(0x01<<optionSaveStruct.uartConfig[4]),1200*(0x01<<optionSaveStruct.uartConfig[5]));
 	
 		System_Time_Init();		 									   /*   Init RTC    */
 

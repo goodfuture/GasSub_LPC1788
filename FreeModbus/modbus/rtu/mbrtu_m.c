@@ -93,6 +93,8 @@ eMBMasterRTUInit(RS485_NUM RS485_X, ULONG ulBaudRate, eMBParity eParity )
     ULONG           usTimerT35_50us;
 		OS_CPU_SR  cpu_sr;
     ENTER_CRITICAL_SECTION(  );//关中断
+		
+		
 
     /* Modbus RTU uses 8 Databits. */
     if( xMBMasterPortSerialInit( RS485_X, ulBaudRate, 8, eParity ) != TRUE )
@@ -125,8 +127,8 @@ eMBMasterRTUInit(RS485_NUM RS485_X, ULONG ulBaudRate, eMBParity eParity )
             eStatus = MB_EPORTERR;
         }
     }
-    EXIT_CRITICAL_SECTION(  );//开中断
-
+    
+		EXIT_CRITICAL_SECTION(  );//开中断
     return eStatus;
 }
 

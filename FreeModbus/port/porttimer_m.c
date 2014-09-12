@@ -84,7 +84,7 @@ BOOL xMBMasterPortTimersInit(USHORT usTimeOut50us)
 	NVIC_DisableIRQ(TIMER3_IRQn);
 
 	// To start timer
-	TIM_Cmd(LPC_TIM3, DISABLE);
+	//TIM_Cmd(LPC_TIM3, DISABLE);
 	
 	return TRUE;
 }
@@ -301,7 +301,7 @@ void prvvTIMERExpiredISR(void)
 * comment		:	
 *********************************************************************************************/
 
-void TIM3_IRQHandler(void)
+void TIMER3_IRQHandler(void)
 {
 //	rt_interrupt_enter();
 //	if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
