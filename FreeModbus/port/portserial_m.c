@@ -235,6 +235,7 @@ BOOL xMBMasterPortSerialInit(RS485_NUM RS485_X, ULONG ulBaudRate, UCHAR ucDataBi
 			UART_FIFOConfig(UART_0,&UartFIFOConfig);
 			UART_IntConfig(UART_0, UART_INTCFG_RBR, ENABLE);
 			UART_IntConfig(UART_0, UART_INTCFG_RLS, ENABLE);
+			UART_IntConfig(UART_0, UART_INTCFG_THRE, ENABLE);						/* 		Enable the tr exit			*/
 			NVIC_SetPriority(UART0_IRQn, ((0x01<<3)|0x02));
 			NVIC_EnableIRQ(UART0_IRQn);
 			UART_RS485ReceiverCmd(UART_0,ENABLE);
@@ -252,6 +253,7 @@ BOOL xMBMasterPortSerialInit(RS485_NUM RS485_X, ULONG ulBaudRate, UCHAR ucDataBi
 			UART_FIFOConfig(UART_2,&UartFIFOConfig);
 			UART_IntConfig(UART_2, UART_INTCFG_RBR, ENABLE);
 			UART_IntConfig(UART_2, UART_INTCFG_RLS, ENABLE);
+			UART_IntConfig(UART_2, UART_INTCFG_THRE, ENABLE);						/* 		Enable the tr exit			*/
 			NVIC_SetPriority(UART2_IRQn, ((0x01<<3)|0x02));
 			NVIC_EnableIRQ(UART2_IRQn);
 			UART_RS485ReceiverCmd(UART_2,ENABLE);
@@ -269,6 +271,7 @@ BOOL xMBMasterPortSerialInit(RS485_NUM RS485_X, ULONG ulBaudRate, UCHAR ucDataBi
 			UART_FIFOConfig(UART_3,&UartFIFOConfig);
 			UART_IntConfig(UART_3, UART_INTCFG_RBR, ENABLE);
 			UART_IntConfig(UART_3, UART_INTCFG_RLS, ENABLE);
+			UART_IntConfig(UART_3, UART_INTCFG_THRE, ENABLE);						/* 		Enable the tr exit			*/
 			NVIC_SetPriority(UART3_IRQn, ((0x01<<3)|0x02));
 			NVIC_EnableIRQ(UART3_IRQn);
 			UART_RS485ReceiverCmd(UART_3,ENABLE);
@@ -286,6 +289,7 @@ BOOL xMBMasterPortSerialInit(RS485_NUM RS485_X, ULONG ulBaudRate, UCHAR ucDataBi
 			UART_FIFOConfig(UART_4,&UartFIFOConfig);
 			UART_IntConfig(UART_4, UART_INTCFG_RBR, ENABLE);
 			UART_IntConfig(UART_4, UART_INTCFG_RLS, ENABLE);
+			UART_IntConfig(UART_4, UART_INTCFG_THRE, ENABLE);						/* 		Enable the tr exit			*/
 			NVIC_SetPriority(UART4_IRQn, ((0x01<<3)|0x02));
 			NVIC_EnableIRQ(UART4_IRQn);
 			UART_RS485ReceiverCmd(UART_4,ENABLE);
@@ -379,6 +383,8 @@ void prvvUARTRxISR(RS485_NUM RS485_X)
 {
 	pxMBMasterFrameCBByteReceived(RS485_X);
 }
+
+
 
 /*******************************************************************************
  * Function Name  : USART0_IRQHandler
@@ -540,5 +546,4 @@ void USART4_IRQHandler(void)
 	}
 	OSIntExit();											/*****通知os退出中断******/
 }
-
 #endif

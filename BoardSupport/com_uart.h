@@ -31,7 +31,8 @@ typedef struct
 	uint8_t ctrl;
 	uint8_t len;
 	uint8_t	*data;
-	uint8_t cheak;
+	uint8_t CRCH;
+	uint8_t CRCL;
 	uint8_t tail;
 }RS485SendStruct;
 
@@ -41,14 +42,15 @@ typedef struct
 	uint8_t ctrl;
 	uint8_t len;
 	uint8_t *data;
-	uint8_t check;
+	uint8_t CRCH;
+	uint8_t CRCL;
 	uint8_t tail;
 }RS486RcvStruct;
 
 typedef struct
 {
-	uint8_t Send[10];
-	uint8_t	Rcv[15];
+	uint8_t Send[256];
+	uint8_t	Rcv[256];
 	uint8_t	sendIndex;
 	uint8_t rcvIndex;
 	uint8_t sendOK;
@@ -64,14 +66,19 @@ typedef struct											/*	RS485发送结构体	*/
 	uint8_t address;
 	uint8_t ctrl;
 	uint8_t len;
-	uint8_t data[3];
+	uint8_t data[128];
+	uint8_t CRCH;
+	uint8_t CRCL;
 }UserRS485Send;				
 
 typedef struct											/*	RS485接收结构体	*/
 {
+	uint8_t address;
 	uint8_t ctrl;
 	uint8_t len;
-	uint8_t data[10];
+	uint8_t data[128];
+	uint8_t CRCH;
+	uint8_t CRCL;
 }UserRS485Rcv;
 
  typedef struct											/*	Uart1接收结构体	*/

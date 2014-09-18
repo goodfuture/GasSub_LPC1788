@@ -78,7 +78,7 @@ BOOL xMBMasterPortTimersInit(USHORT usTimeOut50us)
 	usT35TimeOut50us=usTimeOut50us;
 
 	/* preemption = 1, sub-priority = 1 */
-	NVIC_SetPriority(TIMER3_IRQn, ((0x01<<5)|0x01));
+	NVIC_SetPriority(TIMER3_IRQn, ((0x01<<4)|0x01));
 
 	/* Enable interrupt for timer 3 */
 	NVIC_DisableIRQ(TIMER3_IRQn);
@@ -316,8 +316,8 @@ void TIMER3_IRQHandler(void)
 	OS_CPU_SR  cpu_sr;
 	OS_ENTER_CRITICAL();
 	OSIntNesting++;
-	OSIntExit();
-	if (TIM_GetIntStatus(LPC_TIM2, TIM_MR0_INT)== SET)
+	OS_EXIT_CRITICAL();
+	if (TIM_GetIntStatus(LPC_TIM3, TIM_MR0_INT)== SET)
 	{
 		TIM_ClearIntPending(LPC_TIM3, TIM_MR0_INT);	//T0ÖÐ¶Ï¸´Î» T0IR
 		prvvTIMERExpiredISR();

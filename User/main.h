@@ -44,7 +44,7 @@ extern "C" {
 	
 #define  TASK_FTP_PRIO									7
 	
-#define  TASK_ERROR_RATE_RS485					55
+#define  TASK_ERROR_RATE_RS485					10
 							          
 /*********************************************************************************************************
   TASK STACK SIZES  任务堆栈大小
@@ -58,7 +58,7 @@ extern "C" {
 
 #define  TASK_FTP_STK_SIZE							1024
 
-#define  TASK_ERROR_RATE_RS485_STK_SIZE 1024
+#define  TASK_ERROR_RATE_RS485_STK_SIZE 2048
 
 #ifdef __cplusplus
     }

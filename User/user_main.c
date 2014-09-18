@@ -66,6 +66,9 @@
 #define UPLOADQSIZE 128				//上传信息队列大小
 #define UARTSENDQSIZE 8				//8路开出口控制消息队列大小
 
+#define FRMB_DEBUG	0
+
+
 OS_EVENT    *KeyQueueHead = NULL;           //按键消息队列指针
 void        *KeyMsg[KEYQSIZE]; 		   				//按键消息指针数组
 
@@ -93,11 +96,11 @@ extern void UartRcv_Task(void);
 
 static OS_STK  GstkStart[TASK_START_STK_SIZE];                     /*  The stack of start task   */
 static OS_STK  Gstk2[MENU_TASK_STK_SIZE];                          /*  Led?????             */
-static OS_STK  TaskEquipmentStk[TASK_EQUIPMENT_STK_SIZE]; 		   	//任务堆栈
-static OS_STK  TaskUartRcvStk[TASK_UARTRCV_STK_SIZE];
-static OS_STK  TaskFileRcvStk[TASK_FILERCV_STK_SIZE];
-static OS_STK  TaskFtpStk[ TASK_FTP_STK_SIZE ];
-static OS_STK  TaskErrorRateRS485Stk[ TASK_ERROR_RATE_RS485_STK_SIZE ];
+__align(8) static OS_STK  TaskEquipmentStk[TASK_EQUIPMENT_STK_SIZE]; 		   	//任务堆栈
+__align(8) static OS_STK  TaskUartRcvStk[TASK_UARTRCV_STK_SIZE];
+__align(8) static OS_STK  TaskFileRcvStk[TASK_FILERCV_STK_SIZE];
+__align(8) static OS_STK  TaskFtpStk[ TASK_FTP_STK_SIZE ];
+__align(8) static OS_STK  TaskErrorRateRS485Stk[ TASK_ERROR_RATE_RS485_STK_SIZE ];
 //static OS_STK  TestStk[512];          
 
 INT8U	err;
@@ -164,21 +167,6 @@ void tcpip_init_done(void *arg)
   OSSemPost(sem_tcp_init_done);
 }
 
-/*
-RS485_Test
-*/
-void RS485_Test(void)
-{
-		printf("RS485_Init ERRORCode = %d\n",eMBMasterInit(MB_RTU,RS485_1,1200,MB_PAR_ODD));
-		printf("RS485_Enable ERRORCode = %d\n",eMBMasterEnable());
-	
-		while(1)
-		{
-			printf("RS485_Poll ERRORCode = %d\n",eMBMasterPoll());
-			OSTimeDlyHMSM(0,0,5,0);
-		}
-}
-
 
 /*********************************************************************************************************
 ** Function name:           taskStart	   
@@ -189,10 +177,14 @@ void RS485_Test(void)
 *********************************************************************************************************/
 static void TaskStart (void  *parg)
 {
+
 		INT8U err;
+		UserRS485Send ussend;
 	
     (void)parg;
 
+
+	
     #if OS_TASK_STAT_EN > 0
     OSStatInit();                                                       /*  Enable statistics           */
     #endif
@@ -257,22 +249,38 @@ static void TaskStart (void  *parg)
 						   (void 	*)0,   
 						   (OS_STK	*)&TestStk[511],
 						   (INT8U	 )44  	);                           /  Create Menu Task     */ 	
-		
-		
-		err = OSTaskCreate ((void (*)(void	*))RS485_Test, 
-						   (void 	*)0,   
-						   (OS_STK	*)&TaskErrorRateRS485Stk[ TASK_ERROR_RATE_RS485_STK_SIZE-1 ],
-						   (INT8U	 )TASK_ERROR_RATE_RS485  	);                          
-		printf("ErrorRateRS485_Task: err = %d\n", err );
 			
 		App_KeyTaskCreate();						  /* Create Task Key */
 
-		
-		
+#if	FRMB_DEBUG
+		ussend.address=0x00;
+		ussend.ctrl=0x01;
+		ussend.data[0]=0xaa;
+		ussend .len=1;
+		ussend.CRCH=0x00;
+		ussend.CRCL=0x11;
+#else
+
+		printf("RS485_Init ERRORCode = %d\n",eMBMasterInit(MB_RTU,RS485_1,1200,MB_PAR_ODD));
+		printf("RS485_Enable ERRORCode = %d\n",eMBMasterEnable());
+	
+#endif
+
 		while (1) 
-		{                             
-        OSTaskSuspend(OS_PRIO_SELF);                                    /*  The start task can be pended*/
-                                                                        /*  here. ??????????  */
+		{
+#if	FRMB_DEBUG
+			RS485Send_Struct(RS485_UART0,&ussend);
+			RS485Send_Struct(RS485_UART2,&ussend);
+			RS485Send_Struct(RS485_UART3,&ussend);
+			RS485Send_Struct(RS485_UART4,&ussend);
+#else			
+ 			printf("RS485_Poll ERRORCode = %d\n",eMBMasterPoll());
+			printf("eMBMasterReqWriteCoil ERRORCode = %d\n",eMBMasterReqWriteCoil(1,8,0xFF00,-1));
+			
+#endif
+			OSTimeDly(500);		
+			//OSTaskSuspend(OS_PRIO_SELF);                                    /*  The start task can be pended*/
+                                                                        /*  here. ??????????  */			
 		}
 }
 
@@ -360,6 +368,7 @@ int main(void)
 	
 		Display_Logo();
 		
+	
 	/* init phy */
     PHY_Init(optionSaveStruct.ipConfig.mac);
 		
@@ -368,8 +377,9 @@ int main(void)
 		GT21L16S2W_SSP_Init();
 		
 		
-		
-//		LPC_Uart_Init(1200*(0x01<<optionSaveStruct.uartConfig[2]),1200*(0x01<<optionSaveStruct.uartConfig[3]),1200*(0x01<<optionSaveStruct.uartConfig[4]),1200*(0x01<<optionSaveStruct.uartConfig[5]));
+#if	FRMB_DEBUG		
+		LPC_Uart_Init(1200*(0x01<<optionSaveStruct.uartConfig[2]),1200*(0x01<<optionSaveStruct.uartConfig[3]),1200*(0x01<<optionSaveStruct.uartConfig[4]),1200*(0x01<<optionSaveStruct.uartConfig[5]));
+#endif
 	
 		System_Time_Init();		 									   /*   Init RTC    */
 
@@ -378,7 +388,7 @@ int main(void)
     OSTaskCreate ( TaskStart,(void *)0,&GstkStart[TASK_START_STK_SIZE-1],TASK_START_PRIO );     /*  Initialize the start task   */
                                                                    /*  Start OS Schedule         */  
     OSStart();                                                     /*  Start uC/OS-II ??uC/OS-II */
-    return(0) ;	
+    return(0);	
 	
 }
 

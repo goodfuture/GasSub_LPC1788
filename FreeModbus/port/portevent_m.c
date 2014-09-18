@@ -276,24 +276,24 @@ eMBMasterReqErrCode eMBMasterWaitRequestFinish( void ) {
 	    &err );
 	switch (recvedEvent)
 	{
-	case EV_MASTER_PROCESS_SUCESS:
+		case EV_MASTER_PROCESS_SUCESS:
 
-		break;
-	case EV_MASTER_ERROR_RESPOND_TIMEOUT:
-	{
-		eErrStatus = MB_MRE_TIMEDOUT;
-		break;
-	}
-	case EV_MASTER_ERROR_RECEIVE_DATA:
-	{
-		eErrStatus = MB_MRE_REV_DATA;
-		break;
-	}
-	case EV_MASTER_ERROR_EXECUTE_FUNCTION:
-	{
-		eErrStatus = MB_MRE_EXE_FUN;
-		break;
-	}
+			break;
+		case EV_MASTER_ERROR_RESPOND_TIMEOUT:
+		{
+			eErrStatus = MB_MRE_TIMEDOUT;
+			break;
+		}
+		case EV_MASTER_ERROR_RECEIVE_DATA:
+		{
+			eErrStatus = MB_MRE_REV_DATA;
+			break;
+		}
+		case EV_MASTER_ERROR_EXECUTE_FUNCTION:
+		{
+			eErrStatus = MB_MRE_EXE_FUN;
+			break;
+		}
 	}
     return eErrStatus;
 }

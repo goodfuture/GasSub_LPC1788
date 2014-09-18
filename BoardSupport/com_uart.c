@@ -29,6 +29,8 @@
 #define RS485FIFOTRGLEV		UART_FIFO_TRGLEV0			/*	RS485FIFO中断字节设置		*/
 #define ENABLERS485RCVER	1											/*	开启rs485接收						*/
 
+#define UARTRCVTL					1000									/*	UART接收时间限制（0.1ms）*/
+
 
 #ifdef FUNCTIONREWRITE
 /* buffer size definition */
@@ -120,6 +122,12 @@ RS485TMP RS485Uart2;
 RS485TMP RS485Uart3;
 RS485TMP RS485Uart4;
 
+uint16_t Uart0TOL;										/*串口包接收超时标记*/
+uint16_t Uart1TOL;
+uint16_t Uart2TOL;
+uint16_t Uart3TOL;
+uint16_t Uart4TOL;
+
 extern uint8_t uart0RcvOK;
 extern uint8_t uart2RcvOK;
 extern uint8_t uart3RcvOK;
@@ -146,6 +154,13 @@ void LPC_Uart_Init(uint16_t RS485BAND_1,uint16_t RS485BAND_2,uint16_t RS485BAND_
 	uart1RcvIndex=0;
 	uart1SendIndex=0;
 	uart1SendOK=1;
+	
+	
+	Uart0TOL=0;
+	Uart1TOL=0;
+	Uart2TOL=0;
+	Uart3TOL=0;
+	Uart4TOL=0;
 	
 	RS485Uart0.rcvIndex=0;
 	RS485Uart0.sendIndex=0;
@@ -418,8 +433,16 @@ void UART1_IRQHandler()
 		if(readyToRcv==1)
 		{
 #ifdef UART1RCV_INT
+			if(Uart1TOL>UARTRCVTL)
+			{
+				uart1RcvOK=0;				/*接收失败*/
+				readyToRcv=0;
+				uart1RcvIndex=0;
+				goto UART1RCVError;
+			}
 			dataToRcv[uart1RcvIndex]=UART_ReceiveByte((LPC_UART_TypeDef *)LPC_UART1);
 			uart1RcvIndex+=1;
+			Uart0TOL=0;
 			if(uart1RcvIndex<134)
 			{
 				OSIntExit();											/*****通知os退出中断******/
@@ -438,6 +461,7 @@ void UART1_IRQHandler()
 			}
 			else 
 			{
+
 				uart1RcvOK=0;				/*接收失败*/
 				readyToRcv=0;
 				uart1RcvIndex=0;
@@ -445,6 +469,7 @@ void UART1_IRQHandler()
 				return;
 			}
 		}
+UART1RCVError:
 		rcvTemp=UART_ReceiveByte((LPC_UART_TypeDef *)LPC_UART1);
 		if(rcvTemp==0x5A&&uart1RcvStart==0)//若接收未开始且收到开始标记，则标记接收开始
 		{
@@ -457,6 +482,7 @@ void UART1_IRQHandler()
 				readyToRcv=1;
 				uart1RcvStart=0;
 				uart1RcvIndex=0;
+				Uart1TOL=0;
 			}
 		}
 	}
@@ -476,6 +502,10 @@ void UART1_IRQHandler()
 	OSIntExit();											/*****通知os退出中断******/
 	
 }
+
+
+#if	FRMB_DEBUG==1
+
 
 /*********************************************************************************************
 * name			:		UART0_IRQHandler
@@ -510,33 +540,30 @@ void UART0_IRQHandler()
 		if(RS485Uart0.readyToRcv==1)
 		{
 
+			if(RS485Uart0.rcvIndex>=RS485Uart0.Rcv[2]+6||Uart0TOL>UARTRCVTL)
+			{
+
+				uart0RcvOK=0;				/*设标记位，标志接收失败*/
+				RS485Uart0.readyToRcv=0;
+				RS485Uart0.rcvIndex=0;
+				goto UART0RCVError;
+			}
 			RS485Uart0.Rcv[RS485Uart0.rcvIndex]=UART_ReceiveByte(LPC_UART0);
 			RS485Uart0.rcvIndex+=1;
+			Uart0TOL=0;
 			if(RS485Uart0.Rcv[RS485Uart0.rcvIndex-1]!='E')													/*	未收到包尾		*/
 			{
 				OSIntExit();											/*****通知os退出中断******/
 				return;
 			}
 
-			else if(RS485Uart0.Rcv[RS485Uart0.rcvIndex-1]=='E'&&RS485Uart0.rcvIndex>=5)			/*	收到包尾且长度大于5	*/
+			else if(RS485Uart0.Rcv[RS485Uart0.rcvIndex-1]=='E'&&RS485Uart0.rcvIndex>=RS485Uart0.Rcv[2]+4)			/*	收到包尾且长度大于5	*/
 			{
-				if(RS485Uart0.Rcv[RS485Uart0.rcvIndex-2]==(('S'+'E')&0xff))										/*	检测校验位						*/
-				{
-					uart0RcvOK=1;				/*设标记位，标志接收成功*/
+					uart0RcvOK=1;											/*设标记位，标志接收成功*/
 					RS485Uart0.readyToRcv=0;
 					RS485Uart0.rcvIndex=0;
 					OSIntExit();											/*****通知os退出中断******/
 					return;
-				}
-				else
-				{
-					uart0RcvOK=0;				/*设标记位，标志接收成功*/
-					RS485Uart0.readyToRcv=0;
-					RS485Uart0.rcvIndex=0;
-					OSIntExit();											/*****通知os退出中断******/
-					return;
-				}
-					
 			}
 			else 
 			{
@@ -544,10 +571,13 @@ void UART0_IRQHandler()
 				return;
 			}
 		}
+UART0RCVError:
 		rcvTemp=UART_ReceiveByte(LPC_UART0);
+		
 		if(rcvTemp=='S'&&RS485Uart0.readyToRcv==0)//若接收未开始且收到开始标记，则标记接收开始
 		{
 			RS485Uart0.readyToRcv=1;
+			Uart0TOL=0;
 		}
 	}
 	/****	发送区为空中断	****/
@@ -597,33 +627,31 @@ void UART2_IRQHandler()
 	{
 		if(RS485Uart2.readyToRcv==1)
 		{
+			if(RS485Uart2.rcvIndex>=RS485Uart2.Rcv[2]+6||Uart2TOL>UARTRCVTL)
+			{
 
+				uart2RcvOK=0;				/*设标记位，标志接收失败*/
+				RS485Uart2.readyToRcv=0;
+				RS485Uart2.rcvIndex=0;
+				goto UART2RCVError;
+			}
 			RS485Uart2.Rcv[RS485Uart2.rcvIndex]=UART_ReceiveByte(LPC_UART2);
 			RS485Uart2.rcvIndex+=1;
+			Uart2TOL=0;
 			if(RS485Uart2.Rcv[RS485Uart2.rcvIndex-1]!='E')													/*	未收到包尾		*/
 			{
 				OSIntExit();											/*****通知os退出中断******/
 				return;
 			}
 
-			else if(RS485Uart2.Rcv[RS485Uart2.rcvIndex-1]=='E'&&RS485Uart2.rcvIndex>=5)			/*	收到包尾且长度大于5	*/
+			else if(RS485Uart2.Rcv[RS485Uart2.rcvIndex-1]=='E'&&RS485Uart2.rcvIndex>=RS485Uart2.Rcv[2]+4)			/*	收到包尾且长度大于5	*/
 			{
-				if(RS485Uart2.Rcv[RS485Uart2.rcvIndex-2]==(('S'+'E')&0xff))										/*	检测校验位						*/
-				{
-					uart2RcvOK=1;				/*设标记位，标志接收成功*/
+
+					uart2RcvOK=1;											/*设标记位，标志接收成功*/
 					RS485Uart2.readyToRcv=0;
 					RS485Uart2.rcvIndex=0;
 					OSIntExit();											/*****通知os退出中断******/
 					return;
-				}
-				else
-				{
-					uart2RcvOK=0;				/*设标记位，标志接收成功*/
-					RS485Uart2.readyToRcv=0;
-					RS485Uart2.rcvIndex=0;
-					OSIntExit();											/*****通知os退出中断******/
-					return;
-				}
 					
 			}
 			else 
@@ -632,10 +660,12 @@ void UART2_IRQHandler()
 				return;
 			}
 		}
+UART2RCVError:
 		rcvTemp=UART_ReceiveByte(LPC_UART2);
 		if(rcvTemp=='S'&&RS485Uart2.readyToRcv==0)//若接收未开始且收到开始标记，则标记接收开始
 		{
 			RS485Uart2.readyToRcv=1;
+			Uart2TOL=0;
 		}
 	}
 	/****	发送区为空中断	****/
@@ -686,32 +716,30 @@ void UART3_IRQHandler()
 		if(RS485Uart3.readyToRcv==1)
 		{
 
+			if(RS485Uart3.rcvIndex>=RS485Uart3.Rcv[2]+6||Uart3TOL>UARTRCVTL)
+			{
+
+				uart3RcvOK=0;				/*设标记位，标志接收失败*/
+				RS485Uart3.readyToRcv=0;
+				RS485Uart3.rcvIndex=0;
+				goto UART3RCVError;
+			}
 			RS485Uart3.Rcv[RS485Uart3.rcvIndex]=UART_ReceiveByte(LPC_UART3);
 			RS485Uart3.rcvIndex+=1;
+			Uart3TOL=0;		
 			if(RS485Uart3.Rcv[RS485Uart3.rcvIndex-1]!='E')													/*	未收到包尾		*/
 			{
 				OSIntExit();											/*****通知os退出中断******/
 				return;
 			}
 
-			else if(RS485Uart3.Rcv[RS485Uart3.rcvIndex-1]=='E'&&RS485Uart3.rcvIndex>=5)			/*	收到包尾且长度大于5	*/
+			else if(RS485Uart3.Rcv[RS485Uart3.rcvIndex-1]=='E'&&RS485Uart3.rcvIndex>=RS485Uart3.Rcv[2]+4)			/*	收到包尾且长度大于5	*/
 			{
-				if(RS485Uart3.Rcv[RS485Uart3.rcvIndex-2]==(('S'+'E')&0xff))										/*	检测校验位						*/
-				{
-					uart3RcvOK=1;				/*设标记位，标志接收成功*/
+					uart3RcvOK=1;											/*设标记位，标志接收成功*/
 					RS485Uart3.readyToRcv=0;
 					RS485Uart3.rcvIndex=0;
 					OSIntExit();											/*****通知os退出中断******/
 					return;
-				}
-				else
-				{
-					uart3RcvOK=0;				/*设标记位，标志接收成功*/
-					RS485Uart3.readyToRcv=0;
-					RS485Uart3.rcvIndex=0;
-					OSIntExit();											/*****通知os退出中断******/
-					return;
-				}
 					
 			}
 			else 
@@ -720,10 +748,12 @@ void UART3_IRQHandler()
 				return;
 			}
 		}
+UART3RCVError:
 		rcvTemp=UART_ReceiveByte(LPC_UART3);
 		if(rcvTemp=='S'&&RS485Uart3.readyToRcv==0)//若接收未开始且收到开始标记，则标记接收开始
 		{
 			RS485Uart3.readyToRcv=1;
+			Uart3TOL=0;
 		}
 	}
 	/****	发送区为空中断	****/
@@ -774,32 +804,31 @@ void UART4_IRQHandler()
 		if(RS485Uart4.readyToRcv==1)
 		{
 
+			if(RS485Uart4.rcvIndex>=RS485Uart4.Rcv[2]+6||Uart4TOL>UARTRCVTL)
+			{
+
+				uart4RcvOK=0;				/*设标记位，标志接收失败*/
+				RS485Uart4.readyToRcv=0;
+				RS485Uart4.rcvIndex=0;
+				goto UART4RCVError;
+			}
+			
 			RS485Uart4.Rcv[RS485Uart4.rcvIndex]=UART_ReceiveByte((LPC_UART_TypeDef *)LPC_UART4);
 			RS485Uart4.rcvIndex+=1;
+			Uart4TOL=0;
 			if(RS485Uart4.Rcv[RS485Uart4.rcvIndex-1]!='E')													/*	未收到包尾		*/
 			{
 				OSIntExit();											/*****通知os退出中断******/
 				return;
 			}
 
-			else if(RS485Uart4.Rcv[RS485Uart4.rcvIndex-1]=='E'&&RS485Uart4.rcvIndex>=5)			/*	收到包尾且长度大于5	*/
+			else if(RS485Uart4.Rcv[RS485Uart4.rcvIndex-1]=='E'&&RS485Uart4.rcvIndex>=RS485Uart4.Rcv[2]+4)			/*	收到包尾且长度大于5	*/
 			{
-				if(RS485Uart4.Rcv[RS485Uart4.rcvIndex-2]==(('S'+'E')&0xff))										/*	检测校验位						*/
-				{
-					uart4RcvOK=1;				/*设标记位，标志接收成功*/
+					uart4RcvOK=1;											/*设标记位，标志接收成功*/
 					RS485Uart4.readyToRcv=0;
 					RS485Uart4.rcvIndex=0;
 					OSIntExit();											/*****通知os退出中断******/
 					return;
-				}
-				else
-				{
-					uart4RcvOK=0;				/*设标记位，标志接收成功*/
-					RS485Uart4.readyToRcv=0;
-					RS485Uart4.rcvIndex=0;
-					OSIntExit();											/*****通知os退出中断******/
-					return;
-				}
 					
 			}
 			else 
@@ -808,10 +837,12 @@ void UART4_IRQHandler()
 				return;
 			}
 		}
+UART4RCVError:
 		rcvTemp=UART_ReceiveByte((LPC_UART_TypeDef *)LPC_UART4);
 		if(rcvTemp=='S'&&RS485Uart4.readyToRcv==0)//若接收未开始且收到开始标记，则标记接收开始
 		{
 			RS485Uart4.readyToRcv=1;
+			Uart4TOL=0;
 		}
 	}
 	/****	发送区为空中断	****/
@@ -828,6 +859,9 @@ void UART4_IRQHandler()
 	}
 	OSIntExit();											/*****通知os退出中断******/
 }
+
+#endif
+
 
 /*********************************************************************************************
 * name			:		Uart1_Send_Struct
@@ -926,9 +960,10 @@ void RS485Send_Struct(RS485_UART_NUM UART_NUM,UserRS485Send* rs485Send_S)
 			{
 				RS485Uart0.Send[3+i]=rs485Send_S->data[i-1];
 			}
-			RS485Uart0.Send[3+rs485Send_S->len+1]=('S'+'E')&0xff;
-			RS485Uart0.Send[3+rs485Send_S->len+2]='E';
-			RS485Uart0.sendLen=rs485Send_S->len+6;
+			RS485Uart0.Send[3+rs485Send_S->len+1]=rs485Send_S->CRCH;
+			RS485Uart0.Send[3+rs485Send_S->len+2]=rs485Send_S->CRCL;
+			RS485Uart0.Send[3+rs485Send_S->len+3]='E';
+			RS485Uart0.sendLen=rs485Send_S->len+7;
 			
 			UART_SendByte(LPC_UART0,RS485Uart0.Send[0]);
 			UART_IntConfig(UART_0, UART_INTCFG_THRE, ENABLE);						/* 		Enable the tr exit			*/
@@ -947,9 +982,10 @@ void RS485Send_Struct(RS485_UART_NUM UART_NUM,UserRS485Send* rs485Send_S)
 			{
 				RS485Uart2.Send[3+i]=rs485Send_S->data[i-1];
 			}
-			RS485Uart2.Send[3+rs485Send_S->len+1]=('S'+'E')&0xff;
-			RS485Uart2.Send[3+rs485Send_S->len+2]='E';
-			RS485Uart2.sendLen=rs485Send_S->len+6;
+			RS485Uart2.Send[3+rs485Send_S->len+1]=rs485Send_S->CRCH;
+			RS485Uart2.Send[3+rs485Send_S->len+2]=rs485Send_S->CRCL;
+			RS485Uart2.Send[3+rs485Send_S->len+3]='E';
+			RS485Uart2.sendLen=rs485Send_S->len+7;
 			
 			UART_SendByte(LPC_UART2,RS485Uart2.Send[0]);
 			UART_IntConfig(UART_2, UART_INTCFG_THRE, ENABLE);						/* 		Enable the tr exit			*/
@@ -968,9 +1004,10 @@ void RS485Send_Struct(RS485_UART_NUM UART_NUM,UserRS485Send* rs485Send_S)
 			{
 				RS485Uart3.Send[3+i]=rs485Send_S->data[i-1];
 			}
-			RS485Uart3.Send[3+rs485Send_S->len+1]=('S'+'E')&0xff;
-			RS485Uart3.Send[3+rs485Send_S->len+2]='E';
-			RS485Uart3.sendLen=rs485Send_S->len+6;
+			RS485Uart3.Send[3+rs485Send_S->len+1]=rs485Send_S->CRCH;
+			RS485Uart3.Send[3+rs485Send_S->len+2]=rs485Send_S->CRCL;
+			RS485Uart3.Send[3+rs485Send_S->len+3]='E';
+			RS485Uart3.sendLen=rs485Send_S->len+7;
 			
 			UART_SendByte(LPC_UART3,RS485Uart3.Send[0]);
 			UART_IntConfig(UART_3, UART_INTCFG_THRE, ENABLE);						/* 		Enable the tr exit			*/
@@ -989,9 +1026,10 @@ void RS485Send_Struct(RS485_UART_NUM UART_NUM,UserRS485Send* rs485Send_S)
 			{
 				RS485Uart4.Send[3+i]=rs485Send_S->data[i-1];
 			}
-			RS485Uart4.Send[3+rs485Send_S->len+1]=('S'+'E')&0xff;
-			RS485Uart4.Send[3+rs485Send_S->len+2]='E';
-			RS485Uart4.sendLen=rs485Send_S->len+6;
+			RS485Uart4.Send[3+rs485Send_S->len+1]=rs485Send_S->CRCH;
+			RS485Uart4.Send[3+rs485Send_S->len+2]=rs485Send_S->CRCL;
+			RS485Uart4.Send[3+rs485Send_S->len+3]='E';
+			RS485Uart4.sendLen=rs485Send_S->len+7;
 			
 			UART_SendByte((LPC_UART_TypeDef *)LPC_UART4,RS485Uart4.Send[0]);
 			UART_IntConfig(UART_4, UART_INTCFG_THRE, ENABLE);						/* 		Enable the tr exit			*/
@@ -1021,11 +1059,12 @@ UserRS485Rcv RS485_Get_Struct(RS485_UART_NUM UART_NUM)
 			{
 				break;
 			}
-			rs485Rcv_S.ctrl=RS485Uart0.Rcv[0];
-			rs485Rcv_S.len=RS485Uart0.Rcv[1];
+			rs485Rcv_S.address=RS485Uart0.Rcv[0];
+			rs485Rcv_S.ctrl=RS485Uart0.Rcv[1];
+			rs485Rcv_S.len=RS485Uart0.Rcv[2];
 			for(i=0;i<rs485Rcv_S.len;i++)
 			{
-				rs485Rcv_S.data[i]=RS485Uart0.Rcv[1+i+1];
+				rs485Rcv_S.data[i]=RS485Uart0.Rcv[2+i+1];
 			}
 			uart0RcvOK=0;
 			return rs485Rcv_S;
@@ -1034,11 +1073,12 @@ UserRS485Rcv RS485_Get_Struct(RS485_UART_NUM UART_NUM)
 			{
 				break;
 			}
-			rs485Rcv_S.ctrl=RS485Uart2.Rcv[0];
-			rs485Rcv_S.len=RS485Uart2.Rcv[1];
+			rs485Rcv_S.address=RS485Uart2.Rcv[0];
+			rs485Rcv_S.ctrl=RS485Uart2.Rcv[1];
+			rs485Rcv_S.len=RS485Uart2.Rcv[2];
 			for(i=0;i<rs485Rcv_S.len;i++)
 			{
-				rs485Rcv_S.data[i]=RS485Uart2.Rcv[1+i+1];
+				rs485Rcv_S.data[i]=RS485Uart2.Rcv[2+i+1];
 			}
 			uart2RcvOK=0;
 			return rs485Rcv_S;
@@ -1047,11 +1087,12 @@ UserRS485Rcv RS485_Get_Struct(RS485_UART_NUM UART_NUM)
 			{
 				break;
 			}
-			rs485Rcv_S.ctrl=RS485Uart3.Rcv[0];
-			rs485Rcv_S.len=RS485Uart3.Rcv[1];
+			rs485Rcv_S.address=RS485Uart3.Rcv[0];
+			rs485Rcv_S.ctrl=RS485Uart3.Rcv[1];
+			rs485Rcv_S.len=RS485Uart3.Rcv[2];
 			for(i=0;i<rs485Rcv_S.len;i++)
 			{
-				rs485Rcv_S.data[i]=RS485Uart3.Rcv[1+i+1];
+				rs485Rcv_S.data[i]=RS485Uart3.Rcv[2+i+1];
 			}
 			uart3RcvOK=0;
 			return rs485Rcv_S;
@@ -1060,17 +1101,19 @@ UserRS485Rcv RS485_Get_Struct(RS485_UART_NUM UART_NUM)
 			{
 				break;
 			}
-			rs485Rcv_S.ctrl=RS485Uart4.Rcv[0];
-			rs485Rcv_S.len=RS485Uart4.Rcv[1];
+			rs485Rcv_S.address=RS485Uart4.Rcv[0];
+			rs485Rcv_S.ctrl=RS485Uart4.Rcv[1];
+			rs485Rcv_S.len=RS485Uart4.Rcv[2];
 			for(i=0;i<rs485Rcv_S.len;i++)
 			{
-				rs485Rcv_S.data[i]=RS485Uart4.Rcv[1+i+1];
+				rs485Rcv_S.data[i]=RS485Uart4.Rcv[2+i+1];
 			}
 			uart4RcvOK=0;
 			return rs485Rcv_S;
 		default:
 			break;
 	}
-	return rs485Rcv_S;
 }
+
+
 

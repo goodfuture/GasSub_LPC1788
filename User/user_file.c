@@ -161,27 +161,27 @@ void File_Update(void)
 
 void File_TpConfig_Exist()
 {
-//		int f;
-//	
-//		f = yaffs_open("/nand/config/TestpointConfig", O_RDONLY, 0 );    //检查测点配置文件是否存在
-//		if (f >= 0)
-//		{
-//			 printf("Open Success! Testpoint Config Exist!\n");
-//		}
-//		else 																															//如果不存在，创建一个
-//		{
-//			 f = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
-//			 if ( f >= 0 )
-//			 {
-//					printf("Create Success! Testpoint Config doesn't exist!\n");
-//			 }
-//		}
-//		yaffs_close(f);
+		int f;
+	
+		f = yaffs_open("/nand/config/TestpointConfig", O_RDONLY, 0 );    //检查测点配置文件是否存在
+		if (f >= 0)
+		{
+			 printf("Open Success! Testpoint Config Exist!\n");
+		}
+		else 																															//如果不存在，创建一个
+		{
+			 f = yaffs_open( "/nand/config/TestpointConfig",  O_CREAT | O_RDWR | O_TRUNC, S_IREAD | S_IWRITE  );
+			 if ( f >= 0 )
+			 {
+					printf("Create Success! Testpoint Config doesn't exist!\n");
+			 }
+		}
+		yaffs_close(f);
 	/**********************************************************************
 				*2014-09-04 刘帅修改，添加默认配置
 				**********************************************************************/
-				 Config_Struct *revConf;
-				 File_Create_TpConfig( revConf );
+//				 Config_Struct *revConf;
+//				 File_Create_TpConfig( revConf );
 				 /**********************************************************************
 				*2014-09-04 修改区结束
 				**********************************************************************/
