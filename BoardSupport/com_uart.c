@@ -29,7 +29,7 @@
 #define RS485FIFOTRGLEV		UART_FIFO_TRGLEV0			/*	RS485FIFO中断字节设置		*/
 #define ENABLERS485RCVER	1											/*	开启rs485接收						*/
 
-#define UARTRCVTL					1000									/*	UART接收时间限制（0.1ms）*/
+#define UARTRCVTL					1000									/*	UART接收时间限制（100ms）*/
 
 
 #ifdef FUNCTIONREWRITE

@@ -8,9 +8,23 @@ Project File Date:  09/09/2014
 
 <h2>Output:</h2>
 Build target 'FLASH'
+compiling com_uart.c...
+..\..\BoardSupport\com_uart.c(1116): warning:  #940-D: missing return statement at end of non-void function "RS485_Get_Struct"
+compiling portserial_m.c...
+..\..\FreeModbus\port\portserial_m.c(176): warning:  #550-D: variable "rs485cfg" was set but never used
+..\..\FreeModbus\port\portserial_m.c(371): warning:  #177-D: function "prvvUARTTxReadyISR" was declared but never referenced
+..\..\FreeModbus\port\portserial_m.c(382): warning:  #177-D: function "prvvUARTRxISR" was declared but never referenced
 linking...
-Program Size: Code=313090 RO-data=14142 RW-data=11744 ZI-data=14950816  
-"..\FLASH_obj\uc1788.axf" - 0 Errors, 0 Warning(s).
+Program Size: Code=314366 RO-data=14142 RW-data=11744 ZI-data=14950816  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 4 Warning(s).
+Build target 'FLASH'
+compiling user_main.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_main.c(93): warning:  #1295-D: Deprecated declaration hvsftpd_main - give arg types
+..\..\User\user_main.c(103): warning:  #177-D: variable "TaskErrorRateRS485Stk" was declared but never referenced
+linking...
+Program Size: Code=314294 RO-data=14142 RW-data=11744 ZI-data=14950816  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 3 Warning(s).
 Load "..\\FLASH_obj\\uc1788.axf" 
 Set JLink Project File to "E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\JLinkSettings.ini"
 * JLink Info: Device "LPC1788" selected (512 KB flash, 64 KB RAM).
@@ -32,7 +46,7 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: LPC1788
-VTarget = 3.325V
+VTarget = 3.358V
 State of Pins: 
 TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
@@ -102,15 +116,12 @@ Erase Done.
 Programming Done.
 Verify OK.
 Build target 'FLASH'
-compiling portserial_m.c...
-..\..\FreeModbus\port\portserial_m.c(176): warning:  #550-D: variable "rs485cfg" was set but never used
-..\..\FreeModbus\port\portserial_m.c(418): warning:  #550-D: variable "lineStatus" was set but never used
-..\..\FreeModbus\port\portserial_m.c(454): warning:  #550-D: variable "lineStatus" was set but never used
-..\..\FreeModbus\port\portserial_m.c(489): warning:  #550-D: variable "lineStatus" was set but never used
-..\..\FreeModbus\port\portserial_m.c(524): warning:  #550-D: variable "lineStatus" was set but never used
+compiling com_uart.c...
+..\..\BoardSupport\com_uart.c(1116): warning:  #940-D: missing return statement at end of non-void function "RS485_Get_Struct"
+compiling user_key.c...
 linking...
-Program Size: Code=313130 RO-data=14142 RW-data=11744 ZI-data=14950816  
-"..\FLASH_obj\uc1788.axf" - 0 Errors, 5 Warning(s).
+Program Size: Code=314370 RO-data=14142 RW-data=11744 ZI-data=14950816  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 1 Warning(s).
 Load "..\\FLASH_obj\\uc1788.axf" 
 Set JLink Project File to "E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\JLinkSettings.ini"
 * JLink Info: Device "LPC1788" selected (512 KB flash, 64 KB RAM).
@@ -202,9 +213,33 @@ Erase Done.
 Programming Done.
 Verify OK.
 Build target 'FLASH'
-compiling portevent_m.c...
+compiling com_uart.c...
+..\..\BoardSupport\com_uart.c(1116): warning:  #940-D: missing return statement at end of non-void function "RS485_Get_Struct"
+compiling user_key.c...
+compiling user_main.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_main.c(95): warning:  #1295-D: Deprecated declaration hvsftpd_main - give arg types
+..\..\User\user_main.c(222): warning:  #177-D: variable "ussend" was declared but never referenced
+..\..\User\user_main.c(108): warning:  #177-D: variable "TaskErrorRateRS485Stk" was declared but never referenced
+compiling EquipmentList.c...
+..\..\Task\EquipmentList.c(164): warning:  #177-D: variable "phead" was declared but never referenced
+..\..\Task\EquipmentList.c(194): warning:  #177-D: variable "pNext" was declared but never referenced
+..\..\Task\EquipmentList.c(325): warning:  #177-D: variable "err" was declared but never referenced
+..\..\Task\EquipmentList.c(326): warning:  #550-D: variable "n" was set but never used
+compiling task_UartRcv.c...
+..\..\Task\task_UartRcv.c(49): warning:  #111-D: statement is unreachable
+compiling portserial_m.c...
+..\..\FreeModbus\port\portserial_m.c(176): warning:  #550-D: variable "rs485cfg" was set but never used
+..\..\FreeModbus\port\portserial_m.c(418): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(454): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(489): warning:  #550-D: variable "lineStatus" was set but never used
+..\..\FreeModbus\port\portserial_m.c(524): warning:  #550-D: variable "lineStatus" was set but never used
 linking...
-Program Size: Code=313130 RO-data=14142 RW-data=11744 ZI-data=14950816  
+Program Size: Code=313266 RO-data=14142 RW-data=11744 ZI-data=14959000  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 15 Warning(s).
+Build target 'FLASH'
+linking...
+Program Size: Code=313266 RO-data=14142 RW-data=11744 ZI-data=14959000  
 "..\FLASH_obj\uc1788.axf" - 0 Errors, 0 Warning(s).
 Load "..\\FLASH_obj\\uc1788.axf" 
 Set JLink Project File to "E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\JLinkSettings.ini"
@@ -229,7 +264,7 @@ Target info:
 Device: LPC1788
 VTarget = 3.358V
 State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
 Software-Breakpoints: 8192
 Watchpoints:          4

@@ -45,6 +45,9 @@ extern "C" {
 #define  TASK_FTP_PRIO									7
 	
 #define  TASK_ERROR_RATE_RS485					10
+	
+#define  FMB_TASK_PRIO									8
+#define  FMB_POLL_TASK_PRIO							9
 							          
 /*********************************************************************************************************
   TASK STACK SIZES  任务堆栈大小
@@ -55,6 +58,8 @@ extern "C" {
 #define  TASK_EQUIPMENT_STK_SIZE		    1024
 #define	 TASK_UARTRCV_STK_SIZE          1024
 #define  TASK_FILERCV_STK_SIZE					1024
+
+#define FMB_TASK_STK_SIZE								1024
 
 #define  TASK_FTP_STK_SIZE							1024
 

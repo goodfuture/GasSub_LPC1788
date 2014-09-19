@@ -66,6 +66,8 @@
 #define UPLOADQSIZE 128				//上传信息队列大小
 #define UARTSENDQSIZE 8				//8路开出口控制消息队列大小
 
+
+
 #define FRMB_DEBUG	0
 
 
@@ -96,6 +98,9 @@ extern void UartRcv_Task(void);
 
 static OS_STK  GstkStart[TASK_START_STK_SIZE];                     /*  The stack of start task   */
 static OS_STK  Gstk2[MENU_TASK_STK_SIZE];                          /*  Led?????             */
+static OS_STK	 FMBStk[FMB_TASK_STK_SIZE-1];
+static OS_STK  FMBPollStk[FMB_TASK_STK_SIZE-1];
+
 __align(8) static OS_STK  TaskEquipmentStk[TASK_EQUIPMENT_STK_SIZE]; 		   	//任务堆栈
 __align(8) static OS_STK  TaskUartRcvStk[TASK_UARTRCV_STK_SIZE];
 __align(8) static OS_STK  TaskFileRcvStk[TASK_FILERCV_STK_SIZE];
@@ -165,6 +170,41 @@ void eth_netif_init(IPConfigStruct ipConfig)
 void tcpip_init_done(void *arg)
 {
   OSSemPost(sem_tcp_init_done);
+}
+/**
+ * FMB_Task
+ *
+ * @param   none
+ * @return  none
+ *
+ * @brief   FMB_Task
+ */
+void FMB_Task(void *arg)
+{
+	while(1)
+	{
+		printf("eMBMasterReqWriteCoil ERRORCode = %d\n",eMBMasterReqWriteCoil(1,8,0xFF00,-1));
+		OSTimeDly(500);
+	}
+}
+
+/**
+ * FMB_Poll_Task
+ *
+ * @param   none
+ * @return  none
+ *
+ * @brief   FMB_Poll_Task
+ */
+void FMB_Poll_Task(void *arg)
+{
+		printf("RS485_Init ERRORCode = %d\n",eMBMasterInit(MB_RTU,RS485_1,1200,MB_PAR_ODD));
+		printf("RS485_Enable ERRORCode = %d\n",eMBMasterEnable());
+		while(1)
+		{
+			printf("RS485_Poll ERRORCode = %d\n",eMBMasterPoll());
+			OSTimeDly(500);
+		}
 }
 
 
@@ -261,8 +301,18 @@ static void TaskStart (void  *parg)
 		ussend.CRCL=0x11;
 #else
 
-		printf("RS485_Init ERRORCode = %d\n",eMBMasterInit(MB_RTU,RS485_1,1200,MB_PAR_ODD));
-		printf("RS485_Enable ERRORCode = %d\n",eMBMasterEnable());
+		err=OSTaskCreate((void (*)(void *))FMB_Task,
+											(void *)0,
+											(OS_STK *)&FMBStk[FMB_TASK_STK_SIZE-1],
+											(INT8U )FMB_TASK_PRIO	);
+											
+		err=OSTaskCreate((void (*)(void *))FMB_Poll_Task,
+											(void *)0,
+											(OS_STK *)&FMBPollStk[FMB_TASK_STK_SIZE-1],
+											(INT8U )FMB_POLL_TASK_PRIO	);									
+											
+		
+		
 	
 #endif
 
@@ -274,12 +324,12 @@ static void TaskStart (void  *parg)
 			RS485Send_Struct(RS485_UART3,&ussend);
 			RS485Send_Struct(RS485_UART4,&ussend);
 #else			
- 			printf("RS485_Poll ERRORCode = %d\n",eMBMasterPoll());
-			printf("eMBMasterReqWriteCoil ERRORCode = %d\n",eMBMasterReqWriteCoil(1,8,0xFF00,-1));
+ 			
+			
 			
 #endif
-			OSTimeDly(500);		
-			//OSTaskSuspend(OS_PRIO_SELF);                                    /*  The start task can be pended*/
+			//OSTimeDly(500);		
+			OSTaskSuspend(OS_PRIO_SELF);                                    /*  The start task can be pended*/
                                                                         /*  here. ??????????  */			
 		}
 }
