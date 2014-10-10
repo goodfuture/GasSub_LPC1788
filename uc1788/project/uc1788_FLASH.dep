@@ -244,7 +244,7 @@ I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\CMSISv2p00_LPC177x
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc_types.h)(0x540EAA84)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc177x_8x_gpio.h)(0x54099097)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\BoardSupport\Gpioconfig.h)(0x54099096)
-F (..\..\BoardSupport\com_uart.c)(0x5419342C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\com_uart.o --omf_browse ..\flash_obj\com_uart.crf --depend ..\flash_obj\com_uart.d)
+F (..\..\BoardSupport\com_uart.c)(0x541BF70E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\com_uart.o --omf_browse ..\flash_obj\com_uart.crf --depend ..\flash_obj\com_uart.d)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\BoardSupport\com_uart.h)(0x54003F1F)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc177x_8x_uart.h)(0x54099097)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h)(0x54099096)
@@ -2006,7 +2006,7 @@ I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\CMSISv2p00_LPC177x
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\CMSISv2p00_LPC177x_8x\inc\core_cmFunc.h)(0x54099096)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\CMSISv2p00_LPC177x_8x\inc\system_LPC177x_8x.h)(0x54099096)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc_types.h)(0x540EAA84)
-F (..\..\User\user_key.c)(0x54099097)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\user_key.o --omf_browse ..\flash_obj\user_key.crf --depend ..\flash_obj\user_key.d)
+F (..\..\User\user_key.c)(0x541BDD53)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\user_key.o --omf_browse ..\flash_obj\user_key.crf --depend ..\flash_obj\user_key.d)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc177x_8x_gpio.h)(0x54099097)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h)(0x54099096)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\CMSISv2p00_LPC177x_8x\inc\core_cm3.h)(0x54099096)
@@ -2072,7 +2072,7 @@ I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\lwip\include\lwip\
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\lwip\include\lwip\timers.h)(0x54099097)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc177x_8x_exti.h)(0x54099097)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc177x_8x_timer.h)(0x54099097)
-I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\main.h)(0x5413CDE7)
+I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\main.h)(0x541BF58A)
 F (..\..\User\user_BrowsTestpoint.c)(0x54099097)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\user_browstestpoint.o --omf_browse ..\flash_obj\user_browstestpoint.crf --depend ..\flash_obj\user_browstestpoint.d)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc177x_8x_rtc.h)(0x54099097)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\CMSISv2p00_LPC177x_8x\inc\LPC177x_8x.h)(0x54099096)
@@ -2203,7 +2203,7 @@ I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\DataStruct.h)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h)(0x54099097)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\GuiLib\include\MENU.h)(0x54099096)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\user_menu.h)(0x54099097)
-F (..\..\User\user_main.c)(0x54195049)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\user_main.o --omf_browse ..\flash_obj\user_main.crf --depend ..\flash_obj\user_main.d)
+F (..\..\User\user_main.c)(0x541BF6CA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\user_main.o --omf_browse ..\flash_obj\user_main.crf --depend ..\flash_obj\user_main.d)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\LPC177x_8xLib\inc\lpc_types.h)(0x540EAA84)
 I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7B744)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\BoardSupport\sdram_mt48lc8m32lfb5.h)(0x54099096)
@@ -2254,7 +2254,7 @@ I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\GuiLib\include\MUL
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\GuiLib\include\RADIO.h)(0x54099096)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\GuiLib\include\SLIDER.h)(0x54099096)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\GuiLib\include\TEXT.h)(0x54099096)
-I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\main.h)(0x5413CDE7)
+I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\main.h)(0x541BF58A)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\App\includes.h)(0x54099097)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -2943,7 +2943,7 @@ I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 F (..\..\Task\EquipmentList.c)(0x54099097)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\equipmentlist.o --omf_browse ..\flash_obj\equipmentlist.crf --depend ..\flash_obj\equipmentlist.d)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
-I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\main.h)(0x5413CDE7)
+I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\main.h)(0x541BF58A)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\App\includes.h)(0x54099097)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -3013,7 +3013,7 @@ I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\Task\Sensor_Operat
 F (..\..\Task\task_UartRcv.c)(0x54099097)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\task_uartrcv.o --omf_browse ..\flash_obj\task_uartrcv.crf --depend ..\flash_obj\task_uartrcv.d)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
-I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\main.h)(0x5413CDE7)
+I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\main.h)(0x541BF58A)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\App\includes.h)(0x54099097)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -4141,7 +4141,7 @@ I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\FreeModbus\modbus\
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\User\DataStruct.h)(0x540EAA84)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\FreeModbus\modbus\include\mbproto.h)(0x54099096)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\FreeModbus\modbus\include\mb_m.h)(0x54099096)
-F (..\..\FreeModbus\port\portserial_m.c)(0x541AA337)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\portserial_m.o --omf_browse ..\flash_obj\portserial_m.crf --depend ..\flash_obj\portserial_m.d)
+F (..\..\FreeModbus\port\portserial_m.c)(0x541BF70E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\..\CMSISv2p00_LPC177x_8x\inc -I..\..\LPC177x_8xLib\inc -I..\..\Config -I..\..\uCOS-II\Source -I..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView -I..\..\BoardSupport -I..\App -I..\..\YAFFS2 -I..\..\lwip\include -I..\..\goahead\src -I..\..\hvsftpd -I..\..\User -I..\..\Task -I..\..\GuiLib\include -I..\..\GuiLib\Config -I..\..\FreeModbus\modbus\include -I..\..\FreeModbus\port -I..\..\FreeModbus -I..\..\FreeModbus\modbus\rtu-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\NXP\LPC177x_8x-o ..\flash_obj\portserial_m.o --omf_browse ..\flash_obj\portserial_m.crf --depend ..\flash_obj\portserial_m.d)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\FreeModbus\port\FMBport.h)(0x5412C933)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\FreeModbus\modbus\include\mbconfig.h)(0x5412C26C)
 I (E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uCOS-II\Source\ucos_ii.h)(0x54099097)
