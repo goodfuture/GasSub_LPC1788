@@ -26,7 +26,7 @@
 #include "lpc_types.h"
 #include "sdram_mt48lc8m32lfb5.h"
 #include "Gpioconfig.h"
-#include "LPC177x_8x_ssp.h"
+#include "LPC177x_8x_ssp.h" 
 #include "lpc177x_8x_gpio.h"
 #include "lpc177x_8x_lcd.h"
 #include "lpc177x_8x_timer.h"
@@ -157,6 +157,7 @@ void eth_netif_init(IPConfigStruct ipConfig)
 
   netif_add(&eth_netif, &eth_ipaddr, &eth_netmask, &eth_gw, NULL, ethernetif_init, tcpip_input);
   netif_set_up(&eth_netif);
+
 }
 
 /**
@@ -230,6 +231,11 @@ static void TaskStart (void  *parg)
     #endif
 	
 		/* Init the file system */
+	
+	optionSaveStruct.masterIP[1]=0xaa;
+	
+	EEPROM_WriteStruct(optionSaveStruct);
+	
     yaffs_start_up();	
 		File_Init();
 		
@@ -301,15 +307,15 @@ static void TaskStart (void  *parg)
 		ussend.CRCL=0x11;
 #else
 
-		err=OSTaskCreate((void (*)(void *))FMB_Task,
-											(void *)0,
-											(OS_STK *)&FMBStk[FMB_TASK_STK_SIZE-1],
-											(INT8U )FMB_TASK_PRIO	);
-											
-		err=OSTaskCreate((void (*)(void *))FMB_Poll_Task,
-											(void *)0,
-											(OS_STK *)&FMBPollStk[FMB_TASK_STK_SIZE-1],
-											(INT8U )FMB_POLL_TASK_PRIO	);									
+//		err=OSTaskCreate((void (*)(void *))FMB_Task,
+//											(void *)0,
+//											(OS_STK *)&FMBStk[FMB_TASK_STK_SIZE-1],
+//											(INT8U )FMB_TASK_PRIO	);
+//											
+//		err=OSTaskCreate((void (*)(void *))FMB_Poll_Task,
+//											(void *)0,
+//											(OS_STK *)&FMBPollStk[FMB_TASK_STK_SIZE-1],
+//											(INT8U )FMB_POLL_TASK_PRIO	);									
 											
 		
 		
@@ -412,6 +418,8 @@ int main(void)
 
 		Board_Init();
 	
+	
+		
 		//KeyInit();
 	
 		GUI_Init();

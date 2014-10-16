@@ -4,7 +4,7 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\uc1788.uvproj
-Project File Date:  09/09/2014
+Project File Date:  10/12/2014
 
 <h2>Output:</h2>
 Build target 'FLASH'
@@ -13,9 +13,13 @@ compiling user_main.c...
 ..\..\User\user_main.c(95): warning:  #1295-D: Deprecated declaration hvsftpd_main - give arg types
 ..\..\User\user_main.c(222): warning:  #177-D: variable "ussend" was declared but never referenced
 ..\..\User\user_main.c(108): warning:  #177-D: variable "TaskErrorRateRS485Stk" was declared but never referenced
+compiling user_SaveOption.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_SaveOption.c(116): warning:  #940-D: missing return statement at end of non-void function "EEPROM_ReadArray"
+..\..\User\user_SaveOption.c(263): warning:  #177-D: variable "i" was declared but never referenced
 linking...
-Program Size: Code=313266 RO-data=14142 RW-data=11744 ZI-data=14959000  
-"..\FLASH_obj\uc1788.axf" - 0 Errors, 4 Warning(s).
+Program Size: Code=313370 RO-data=14142 RW-data=11744 ZI-data=14959000  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 7 Warning(s).
 Load "..\\FLASH_obj\\uc1788.axf" 
 Set JLink Project File to "E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\JLinkSettings.ini"
 * JLink Info: Device "LPC1788" selected (512 KB flash, 64 KB RAM).
@@ -40,6 +44,425 @@ Device: LPC1788
 VTarget = 3.358V
 State of Pins: 
 TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Include "E:\\ARM_Program\\LPC1788_Ctrl_LPC1788\\Program\\GasSub_LPC1788\\uc1788\\project\\FLASH_download.ini" 
+INCLUDE SST39VF1601.ini
+FUNC void PinSel(int p1, int n1, int f1)
+{
+    _WDWORD(0x4002C000 + (p1 * 32 + n1) * 4, 0x8 | f1);
+}
+FUNC void InitNORFlash(void)
+{
+    int i;
+    
+    PinSel(2,16,1);
+    PinSel(2,17,1);
+    PinSel(2,18,1);
+    PinSel(2,20,1);
+    PinSel(2,24,1);
+    PinSel(2,28,1);
+    PinSel(2,29,1);
+    PinSel(2,30,1);
+    PinSel(2,31,1);
+    for(i = 0; i < 32; i++)
+        PinSel(3,i,1);
+        
+    for(i = 0; i < 21; i++)
+        PinSel(4,i,1);
+    PinSel(4,24,1);
+    PinSel(4,25,1);
+    PinSel(4,30,1);
+    PinSel(4,31,1);
+    
+    /* PCONP |= 1 << 11 */
+    _WDWORD(0x400FC0C4, 0x04288FDE);    // Power On EMC
+    /* EMCCONTROL |= 1 */
+    _WDWORD(0x2009C000, 0x00000001);    // Enable EMC
+    /* EMCDLYCTL */
+    _WDWORD(0x400FC1DC, 0x00081818);    // Config data read delay
+    /* EMCCONFIG */
+    _WDWORD(0x2009C008, 0x00000000);    // Little endian mode
+    /* STATICCONFIG1 */
+    _WDWORD(0x2009C220, 0x00000081);    // 16bit data width
+                                        // Disable asynchronous page mode
+                                        // Read when active bits are low
+                                        // No extend wait
+    /* STATICWAITWEN1 */
+    _WDWORD(0x2009C224, 0x00000002);    // WaitWEn
+    
+    /* STATICWAITOEN1 */
+    _WDWORD(0x2009C228, 0x00000002);    // WaitOEn
+    /* STATICWAITRD1 */
+    _WDWORD(0x2009C22C, 0x0000001F);    // WaitRd
+    /* STATICWAITPAGE1 */
+    _WDWORD(0x2009C230, 0x0000001F);    // WaitPage
+    /* STATICWAITWR1 */
+    _WDWORD(0x2009C234, 0x0000001F);    // WaitWr
+    /* STATICWAITTURN1 */
+    _WDWORD(0x2009C238, 0x0000000F);    // WaitTurn
+    _sleep_(100);
+}
+InitNORFlash();                                 // Initialize memory
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'FLASH'
+compiling user_main.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_main.c(95): warning:  #1295-D: Deprecated declaration hvsftpd_main - give arg types
+..\..\User\user_main.c(222): warning:  #177-D: variable "ussend" was declared but never referenced
+..\..\User\user_main.c(101): warning:  #177-D: variable "FMBStk" was declared but never referenced
+..\..\User\user_main.c(102): warning:  #177-D: variable "FMBPollStk" was declared but never referenced
+..\..\User\user_main.c(108): warning:  #177-D: variable "TaskErrorRateRS485Stk" was declared but never referenced
+linking...
+Program Size: Code=313330 RO-data=14142 RW-data=11744 ZI-data=14959000  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 6 Warning(s).
+Load "..\\FLASH_obj\\uc1788.axf" 
+Set JLink Project File to "E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\JLinkSettings.ini"
+* JLink Info: Device "LPC1788" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1788
+VTarget = 3.364V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Include "E:\\ARM_Program\\LPC1788_Ctrl_LPC1788\\Program\\GasSub_LPC1788\\uc1788\\project\\FLASH_download.ini" 
+INCLUDE SST39VF1601.ini
+FUNC void PinSel(int p1, int n1, int f1)
+{
+    _WDWORD(0x4002C000 + (p1 * 32 + n1) * 4, 0x8 | f1);
+}
+FUNC void InitNORFlash(void)
+{
+    int i;
+    
+    PinSel(2,16,1);
+    PinSel(2,17,1);
+    PinSel(2,18,1);
+    PinSel(2,20,1);
+    PinSel(2,24,1);
+    PinSel(2,28,1);
+    PinSel(2,29,1);
+    PinSel(2,30,1);
+    PinSel(2,31,1);
+    for(i = 0; i < 32; i++)
+        PinSel(3,i,1);
+        
+    for(i = 0; i < 21; i++)
+        PinSel(4,i,1);
+    PinSel(4,24,1);
+    PinSel(4,25,1);
+    PinSel(4,30,1);
+    PinSel(4,31,1);
+    
+    /* PCONP |= 1 << 11 */
+    _WDWORD(0x400FC0C4, 0x04288FDE);    // Power On EMC
+    /* EMCCONTROL |= 1 */
+    _WDWORD(0x2009C000, 0x00000001);    // Enable EMC
+    /* EMCDLYCTL */
+    _WDWORD(0x400FC1DC, 0x00081818);    // Config data read delay
+    /* EMCCONFIG */
+    _WDWORD(0x2009C008, 0x00000000);    // Little endian mode
+    /* STATICCONFIG1 */
+    _WDWORD(0x2009C220, 0x00000081);    // 16bit data width
+                                        // Disable asynchronous page mode
+                                        // Read when active bits are low
+                                        // No extend wait
+    /* STATICWAITWEN1 */
+    _WDWORD(0x2009C224, 0x00000002);    // WaitWEn
+    
+    /* STATICWAITOEN1 */
+    _WDWORD(0x2009C228, 0x00000002);    // WaitOEn
+    /* STATICWAITRD1 */
+    _WDWORD(0x2009C22C, 0x0000001F);    // WaitRd
+    /* STATICWAITPAGE1 */
+    _WDWORD(0x2009C230, 0x0000001F);    // WaitPage
+    /* STATICWAITWR1 */
+    _WDWORD(0x2009C234, 0x0000001F);    // WaitWr
+    /* STATICWAITTURN1 */
+    _WDWORD(0x2009C238, 0x0000000F);    // WaitTurn
+    _sleep_(100);
+}
+InitNORFlash();                                 // Initialize memory
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'FLASH'
+compiling user_main.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_main.c(95): warning:  #1295-D: Deprecated declaration hvsftpd_main - give arg types
+..\..\User\user_main.c(222): warning:  #177-D: variable "ussend" was declared but never referenced
+..\..\User\user_main.c(101): warning:  #177-D: variable "FMBStk" was declared but never referenced
+..\..\User\user_main.c(102): warning:  #177-D: variable "FMBPollStk" was declared but never referenced
+..\..\User\user_main.c(108): warning:  #177-D: variable "TaskErrorRateRS485Stk" was declared but never referenced
+compiling user_SaveOption.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_SaveOption.c(130): warning:  #940-D: missing return statement at end of non-void function "EEPROM_ReadArray"
+..\..\User\user_SaveOption.c(281): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=313414 RO-data=14142 RW-data=11744 ZI-data=14959000  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 9 Warning(s).
+Build target 'FLASH'
+compiling user_main.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_main.c(95): warning:  #1295-D: Deprecated declaration hvsftpd_main - give arg types
+..\..\User\user_main.c(222): warning:  #177-D: variable "ussend" was declared but never referenced
+..\..\User\user_main.c(101): warning:  #177-D: variable "FMBStk" was declared but never referenced
+..\..\User\user_main.c(102): warning:  #177-D: variable "FMBPollStk" was declared but never referenced
+..\..\User\user_main.c(108): warning:  #177-D: variable "TaskErrorRateRS485Stk" was declared but never referenced
+linking...
+Program Size: Code=313450 RO-data=14142 RW-data=11744 ZI-data=14959000  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 6 Warning(s).
+Load "..\\FLASH_obj\\uc1788.axf" 
+Set JLink Project File to "E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\JLinkSettings.ini"
+* JLink Info: Device "LPC1788" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1788
+VTarget = 3.364V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Include "E:\\ARM_Program\\LPC1788_Ctrl_LPC1788\\Program\\GasSub_LPC1788\\uc1788\\project\\FLASH_download.ini" 
+INCLUDE SST39VF1601.ini
+FUNC void PinSel(int p1, int n1, int f1)
+{
+    _WDWORD(0x4002C000 + (p1 * 32 + n1) * 4, 0x8 | f1);
+}
+FUNC void InitNORFlash(void)
+{
+    int i;
+    
+    PinSel(2,16,1);
+    PinSel(2,17,1);
+    PinSel(2,18,1);
+    PinSel(2,20,1);
+    PinSel(2,24,1);
+    PinSel(2,28,1);
+    PinSel(2,29,1);
+    PinSel(2,30,1);
+    PinSel(2,31,1);
+    for(i = 0; i < 32; i++)
+        PinSel(3,i,1);
+        
+    for(i = 0; i < 21; i++)
+        PinSel(4,i,1);
+    PinSel(4,24,1);
+    PinSel(4,25,1);
+    PinSel(4,30,1);
+    PinSel(4,31,1);
+    
+    /* PCONP |= 1 << 11 */
+    _WDWORD(0x400FC0C4, 0x04288FDE);    // Power On EMC
+    /* EMCCONTROL |= 1 */
+    _WDWORD(0x2009C000, 0x00000001);    // Enable EMC
+    /* EMCDLYCTL */
+    _WDWORD(0x400FC1DC, 0x00081818);    // Config data read delay
+    /* EMCCONFIG */
+    _WDWORD(0x2009C008, 0x00000000);    // Little endian mode
+    /* STATICCONFIG1 */
+    _WDWORD(0x2009C220, 0x00000081);    // 16bit data width
+                                        // Disable asynchronous page mode
+                                        // Read when active bits are low
+                                        // No extend wait
+    /* STATICWAITWEN1 */
+    _WDWORD(0x2009C224, 0x00000002);    // WaitWEn
+    
+    /* STATICWAITOEN1 */
+    _WDWORD(0x2009C228, 0x00000002);    // WaitOEn
+    /* STATICWAITRD1 */
+    _WDWORD(0x2009C22C, 0x0000001F);    // WaitRd
+    /* STATICWAITPAGE1 */
+    _WDWORD(0x2009C230, 0x0000001F);    // WaitPage
+    /* STATICWAITWR1 */
+    _WDWORD(0x2009C234, 0x0000001F);    // WaitWr
+    /* STATICWAITTURN1 */
+    _WDWORD(0x2009C238, 0x0000000F);    // WaitTurn
+    _sleep_(100);
+}
+InitNORFlash();                                 // Initialize memory
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'FLASH'
+compiling user_main.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_main.c(95): warning:  #1295-D: Deprecated declaration hvsftpd_main - give arg types
+..\..\User\user_main.c(222): warning:  #177-D: variable "ussend" was declared but never referenced
+..\..\User\user_main.c(101): warning:  #177-D: variable "FMBStk" was declared but never referenced
+..\..\User\user_main.c(102): warning:  #177-D: variable "FMBPollStk" was declared but never referenced
+..\..\User\user_main.c(108): warning:  #177-D: variable "TaskErrorRateRS485Stk" was declared but never referenced
+linking...
+Program Size: Code=313450 RO-data=14142 RW-data=11744 ZI-data=14959000  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 6 Warning(s).
+Load "..\\FLASH_obj\\uc1788.axf" 
+Set JLink Project File to "E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\JLinkSettings.ini"
+* JLink Info: Device "LPC1788" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1788
+VTarget = 3.364V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Include "E:\\ARM_Program\\LPC1788_Ctrl_LPC1788\\Program\\GasSub_LPC1788\\uc1788\\project\\FLASH_download.ini" 
+INCLUDE SST39VF1601.ini
+FUNC void PinSel(int p1, int n1, int f1)
+{
+    _WDWORD(0x4002C000 + (p1 * 32 + n1) * 4, 0x8 | f1);
+}
+FUNC void InitNORFlash(void)
+{
+    int i;
+    
+    PinSel(2,16,1);
+    PinSel(2,17,1);
+    PinSel(2,18,1);
+    PinSel(2,20,1);
+    PinSel(2,24,1);
+    PinSel(2,28,1);
+    PinSel(2,29,1);
+    PinSel(2,30,1);
+    PinSel(2,31,1);
+    for(i = 0; i < 32; i++)
+        PinSel(3,i,1);
+        
+    for(i = 0; i < 21; i++)
+        PinSel(4,i,1);
+    PinSel(4,24,1);
+    PinSel(4,25,1);
+    PinSel(4,30,1);
+    PinSel(4,31,1);
+    
+    /* PCONP |= 1 << 11 */
+    _WDWORD(0x400FC0C4, 0x04288FDE);    // Power On EMC
+    /* EMCCONTROL |= 1 */
+    _WDWORD(0x2009C000, 0x00000001);    // Enable EMC
+    /* EMCDLYCTL */
+    _WDWORD(0x400FC1DC, 0x00081818);    // Config data read delay
+    /* EMCCONFIG */
+    _WDWORD(0x2009C008, 0x00000000);    // Little endian mode
+    /* STATICCONFIG1 */
+    _WDWORD(0x2009C220, 0x00000081);    // 16bit data width
+                                        // Disable asynchronous page mode
+                                        // Read when active bits are low
+                                        // No extend wait
+    /* STATICWAITWEN1 */
+    _WDWORD(0x2009C224, 0x00000002);    // WaitWEn
+    
+    /* STATICWAITOEN1 */
+    _WDWORD(0x2009C228, 0x00000002);    // WaitOEn
+    /* STATICWAITRD1 */
+    _WDWORD(0x2009C22C, 0x0000001F);    // WaitRd
+    /* STATICWAITPAGE1 */
+    _WDWORD(0x2009C230, 0x0000001F);    // WaitPage
+    /* STATICWAITWR1 */
+    _WDWORD(0x2009C234, 0x0000001F);    // WaitWr
+    /* STATICWAITTURN1 */
+    _WDWORD(0x2009C238, 0x0000000F);    // WaitTurn
+    _sleep_(100);
+}
+InitNORFlash();                                 // Initialize memory
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'FLASH'
+compiling user_main.c...
+..\..\User\user_SaveOption.h(11): warning:  #1295-D: Deprecated declaration EEPROM_ReadRati - give arg types
+..\..\User\user_main.c(95): warning:  #1295-D: Deprecated declaration hvsftpd_main - give arg types
+..\..\User\user_main.c(222): warning:  #177-D: variable "ussend" was declared but never referenced
+..\..\User\user_main.c(101): warning:  #177-D: variable "FMBStk" was declared but never referenced
+..\..\User\user_main.c(102): warning:  #177-D: variable "FMBPollStk" was declared but never referenced
+..\..\User\user_main.c(108): warning:  #177-D: variable "TaskErrorRateRS485Stk" was declared but never referenced
+linking...
+Program Size: Code=313450 RO-data=14142 RW-data=11744 ZI-data=14959000  
+"..\FLASH_obj\uc1788.axf" - 0 Errors, 6 Warning(s).
+Load "..\\FLASH_obj\\uc1788.axf" 
+Set JLink Project File to "E:\ARM_Program\LPC1788_Ctrl_LPC1788\Program\GasSub_LPC1788\uc1788\project\JLinkSettings.ini"
+* JLink Info: Device "LPC1788" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 14 2012 22:34:52
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1788
+VTarget = 3.364V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
 Software-Breakpoints: 8192
 Watchpoints:          4

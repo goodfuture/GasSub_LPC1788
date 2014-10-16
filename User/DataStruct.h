@@ -89,6 +89,7 @@ typedef struct
 	IPConfigStruct ipConfig;
 	INT8U 		uartConfig[6];
 	INT8U			password[6];
+	INT8U     masterIP[4];
 }EEPROMDataStruct;
 
 typedef struct

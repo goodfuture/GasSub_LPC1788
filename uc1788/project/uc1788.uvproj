@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\CMSISv2p00_LPC177x_8x\inc;..\..\LPC177x_8xLib\inc;..\..\Config;..\..\uCOS-II\Source;..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView;..\..\BoardSupport;..\App;..\..\YAFFS2;..\..\lwip\include;..\..\goahead\src;..\..\hvsftpd;..\..\User;..\..\Task;..\..\GuiLib\include;..\..\GuiLib\Config;..\..\FreeModbus\modbus\include;..\..\FreeModbus\port;..\..\FreeModbus;..\..\FreeModbus\modbus\rtu</IncludePath>
+              <IncludePath>..\..\CMSISv2p00_LPC177x_8x\inc;..\..\LPC177x_8xLib\inc;..\..\Config;..\..\uCOS-II\Source;..\..\uCOS-II\Ports\ARM-Cortex-M3\Generic\RealView;..\..\BoardSupport;..\App;..\..\YAFFS2;..\..\lwip\include;..\..\goahead\src;..\..\hvsftpd;..\..\User;..\..\Task;..\..\GuiLib\include;..\..\GuiLib\Config;..\..\FreeModbus\modbus\include;..\..\FreeModbus\port;..\..\FreeModbus;..\..\FreeModbus\modbus\rtu;..\..\Modbus;..\..\Modbus\master</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1331,6 +1331,41 @@
               <FileName>mbutils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\FreeModbus\modbus\functions\mbutils.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Modbus</GroupName>
+          <Files>
+            <File>
+              <FileName>MB_RTU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\MB_RTU.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBCommon.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\MBCommon.c</FilePath>
+            </File>
+            <File>
+              <FileName>SYSHAL.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\SYSHAL.C</FilePath>
+            </File>
+            <File>
+              <FileName>MB_MFunction.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\master\MB_MFunction.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBMaster.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\master\MBMaster.c</FilePath>
+            </File>
+            <File>
+              <FileName>OSFUNfile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\master\OSFUNfile.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2661,6 +2696,41 @@
               <FileName>mbutils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\FreeModbus\modbus\functions\mbutils.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Modbus</GroupName>
+          <Files>
+            <File>
+              <FileName>MB_RTU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\MB_RTU.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBCommon.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\MBCommon.c</FilePath>
+            </File>
+            <File>
+              <FileName>SYSHAL.C</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\SYSHAL.C</FilePath>
+            </File>
+            <File>
+              <FileName>MB_MFunction.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\master\MB_MFunction.c</FilePath>
+            </File>
+            <File>
+              <FileName>MBMaster.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\master\MBMaster.c</FilePath>
+            </File>
+            <File>
+              <FileName>OSFUNfile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Modbus\master\OSFUNfile.c</FilePath>
             </File>
           </Files>
         </Group>

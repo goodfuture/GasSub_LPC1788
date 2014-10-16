@@ -18,14 +18,18 @@
 /*****************************************************************************
  * Defines and typedefs
  ****************************************************************************/
- #define DATA_SIZE		(30)
+ #define DATA_SIZE		(34)
  #define PAGE_SIZE		(8)
  #define DATA_ADRESS	(0x20)
  #define RATI_ADRESS	(0x40)
  #define RATI_SIZE		(0x80)
+ #define MAST_ADRESS	(0xC1)
+ #define MAST_SIZE		(0x04)
  
 void INT32TOUINT8(uint8_t data[],int32_t fp1,int32_t fp2);
 void UINT8TOINT32(uint8_t data[],int32_t fp1[],int32_t fp2[]);
+Bool EEPROM_ReadArray(uint8_t data[],uint8_t size);
+Bool EEPROM_WriteArray(uint8_t data[],uint8_t size);
 
 /*********************************************************************************************
 * name			:		EEPROM_WriteStruct
@@ -36,7 +40,7 @@ void UINT8TOINT32(uint8_t data[],int32_t fp1[],int32_t fp2[]);
 *********************************************************************************************/
 Bool EEPROM_WriteStruct(EEPROMDataStruct savestruct)
 {
-	uint8_t WriteData[PAGE_SIZE];
+	uint8_t WriteData[8];
 	uint8_t i;
 	uint8_t num;
 	
@@ -102,9 +106,60 @@ Bool EEPROM_WriteStruct(EEPROMDataStruct savestruct)
 		return  FALSE;
 	OSTimeDly(6);
 	
+	if(EEPROM_WriteDataOnePage(savestruct.masterIP,MAST_SIZE,(MAST_ADRESS)&0xff)==FALSE)
+		return  FALSE;
 	
+	OSTimeDly(6);
 	
-		return  TRUE;
+	return TRUE;
+}
+
+/*********************************************************************************************
+* name			:		EEPROM_ReadArray
+* func			:		EEPROM读数组
+* para			:		none
+* ret				:		uint8_t data[]
+* comment		:	
+*********************************************************************************************/
+Bool EEPROM_ReadArray(uint8_t data[],uint8_t size)
+{
+	if(EEPROM_ReadData(data,size,DATA_ADRESS)==FALSE)
+	{
+		return FALSE;
+	}
+}
+
+/*********************************************************************************************
+* name			:		EEPROM_WriteArray
+* func			:		EEPROM读数组
+* para			:		none
+* ret				:		uint8_t data[],uint8_t size
+* comment		:	
+*********************************************************************************************/
+Bool EEPROM_WriteArray(uint8_t data[],uint8_t size)
+{
+	uint8_t i;
+	uint8_t num,times;
+	uint8_t writeData[8];
+	
+	num=0;
+	times=0;
+	for(i=0;i<size;i++)
+	{
+		if(num>=8)
+		{
+			num=0;
+			
+			if(EEPROM_WriteDataOnePage(writeData,8,(DATA_ADRESS+PAGE_SIZE*times)&0xff)==FALSE)
+				return  FALSE;
+			times+=1;
+			OSTimeDly(6);
+		}	
+		writeData[num]=data[i];
+	}
+	if(EEPROM_WriteDataOnePage(writeData,size-times*8,(DATA_ADRESS+PAGE_SIZE*times)&0xff)==FALSE)
+				return  FALSE;
+	return TRUE;
 }
 
 /*********************************************************************************************
@@ -162,6 +217,16 @@ EEPROMDataStruct EEPROM_ReadStruct()
 	{
 		savestruct.password[i]=ReadData[num];
 		num+=1;
+	}
+	
+	for(i=0;i<4;i++)
+	{
+		savestruct.masterIP[i]=ReadData[num];
+		num+=1;
+	}
+	
+	if(EEPROM_ReadData(savestruct.masterIP,MAST_SIZE,MAST_ADRESS)==FALSE)
+	{
 	}
 	
 	return savestruct;
